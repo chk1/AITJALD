@@ -1,0 +1,2538 @@
+@prefix schema: <http://schema.org/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix sdmx:  <http://purl.org/linked-data/sdmx#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix geo:   <http://www.opengis.net/ont/geosparql#> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix sf:    <http://www.opengis.net/ont/sf#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix lodcom: <http://vocab.lodcom.de/> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix interval: <http://reference.data.gov.uk/def/intervals/> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+
+lodcom:average_pph_obs_197
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.95"^^xsd:float ;
+        lodcom:refArea    lodcom:gievenbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_176
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.39"^^xsd:float ;
+        lodcom:refArea    lodcom:josef ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_155
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.25"^^xsd:float ;
+        lodcom:refArea    lodcom:handorf ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_134
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.33"^^xsd:float ;
+        lodcom:refArea    lodcom:hafen ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_113
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.41"^^xsd:float ;
+        lodcom:refArea    lodcom:aegidii ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_276
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.84"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_89
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.07"^^xsd:float ;
+        lodcom:refArea    lodcom:roxel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_255
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.0"^^xsd:float ;
+        lodcom:refArea    lodcom:mecklenbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_68
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.64"^^xsd:float ;
+        lodcom:refArea    lodcom:schlachthof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_234
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.36"^^xsd:float ;
+        lodcom:refArea    lodcom:hansaplatz ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_9
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.29"^^xsd:float ;
+        lodcom:refArea    lodcom:bahnhof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_47
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.06"^^xsd:float ;
+        lodcom:refArea    lodcom:angelmodde ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_213
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.03"^^xsd:float ;
+        lodcom:refArea    lodcom:gremmendorf-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_26
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.69"^^xsd:float ;
+        lodcom:refArea    lodcom:uppenberg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_184
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.45"^^xsd:float ;
+        lodcom:refArea    lodcom:innenstadtring ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_163
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.15"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_142
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.65"^^xsd:float ;
+        lodcom:refArea    lodcom:sentrup ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_121
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.28"^^xsd:float ;
+        lodcom:refArea    lodcom:bahnhof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_100
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.08"^^xsd:float ;
+        lodcom:refArea    lodcom:ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_97
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.92"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_263
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.25"^^xsd:float ;
+        lodcom:refArea    lodcom:sprakel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_76
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.96"^^xsd:float ;
+        lodcom:refArea    lodcom:dueesberg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_242
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.64"^^xsd:float ;
+        lodcom:refArea    lodcom:geist ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_55
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.16"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_221
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.18"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_34
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.04"^^xsd:float ;
+        lodcom:refArea    lodcom:nienberge ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_200
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.41"^^xsd:float ;
+        lodcom:refArea    lodcom:albachten ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_13
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.54"^^xsd:float ;
+        lodcom:refArea    lodcom:kreuz ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_192
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.64"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_171
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.34"^^xsd:float ;
+        lodcom:refArea    lodcom:dom ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_150
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.13"^^xsd:float ;
+        lodcom:refArea    lodcom:kinderhaus-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_129
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.76"^^xsd:float ;
+        lodcom:refArea    lodcom:aaseestadt ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_108
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.88"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_271
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.03"^^xsd:float ;
+        lodcom:refArea    lodcom:angelmodde ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_84
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.55"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_250
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.64"^^xsd:float ;
+        lodcom:refArea    lodcom:uppenberg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_63
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.34"^^xsd:float ;
+        lodcom:refArea    lodcom:pluggendorf ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_4
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.42"^^xsd:float ;
+        lodcom:refArea    lodcom:buddenturm ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_42
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.26"^^xsd:float ;
+        lodcom:refArea    lodcom:gelmer-dyckburg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_229
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.34"^^xsd:float ;
+        lodcom:refArea    lodcom:martini ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_21
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.71"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte-sued ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_208
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.1"^^xsd:float ;
+        lodcom:refArea    lodcom:nord ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_179
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.46"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_158
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.16"^^xsd:float ;
+        lodcom:refArea    lodcom:gremmendorf-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_137
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.9"^^xsd:float ;
+        lodcom:refArea    lodcom:rumphorst ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_116
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.36"^^xsd:float ;
+        lodcom:refArea    lodcom:buddenturm ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_92
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.19"^^xsd:float ;
+        lodcom:refArea    lodcom:coerde ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_279
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.09"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_71
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.57"^^xsd:float ;
+        lodcom:refArea    lodcom:schloss ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_258
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.97"^^xsd:float ;
+        lodcom:refArea    lodcom:nienberge ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_50
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.16"^^xsd:float ;
+        lodcom:refArea    lodcom:berg_fidel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_237
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.51"^^xsd:float ;
+        lodcom:refArea    lodcom:kreuz ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_216
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.13"^^xsd:float ;
+        lodcom:refArea    lodcom:wolbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_29
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.07"^^xsd:float ;
+        lodcom:refArea    lodcom:gievenbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_187
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.47"^^xsd:float ;
+        lodcom:refArea    lodcom:schuetzenhof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_166
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.45"^^xsd:float ;
+        lodcom:refArea    lodcom:amelsbueren ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_145
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.07"^^xsd:float ;
+        lodcom:refArea    lodcom:roxel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_124
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.63"^^xsd:float ;
+        lodcom:refArea    lodcom:schlachthof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_103
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.05"^^xsd:float ;
+        lodcom:refArea    lodcom:angelmodde ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_266
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.19"^^xsd:float ;
+        lodcom:refArea    lodcom:gelmer-dyckburg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_79
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.51"^^xsd:float ;
+        lodcom:refArea    lodcom:herz-jesu ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_245
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.67"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte-sued ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_58
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.3"^^xsd:float ;
+        lodcom:refArea    lodcom:ueberwasser ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_224
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.81"^^xsd:float ;
+        lodcom:refArea    lodcom:muenster ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_37
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.9"^^xsd:float ;
+        lodcom:refArea    lodcom:kinderhaus-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_203
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.98"^^xsd:float ;
+        lodcom:refArea    lodcom:west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_16
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.47"^^xsd:float ;
+        lodcom:refArea    lodcom:innenstadtring ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_195
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.66"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte-nordost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_174
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.35"^^xsd:float ;
+        lodcom:refArea    lodcom:altstadt ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_153
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.93"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_132
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.95"^^xsd:float ;
+        lodcom:refArea    lodcom:dueesberg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_111
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.13"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_274
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.1"^^xsd:float ;
+        lodcom:refArea    lodcom:berg_fidel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_87
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.03"^^xsd:float ;
+        lodcom:refArea    lodcom:mecklenbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_253
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.95"^^xsd:float ;
+        lodcom:refArea    lodcom:gievenbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_66
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.37"^^xsd:float ;
+        lodcom:refArea    lodcom:hansaplatz ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_232
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.4"^^xsd:float ;
+        lodcom:refArea    lodcom:josef ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_7
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.36"^^xsd:float ;
+        lodcom:refArea    lodcom:pluggendorf ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_45
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.17"^^xsd:float ;
+        lodcom:refArea    lodcom:gremmendorf-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_211
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.24"^^xsd:float ;
+        lodcom:refArea    lodcom:handorf ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_24
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.67"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_182
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.42"^^xsd:float ;
+        lodcom:refArea    lodcom:neutor ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_161
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.11"^^xsd:float ;
+        lodcom:refArea    lodcom:suedost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_140
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.54"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_119
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.33"^^xsd:float ;
+        lodcom:refArea    lodcom:pluggendorf ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_95
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.35"^^xsd:float ;
+        lodcom:refArea    lodcom:sprakel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_261
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.87"^^xsd:float ;
+        lodcom:refArea    lodcom:kinderhaus-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_74
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.66"^^xsd:float ;
+        lodcom:refArea    lodcom:geist ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_240
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.45"^^xsd:float ;
+        lodcom:refArea    lodcom:innenstadtring ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_53
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.26"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_32
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.45"^^xsd:float ;
+        lodcom:refArea    lodcom:albachten ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_219
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.12"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_11
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.48"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_190
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.34"^^xsd:float ;
+        lodcom:refArea    lodcom:hafen ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_169
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.41"^^xsd:float ;
+        lodcom:refArea    lodcom:aegidii ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_148
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.19"^^xsd:float ;
+        lodcom:refArea    lodcom:coerde ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_127
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.57"^^xsd:float ;
+        lodcom:refArea    lodcom:schloss ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_106
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.12"^^xsd:float ;
+        lodcom:refArea    lodcom:berg_fidel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_82
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.65"^^xsd:float ;
+        lodcom:refArea    lodcom:uppenberg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_269
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.02"^^xsd:float ;
+        lodcom:refArea    lodcom:gremmendorf-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_61
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.33"^^xsd:float ;
+        lodcom:refArea    lodcom:martini ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_248
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.63"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_2
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.32"^^xsd:float ;
+        lodcom:refArea    lodcom:ueberwasser ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_40
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.15"^^xsd:float ;
+        lodcom:refArea    lodcom:nord ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_227
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.33"^^xsd:float ;
+        lodcom:refArea    lodcom:dom ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_206
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.12"^^xsd:float ;
+        lodcom:refArea    lodcom:kinderhaus-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_19
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.49"^^xsd:float ;
+        lodcom:refArea    lodcom:schuetzenhof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_198
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.65"^^xsd:float ;
+        lodcom:refArea    lodcom:sentrup ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_177
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.28"^^xsd:float ;
+        lodcom:refArea    lodcom:bahnhof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_156
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.08"^^xsd:float ;
+        lodcom:refArea    lodcom:ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_135
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.49"^^xsd:float ;
+        lodcom:refArea    lodcom:herz-jesu ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_114
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.31"^^xsd:float ;
+        lodcom:refArea    lodcom:ueberwasser ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_90
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.0"^^xsd:float ;
+        lodcom:refArea    lodcom:nienberge ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_277
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.17"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_256
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.41"^^xsd:float ;
+        lodcom:refArea    lodcom:albachten ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_69
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.51"^^xsd:float ;
+        lodcom:refArea    lodcom:kreuz ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_235
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.46"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_48
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.2"^^xsd:float ;
+        lodcom:refArea    lodcom:wolbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_214
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.11"^^xsd:float ;
+        lodcom:refArea    lodcom:gremmendorf-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_27
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.71"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte-nordost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_185
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.75"^^xsd:float ;
+        lodcom:refArea    lodcom:aaseestadt ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_164
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.85"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_143
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.07"^^xsd:float ;
+        lodcom:refArea    lodcom:mecklenbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_122
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.37"^^xsd:float ;
+        lodcom:refArea    lodcom:hansaplatz ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_101
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.11"^^xsd:float ;
+        lodcom:refArea    lodcom:gremmendorf-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_98
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.24"^^xsd:float ;
+        lodcom:refArea    lodcom:gelmer-dyckburg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_264
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.09"^^xsd:float ;
+        lodcom:refArea    lodcom:nord ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_77
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.68"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte-sued ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_243
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.48"^^xsd:float ;
+        lodcom:refArea    lodcom:schuetzenhof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_56
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.86"^^xsd:float ;
+        lodcom:refArea    lodcom:muenster ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_222
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.44"^^xsd:float ;
+        lodcom:refArea    lodcom:amelsbueren ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_35
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.06"^^xsd:float ;
+        lodcom:refArea    lodcom:west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_201
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.09"^^xsd:float ;
+        lodcom:refArea    lodcom:roxel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_14
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.45"^^xsd:float ;
+        lodcom:refArea    lodcom:neutor ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_193
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.88"^^xsd:float ;
+        lodcom:refArea    lodcom:rumphorst ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_172
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.35"^^xsd:float ;
+        lodcom:refArea    lodcom:buddenturm ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_151
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.32"^^xsd:float ;
+        lodcom:refArea    lodcom:sprakel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_130
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.65"^^xsd:float ;
+        lodcom:refArea    lodcom:geist ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_109
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.21"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_272
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.12"^^xsd:float ;
+        lodcom:refArea    lodcom:wolbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_85
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.99"^^xsd:float ;
+        lodcom:refArea    lodcom:gievenbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_251
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.66"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte-nordost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_64
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.39"^^xsd:float ;
+        lodcom:refArea    lodcom:josef ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_230
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.35"^^xsd:float ;
+        lodcom:refArea    lodcom:altstadt ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_5
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.36"^^xsd:float ;
+        lodcom:refArea    lodcom:martini ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_43
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.29"^^xsd:float ;
+        lodcom:refArea    lodcom:handorf ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_22
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.35"^^xsd:float ;
+        lodcom:refArea    lodcom:hafen ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_209
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.92"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_180
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.64"^^xsd:float ;
+        lodcom:refArea    lodcom:schlachthof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_159
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.03"^^xsd:float ;
+        lodcom:refArea    lodcom:angelmodde ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_138
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.65"^^xsd:float ;
+        lodcom:refArea    lodcom:uppenberg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_117
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.33"^^xsd:float ;
+        lodcom:refArea    lodcom:martini ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_280
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.8"^^xsd:float ;
+        lodcom:refArea    lodcom:muenster ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_93
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.87"^^xsd:float ;
+        lodcom:refArea    lodcom:kinderhaus-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_72
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.45"^^xsd:float ;
+        lodcom:refArea    lodcom:innenstadtring ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_259
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.97"^^xsd:float ;
+        lodcom:refArea    lodcom:west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_51
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.2"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_238
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.43"^^xsd:float ;
+        lodcom:refArea    lodcom:neutor ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_30
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.73"^^xsd:float ;
+        lodcom:refArea    lodcom:sentrup ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_217
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.07"^^xsd:float ;
+        lodcom:refArea    lodcom:suedost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_188
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.94"^^xsd:float ;
+        lodcom:refArea    lodcom:dueesberg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_167
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.11"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_146
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.99"^^xsd:float ;
+        lodcom:refArea    lodcom:nienberge ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_125
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.51"^^xsd:float ;
+        lodcom:refArea    lodcom:kreuz ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_104
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.17"^^xsd:float ;
+        lodcom:refArea    lodcom:wolbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_80
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.65"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_267
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.24"^^xsd:float ;
+        lodcom:refArea    lodcom:handorf ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_246
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.35"^^xsd:float ;
+        lodcom:refArea    lodcom:hafen ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_59
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.33"^^xsd:float ;
+        lodcom:refArea    lodcom:dom ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_225
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.44"^^xsd:float ;
+        lodcom:refArea    lodcom:aegidii ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_38
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.2"^^xsd:float ;
+        lodcom:refArea    lodcom:kinderhaus-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_204
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.16"^^xsd:float ;
+        lodcom:refArea    lodcom:coerde ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_17
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.78"^^xsd:float ;
+        lodcom:refArea    lodcom:aaseestadt ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_196
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.54"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_175
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.33"^^xsd:float ;
+        lodcom:refArea    lodcom:pluggendorf ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_154
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.23"^^xsd:float ;
+        lodcom:refArea    lodcom:gelmer-dyckburg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_133
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.68"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte-sued ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_112
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.82"^^xsd:float ;
+        lodcom:refArea    lodcom:muenster ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_275
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.11"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_88
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.42"^^xsd:float ;
+        lodcom:refArea    lodcom:albachten ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_254
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.65"^^xsd:float ;
+        lodcom:refArea    lodcom:sentrup ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_67
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.46"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_233
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.29"^^xsd:float ;
+        lodcom:refArea    lodcom:bahnhof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_8
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.41"^^xsd:float ;
+        lodcom:refArea    lodcom:josef ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_46
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.19"^^xsd:float ;
+        lodcom:refArea    lodcom:gremmendorf-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_212
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.07"^^xsd:float ;
+        lodcom:refArea    lodcom:ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_25
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.96"^^xsd:float ;
+        lodcom:refArea    lodcom:rumphorst ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_183
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.57"^^xsd:float ;
+        lodcom:refArea    lodcom:schloss ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_162
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.14"^^xsd:float ;
+        lodcom:refArea    lodcom:berg_fidel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_141
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.97"^^xsd:float ;
+        lodcom:refArea    lodcom:gievenbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_120
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.39"^^xsd:float ;
+        lodcom:refArea    lodcom:josef ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_96
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.12"^^xsd:float ;
+        lodcom:refArea    lodcom:nord ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_262
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.12"^^xsd:float ;
+        lodcom:refArea    lodcom:kinderhaus-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_75
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.47"^^xsd:float ;
+        lodcom:refArea    lodcom:schuetzenhof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_241
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.75"^^xsd:float ;
+        lodcom:refArea    lodcom:aaseestadt ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_54
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.49"^^xsd:float ;
+        lodcom:refArea    lodcom:amelsbueren ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_220
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.85"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_33
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.1"^^xsd:float ;
+        lodcom:refArea    lodcom:roxel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_12
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.67"^^xsd:float ;
+        lodcom:refArea    lodcom:schlachthof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_191
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.5"^^xsd:float ;
+        lodcom:refArea    lodcom:herz-jesu ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_170
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.3"^^xsd:float ;
+        lodcom:refArea    lodcom:ueberwasser ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_149
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.88"^^xsd:float ;
+        lodcom:refArea    lodcom:kinderhaus-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_128
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.44"^^xsd:float ;
+        lodcom:refArea    lodcom:innenstadtring ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_107
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.17"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_270
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.09"^^xsd:float ;
+        lodcom:refArea    lodcom:gremmendorf-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_83
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.67"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte-nordost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_62
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.35"^^xsd:float ;
+        lodcom:refArea    lodcom:altstadt ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_249
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.9"^^xsd:float ;
+        lodcom:refArea    lodcom:rumphorst ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_3
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.36"^^xsd:float ;
+        lodcom:refArea    lodcom:dom ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_41
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.94"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_228
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.36"^^xsd:float ;
+        lodcom:refArea    lodcom:buddenturm ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_20
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.96"^^xsd:float ;
+        lodcom:refArea    lodcom:dueesberg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_207
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.27"^^xsd:float ;
+        lodcom:refArea    lodcom:sprakel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_199
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.05"^^xsd:float ;
+        lodcom:refArea    lodcom:mecklenbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_178
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.36"^^xsd:float ;
+        lodcom:refArea    lodcom:hansaplatz ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_157
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.1"^^xsd:float ;
+        lodcom:refArea    lodcom:gremmendorf-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_136
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.65"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_115
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.33"^^xsd:float ;
+        lodcom:refArea    lodcom:dom ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_91
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.99"^^xsd:float ;
+        lodcom:refArea    lodcom:west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_278
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.43"^^xsd:float ;
+        lodcom:refArea    lodcom:amelsbueren ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_70
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.4"^^xsd:float ;
+        lodcom:refArea    lodcom:neutor ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_257
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.08"^^xsd:float ;
+        lodcom:refArea    lodcom:roxel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_236
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.65"^^xsd:float ;
+        lodcom:refArea    lodcom:schlachthof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_49
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.15"^^xsd:float ;
+        lodcom:refArea    lodcom:suedost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_215
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.01"^^xsd:float ;
+        lodcom:refArea    lodcom:angelmodde ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_28
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.58"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_186
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.64"^^xsd:float ;
+        lodcom:refArea    lodcom:geist ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_165
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.2"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_144
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.41"^^xsd:float ;
+        lodcom:refArea    lodcom:albachten ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_123
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.45"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_102
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.17"^^xsd:float ;
+        lodcom:refArea    lodcom:gremmendorf-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_99
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.25"^^xsd:float ;
+        lodcom:refArea    lodcom:handorf ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_265
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.92"^^xsd:float ;
+        lodcom:refArea    lodcom:mauritz-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_78
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.34"^^xsd:float ;
+        lodcom:refArea    lodcom:hafen ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_244
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.94"^^xsd:float ;
+        lodcom:refArea    lodcom:dueesberg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_57
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.41"^^xsd:float ;
+        lodcom:refArea    lodcom:aegidii ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_223
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.1"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_36
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.21"^^xsd:float ;
+        lodcom:refArea    lodcom:coerde ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_202
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.98"^^xsd:float ;
+        lodcom:refArea    lodcom:nienberge ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_15
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.62"^^xsd:float ;
+        lodcom:refArea    lodcom:schloss ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_194
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.64"^^xsd:float ;
+        lodcom:refArea    lodcom:uppenberg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_173
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.34"^^xsd:float ;
+        lodcom:refArea    lodcom:martini ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_152
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.12"^^xsd:float ;
+        lodcom:refArea    lodcom:nord ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_131
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.47"^^xsd:float ;
+        lodcom:refArea    lodcom:schuetzenhof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_110
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.47"^^xsd:float ;
+        lodcom:refArea    lodcom:amelsbueren ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_273
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.07"^^xsd:float ;
+        lodcom:refArea    lodcom:suedost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_86
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.65"^^xsd:float ;
+        lodcom:refArea    lodcom:sentrup ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_252
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.54"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_65
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.26"^^xsd:float ;
+        lodcom:refArea    lodcom:bahnhof ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_231
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.35"^^xsd:float ;
+        lodcom:refArea    lodcom:pluggendorf ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_6
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.38"^^xsd:float ;
+        lodcom:refArea    lodcom:altstadt ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_44
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.11"^^xsd:float ;
+        lodcom:refArea    lodcom:ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_210
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.2"^^xsd:float ;
+        lodcom:refArea    lodcom:gelmer-dyckburg ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_23
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.55"^^xsd:float ;
+        lodcom:refArea    lodcom:herz-jesu ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_181
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.51"^^xsd:float ;
+        lodcom:refArea    lodcom:kreuz ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_160
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.15"^^xsd:float ;
+        lodcom:refArea    lodcom:wolbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_139
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.67"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte-nordost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_118
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.35"^^xsd:float ;
+        lodcom:refArea    lodcom:altstadt ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_94
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.14"^^xsd:float ;
+        lodcom:refArea    lodcom:kinderhaus-west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_260
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.14"^^xsd:float ;
+        lodcom:refArea    lodcom:coerde ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_73
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.78"^^xsd:float ;
+        lodcom:refArea    lodcom:aaseestadt ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_52
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.9"^^xsd:float ;
+        lodcom:refArea    lodcom:hiltrup-mitte ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_239
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.55"^^xsd:float ;
+        lodcom:refArea    lodcom:schloss ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_31
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.09"^^xsd:float ;
+        lodcom:refArea    lodcom:mecklenbeck ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_218
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.13"^^xsd:float ;
+        lodcom:refArea    lodcom:berg_fidel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_10
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.4"^^xsd:float ;
+        lodcom:refArea    lodcom:hansaplatz ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_189
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.67"^^xsd:float ;
+        lodcom:refArea    lodcom:mitte-sued ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_168
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.82"^^xsd:float ;
+        lodcom:refArea    lodcom:muenster ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_147
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.99"^^xsd:float ;
+        lodcom:refArea    lodcom:west ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_126
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.41"^^xsd:float ;
+        lodcom:refArea    lodcom:neutor ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_105
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.12"^^xsd:float ;
+        lodcom:refArea    lodcom:suedost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_81
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.91"^^xsd:float ;
+        lodcom:refArea    lodcom:rumphorst ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_268
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.07"^^xsd:float ;
+        lodcom:refArea    lodcom:ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_60
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.38"^^xsd:float ;
+        lodcom:refArea    lodcom:buddenturm ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_247
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.5"^^xsd:float ;
+        lodcom:refArea    lodcom:herz-jesu ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_1
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.43"^^xsd:float ;
+        lodcom:refArea    lodcom:aegidii ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_226
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.31"^^xsd:float ;
+        lodcom:refArea    lodcom:ueberwasser ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_39
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "2.33"^^xsd:float ;
+        lodcom:refArea    lodcom:sprakel ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_205
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.89"^^xsd:float ;
+        lodcom:refArea    lodcom:kinderhaus-ost ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:average_pph_obs_18
+        a                 qb:Observation ;
+        qb:dataSet        lodcom:AveragePersonsPerHousehold ;
+        qb:measureType    lodcom:averagePersonsPerHousehold ;
+        lodcom:averagePersonsPerHousehold
+                "1.7"^^xsd:float ;
+        lodcom:refArea    lodcom:geist ;
+        lodcom:refPeriod  <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .

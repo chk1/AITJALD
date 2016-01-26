@@ -1,0 +1,284 @@
+@prefix schema: <http://schema.org/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix sdmx:  <http://purl.org/linked-data/sdmx#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix geo:   <http://www.opengis.net/ont/geosparql#> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix sf:    <http://www.opengis.net/ont/sf#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix lodcom: <http://vocab.lodcom.de/> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix interval: <http://reference.data.gov.uk/def/intervals/> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+
+lodcom:SingleHouseholdTotalCount
+        a                           qb:DataSet ;
+        rdfs:label                  "1-Personen-Haushalte der Wohnberechtigten Bevölkerung"@de , "Total Household Count of Single Households"@en ;
+        dc:publisher                lodcom:CityAdministrationMuensterDPT ;
+        qb:structure                lodcom:HouseholdCountsStructure ;
+        sdmx-attribute:unitMeasure  lodcom:Household .
+
+lodcom:AgeRange_50_59
+        a                           lodcom:AgeRange ;
+        rdfs:comment                "The age range for people being 50 to 59 years old." ;
+        sdmx-attribute:unitMeasure  dbo:Year ;
+        lodcom:max                  "59"^^xsd:int ;
+        lodcom:min                  "50"^^xsd:int .
+
+lodcom:AgeRange_30_39
+        a                           lodcom:AgeRange ;
+        rdfs:comment                "The age range for people being 30 to 39 years old." ;
+        sdmx-attribute:unitMeasure  dbo:Year ;
+        lodcom:max                  "39"^^xsd:int ;
+        lodcom:min                  "30"^^xsd:int .
+
+lodcom:ageRange  a    qb:DimensionProperty , rdf:Property ;
+        rdfs:comment  "The dimension relation for an age range on people of an observation." ;
+        rdfs:label    "age range"@en ;
+        rdfs:range    lodcom:AgeRange .
+
+lodcom:refAreaDim  rdfs:comment  "This is the a dimension definition of the reference area. A reference area is a administrative region." ;
+        qb:dimension  lodcom:refArea .
+
+lodcom:FourPersonsHouseholdCount
+        a                           qb:DataSet ;
+        rdfs:label                  "4-Personen-Haushalte der Wohnberechtigten Bevölkerung"@de , "Total Household Count of 4-Person Households"@en ;
+        dc:publisher                lodcom:CityAdministrationMuensterDPT ;
+        qb:structure                lodcom:HouseholdCountsStructure ;
+        sdmx-attribute:unitMeasure  lodcom:Household .
+
+lodcom:ageRangeDim  rdfs:comment  "This dimension relates the coordinate type to an age interval." ;
+        qb:dimension  lodcom:ageRange .
+
+lodcom:SingleGenderHouseholdCountsStructure
+        a             qb:DataStructureDefinition ;
+        rdfs:comment  "A data structure definition that contains the total count and the percentage values of single households in administrative city districts for a given time period and separated by sex." ;
+        qb:component  lodcom:attributeOnObs , lodcom:percentageMeasure , lodcom:countMeasure , lodcom:measureTypeDim , lodcom:refPeriodDim , lodcom:refAreaDim ;
+        qb:component  [ qb:dimension  sdmx-dimension:sex ] .
+
+lodcom:percentageMeasure
+        rdfs:comment  "This resource defines the measurement of a data set. In this case it relates to the percentage measurement, meaning the amount of households in percent." ;
+        qb:measure    lodcom:percentageOfHouseholds .
+
+lodcom:AveragePersonsPerHouseholdCountsStructure
+        a             qb:DataStructureDefinition ;
+        rdfs:comment  "A data structure definition that measures the average amount of persons living in a household for different administrative city districts and time periods." ;
+        qb:component  lodcom:attributeOnDS , lodcom:averageMeasure , lodcom:measureTypeDim , lodcom:refPeriodDim , lodcom:refAreaDim .
+
+lodcom:SingleHouseholdGenderCount
+        a             qb:DataSet ;
+        rdfs:label    "1-Personen-Haushalte der Wohnberechtigten Bevölkerung 2014 nach Geschlecht"@de , "Single Households in 2014 divided by Gender"@en ;
+        dc:publisher  lodcom:CityAdministrationMuensterDPT ;
+        qb:structure  lodcom:SingleGenderHouseholdCountsStructure .
+
+lodcom:AgeRange  a    rdfs:Class ;
+        rdfs:comment  "An age range is an interval that defines a certain age span for people." ;
+        rdfs:label    "Age Range"@en , "Altersgruppe"@de .
+
+lodcom:AgeRange_70_79
+        a                           lodcom:AgeRange ;
+        rdfs:comment                "The age range for people being 70 to 79 years old." ;
+        sdmx-attribute:unitMeasure  dbo:Year ;
+        lodcom:max                  "79"^^xsd:int ;
+        lodcom:min                  "70"^^xsd:int .
+
+lodcom:AgeRange_0_19  a             lodcom:AgeRange ;
+        rdfs:comment                "The age range for people being 0 to 19 years old." ;
+        sdmx-attribute:unitMeasure  dbo:Year ;
+        lodcom:max                  "19"^^xsd:int ;
+        lodcom:min                  "0"^^xsd:int .
+
+lodcom:AgeRange_20_29
+        a                           lodcom:AgeRange ;
+        rdfs:comment                "The age range for people being 20 to 29 years old." ;
+        sdmx-attribute:unitMeasure  dbo:Year ;
+        lodcom:max                  "29"^^xsd:int ;
+        lodcom:min                  "20"^^xsd:int .
+
+lodcom:CityAdministrationMuensterDPT
+        a                          dc:Agent , vcard:Organization ;
+        vcard:hasAddress           [ vcard:country      "Deutschland"@de , "Germany"@en ;
+                                     vcard:locality     "Münster"@de ;
+                                     vcard:postal-code  "48127"
+                                   ] ;
+        vcard:hasEmail             "mailto:statistik@stadt-muenster.de" ;
+        vcard:hasFN                "Stadt Münster - Amt für Stadtentwicklung, Stadtplanung, Verkehrsplanung"@de ;
+        vcard:hasOrganizationName  "Stadt Münster"@de ;
+        vcard:hasOrganizationUnit  "Amt für Stadtentwicklung, Stadtplanung, Verkehrsplanung"@de ;
+        vcard:hasTelephone         [ a               vcard:Voice ;
+                                     vcard:hasValue  "tel: +492514921234"
+                                   ] .
+
+lodcom:numberOfHouseholds
+        a                   qb:MeasureProperty , rdf:Property ;
+        rdfs:comment        "The measurement relation of an observation measuring the amount of households." ;
+        rdfs:label          "the number of households"@en ;
+        rdfs:range          xsd:integer ;
+        rdfs:subPropertyOf  sdmx-measure:obsValue .
+
+lodcom:TotalHouseholdCount
+        a                           qb:DataSet ;
+        rdfs:comment                "Number of Households in M&uuml;nster in total - extracted from M&uuml;nster city statistics"@en ;
+        rdfs:label                  "Haushalte der Wohnberechtigen Bevölkerung"@de , "Total Household Count in M&uuml;nster"@en ;
+        dc:publisher                lodcom:CityAdministrationMuensterDPT ;
+        qb:structure                lodcom:HouseholdCountsStructure ;
+        sdmx-attribute:unitMeasure  lodcom:Household .
+
+lodcom:Person  a      rdfs:Class ;
+        rdfs:label    "Person"@de , "person"@en ;
+        rdfs:seeAlso  dbo:Person .
+
+lodcom:FivePersonsMoreHouseholdCount
+        a                           qb:DataSet ;
+        rdfs:label                  "5- und mehr Personen-Haushalte der Wohnberechtigten Bevölkerung"@de , "Total Household Count of 5-Person Households and more"@en ;
+        dc:publisher                lodcom:CityAdministrationMuensterDPT ;
+        qb:structure                lodcom:HouseholdCountsStructure ;
+        sdmx-attribute:unitMeasure  lodcom:Household .
+
+lodcom:TwoPersonsHouseholdCount
+        a                           qb:DataSet ;
+        rdfs:label                  "2-Personen-Haushalte der Wohnberechtigten Bevölkerung"@de , "Total Household Count of 2-Person Households"@en ;
+        dc:publisher                lodcom:CityAdministrationMuensterDPT ;
+        qb:structure                lodcom:HouseholdCountsStructure ;
+        sdmx-attribute:unitMeasure  lodcom:Household .
+
+lodcom:AveragePersonsPerHousehold
+        a                           qb:DataSet ;
+        rdfs:label                  "Durchschittliche Haushaltegröße der Wohnberechtigten Bevölkerung"@de , "Average household sizes"@en ;
+        dc:publisher                lodcom:CityAdministrationMuensterDPT ;
+        qb:structure                lodcom:AveragePersonsPerHouseholdCountsStructure ;
+        sdmx-attribute:unitMeasure  lodcom:Person .
+
+lodcom:measureTypeDim
+        rdfs:comment  "If a data set has multiple measurements, then this dimension makes it easier to find the correct measurement property." ;
+        qb:dimension  qb:measureType .
+
+lodcom:averagePersonsPerHousehold
+        a                   qb:MeasureProperty , rdf:Property ;
+        rdfs:comment        "The measurment relation of an observation measuring the average amount of persons in a household." ;
+        rdfs:label          "average persons per household"@en ;
+        rdfs:range          xsd:float ;
+        rdfs:subPropertyOf  sdmx-measure:obsValue .
+
+lodcom:attributeOnDS  rdfs:comment  "This resource is set on the data structure definition to state that the unit of measure is attached to the data set." ;
+        qb:attribute            sdmx-attribute:unitMeasure ;
+        qb:componentAttachment  qb:DataSet ;
+        qb:componentRequired    true .
+
+lodcom:AgeRange_60_69
+        a                           lodcom:AgeRange ;
+        rdfs:comment                "The age range for people being 60 to 69 years old." ;
+        sdmx-attribute:unitMeasure  dbo:Year ;
+        lodcom:max                  "69"^^xsd:int ;
+        lodcom:min                  "60"^^xsd:int .
+
+lodcom:AgeRange_40_49
+        a                           lodcom:AgeRange ;
+        rdfs:comment                "The age range for people being 40 to 49 years old." ;
+        sdmx-attribute:unitMeasure  dbo:Year ;
+        lodcom:max                  "49"^^xsd:int ;
+        lodcom:min                  "40"^^xsd:int .
+
+lodcom:HouseholdCountsStructure
+        a             qb:DataStructureDefinition ;
+        rdfs:comment  "A data structure definition for data sets measuring the count of households in an administrative city districts for a giving time period."@en ;
+        qb:component  lodcom:attributeOnDS , lodcom:countMeasure , lodcom:measureTypeDim , lodcom:refPeriodDim , lodcom:refAreaDim .
+
+lodcom:countMeasure  rdfs:comment  "This resource defines the measurement of a data set. In this case it relates to the count measurement, meaning the amount of households." ;
+        qb:measure    lodcom:numberOfHouseholds .
+
+lodcom:refArea  a           qb:DimensionProperty , rdf:Property ;
+        rdfs:comment        "The respecified dimension relation for a reference area of an observation." ;
+        rdfs:label          "reference area"@en ;
+        rdfs:range          dbo:AdministrativeRegion ;
+        rdfs:subPropertyOf  sdmx-dimension:refArea ;
+        qb:concept          qb:refArea .
+
+lodcom:max  rdfs:comment    "The upper boundary of the age range in years." ;
+        rdfs:domain         lodcom:AgeRange ;
+        rdfs:range          xsd:integer ;
+        rdfs:subPropertyOf  dbo:max .
+
+lodcom:HouseholdsWithChildrenCount
+        a                           qb:DataSet ;
+        rdfs:label                  "Haushalte der Wohnberechtigten Bevölkerung mit Kindern"@de , "Households with children count"@en ;
+        dc:publisher                lodcom:CityAdministrationMuensterDPT ;
+        qb:structure                lodcom:HouseholdCountsStructure ;
+        sdmx-attribute:unitMeasure  lodcom:Household .
+
+lodcom:SingleHouseholdAgeRangeCount
+        a                           qb:DataSet ;
+        rdfs:label                  "1-Personen-Haushalte der Wohnberechtigten Bevölkerung 2014 nach Altersgruppen"@de , "Single Households in 2014 divided by age ranges"@en ;
+        dc:publisher                lodcom:CityAdministrationMuensterDPT ;
+        qb:structure                lodcom:SingleHouseholdAgeRangesCountsStructure ;
+        sdmx-attribute:unitMeasure  lodcom:Household .
+
+lodcom:Percentage  a  rdfs:Class ;
+        rdfs:label  "Prozent an Haushalten"@de , "percent on households"@en .
+
+lodcom:averageMeasure
+        rdfs:comment  "This resource defines the measurement of a data set. In this case it relates to the average persons per household measurement." ;
+        qb:measure    lodcom:averagePersonsPerHousehold .
+
+lodcom:refPeriod  a         qb:DimensionProperty , rdf:Property ;
+        rdfs:comment        "The respecified dimension relation for a time interval of an observation." ;
+        rdfs:label          "reference period"@en ;
+        rdfs:range          interval:Interval ;
+        rdfs:subPropertyOf  sdmx-dimension:refPeriod ;
+        qb:concept          qb:refPeriod .
+
+lodcom:SingleHouseholdAgeRangesCountsStructure
+        a             qb:DataStructureDefinition ;
+        rdfs:comment  "A data structure definition that measures the amount of single households categorized by different age ranges for the administrative city districts and time periods." ;
+        qb:component  lodcom:attributeOnDS , lodcom:countMeasure , lodcom:measureTypeDim , lodcom:ageRangeDim , lodcom:refPeriodDim , lodcom:refAreaDim .
+
+lodcom:AgeRange_80  a               lodcom:AgeRange ;
+        rdfs:comment                "The age range for people being 80 years or older." ;
+        sdmx-attribute:unitMeasure  dbo:Year ;
+        lodcom:min                  "80"^^xsd:int .
+
+lodcom:min  rdfs:comment    "The lower boundary of the age range in years." ;
+        rdfs:domain         lodcom:AgeRange ;
+        rdfs:range          xsd:integer ;
+        rdfs:subPropertyOf  dbo:min .
+
+lodcom:refPeriodDim  rdfs:comment  "This dimension definition uses a reference time period." ;
+        qb:dimension  lodcom:refPeriod .
+
+lodcom:SingleParentHouseholdCount
+        a                           qb:DataSet ;
+        rdfs:label                  "Alleinerziehende Haushalte der Wohnberechtigten Bevölkerung"@de , "Households with single parent"@en ;
+        dc:publisher                lodcom:CityAdministrationMuensterDPT ;
+        qb:structure                lodcom:HouseholdCountsStructure ;
+        sdmx-attribute:unitMeasure  lodcom:Household .
+
+lodcom:ThreePersonsHouseholdCount
+        a                           qb:DataSet ;
+        rdfs:label                  "3-Personen-Haushalte der Wohnberechtigten Bevölkerung"@de , "Total Household Count of 3-Person Households"@en ;
+        dc:publisher                lodcom:CityAdministrationMuensterDPT ;
+        qb:structure                lodcom:HouseholdCountsStructure ;
+        sdmx-attribute:unitMeasure  lodcom:Household .
+
+lodcom:Household  a       rdfs:Class ;
+        rdfs:comment      "A person or a group of people registered in a city that live together"@en ;
+        rdfs:isDefinedBy  <http://www.muenster.de/stadt/stadtplanung/pdf/SMS_Haushalte_2014.pdf> ;
+        rdfs:label        "Haushalt"@de , "Household"@en .
+
+lodcom:attributeOnObs
+        rdfs:comment            "This resource is set on the data structure definition to state that the unit of measure is attached to each of the individual observations." ;
+        qb:attribute            sdmx-attribute:unitMeasure ;
+        qb:componentAttachment  qb:Observation ;
+        qb:componentRequired    true .
+
+lodcom:percentageOfHouseholds
+        a                   qb:MeasureProperty , rdf:Property ;
+        rdfs:comment        "The measurement relation of an observation measuring the relative amount of households in percent." ;
+        rdfs:label          "percentage of households"@en ;
+        rdfs:range          xsd:float ;
+        rdfs:subPropertyOf  dbo:percentage , sdmx-measure:obsValue .

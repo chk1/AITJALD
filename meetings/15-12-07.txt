@@ -1,0 +1,23 @@
+Meeting 07.12.2015
+
+- Topics:
+- last weeks work review
+	- oleg: ways of visualizing data, spatial components
+	- shivam: converted pdf, looking at JQuery for getting data from triple store, ways of visualizing statistical data
+	- florian: converted shp to linked data, prepared excel file for linked data, prepared example about districts, data set and observation
+	- christoph: 
+- check if everyone is on GitHub / Trello / email list
+	- all done
+- reassign / update trello / planning for next week
+- discussion about example / send to Auriol
+	- observations, how it is formed (triples: area,period,householdCount) in the most easiest way
+	- more dimensional if we have information like gender or age intervals
+- discussion license for data / code
+	- putting aside for now
+- discussion visualization approach (possible frameworks)
+	- mapbox
+	- chart.js
+- discussion server / technology / etc.
+	- output of triple store is like a table, depending on the sparql query you have used (e.g. how the output variables are named, those will be the columns of the output)
+- nex meeting:
+	- monday 14-12-2015 14:00 at Shivams office

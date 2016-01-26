@@ -1,0 +1,1978 @@
+@prefix schema: <http://schema.org/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix sdmx:  <http://purl.org/linked-data/sdmx#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix geo:   <http://www.opengis.net/ont/geosparql#> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix sf:    <http://www.opengis.net/ont/sf#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix lodcom: <http://vocab.lodcom.de/> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix interval: <http://reference.data.gov.uk/def/intervals/> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+
+lodcom:total_obs_81  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4153"^^xsd:int ;
+        lodcom:refArea             lodcom:rumphorst ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_158  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3012"^^xsd:int ;
+        lodcom:refArea             lodcom:gremmendorf-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_60  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1538"^^xsd:int ;
+        lodcom:refArea             lodcom:buddenturm ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_137  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4212"^^xsd:int ;
+        lodcom:refArea             lodcom:rumphorst ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_39  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1260"^^xsd:int ;
+        lodcom:refArea             lodcom:sprakel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_116  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1546"^^xsd:int ;
+        lodcom:refArea             lodcom:buddenturm ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_18  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5093"^^xsd:int ;
+        lodcom:refArea             lodcom:geist ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_279  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "17498"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_258  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3433"^^xsd:int ;
+        lodcom:refArea             lodcom:nienberge ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_237  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "8235"^^xsd:int ;
+        lodcom:refArea             lodcom:kreuz ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_216  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4137"^^xsd:int ;
+        lodcom:refArea             lodcom:wolbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_187  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5148"^^xsd:int ;
+        lodcom:refArea             lodcom:schuetzenhof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_166  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2422"^^xsd:int ;
+        lodcom:refArea             lodcom:amelsbueren ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_89  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4185"^^xsd:int ;
+        lodcom:refArea             lodcom:roxel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_68  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3062"^^xsd:int ;
+        lodcom:refArea             lodcom:schlachthof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_145  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4254"^^xsd:int ;
+        lodcom:refArea             lodcom:roxel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_47  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3528"^^xsd:int ;
+        lodcom:refArea             lodcom:angelmodde ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_124  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3101"^^xsd:int ;
+        lodcom:refArea             lodcom:schlachthof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_26  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4604"^^xsd:int ;
+        lodcom:refArea             lodcom:uppenberg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_103  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3626"^^xsd:int ;
+        lodcom:refArea             lodcom:angelmodde ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_266  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1682"^^xsd:int ;
+        lodcom:refArea             lodcom:gelmer-dyckburg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_4  a              qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1401"^^xsd:int ;
+        lodcom:refArea             lodcom:buddenturm ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_245  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "17233"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte-sued ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_224  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "162500"^^xsd:int ;
+        lodcom:refArea             lodcom:muenster ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_203  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "29626"^^xsd:int ;
+        lodcom:refArea             lodcom:west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_195  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "19273"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte-nordost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_174  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "6268"^^xsd:int ;
+        lodcom:refArea             lodcom:altstadt ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_97  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5200"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_76  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3485"^^xsd:int ;
+        lodcom:refArea             lodcom:dueesberg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_153  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5295"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_55  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "16666"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_132  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3504"^^xsd:int ;
+        lodcom:refArea             lodcom:dueesberg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_34  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3196"^^xsd:int ;
+        lodcom:refArea             lodcom:nienberge ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_111  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "17156"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_13  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "7678"^^xsd:int ;
+        lodcom:refArea             lodcom:kreuz ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_274  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2614"^^xsd:int ;
+        lodcom:refArea             lodcom:berg_fidel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_253  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "10748"^^xsd:int ;
+        lodcom:refArea             lodcom:gievenbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_232  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "6217"^^xsd:int ;
+        lodcom:refArea             lodcom:josef ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_211  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3476"^^xsd:int ;
+        lodcom:refArea             lodcom:handorf ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_182  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3004"^^xsd:int ;
+        lodcom:refArea             lodcom:neutor ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_161  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "12954"^^xsd:int ;
+        lodcom:refArea             lodcom:suedost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_84  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "77416"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_63  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3079"^^xsd:int ;
+        lodcom:refArea             lodcom:pluggendorf ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_140  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "77291"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_42  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1536"^^xsd:int ;
+        lodcom:refArea             lodcom:gelmer-dyckburg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_119  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3072"^^xsd:int ;
+        lodcom:refArea             lodcom:pluggendorf ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_21  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "16200"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte-sued ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_261  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2661"^^xsd:int ;
+        lodcom:refArea             lodcom:kinderhaus-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_240  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "35319"^^xsd:int ;
+        lodcom:refArea             lodcom:innenstadtring ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_219  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2995"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_190  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "793"^^xsd:int ;
+        lodcom:refArea             lodcom:hafen ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_92  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4673"^^xsd:int ;
+        lodcom:refArea             lodcom:coerde ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_169  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "995"^^xsd:int ;
+        lodcom:refArea             lodcom:aegidii ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_71  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1314"^^xsd:int ;
+        lodcom:refArea             lodcom:schloss ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_148  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4714"^^xsd:int ;
+        lodcom:refArea             lodcom:coerde ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_50  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2491"^^xsd:int ;
+        lodcom:refArea             lodcom:berg_fidel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_127  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1295"^^xsd:int ;
+        lodcom:refArea             lodcom:schloss ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_29  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "8998"^^xsd:int ;
+        lodcom:refArea             lodcom:gievenbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_106  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2580"^^xsd:int ;
+        lodcom:refArea             lodcom:berg_fidel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_269  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2430"^^xsd:int ;
+        lodcom:refArea             lodcom:gremmendorf-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_7  a              qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2761"^^xsd:int ;
+        lodcom:refArea             lodcom:pluggendorf ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_248  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "6241"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_227  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1585"^^xsd:int ;
+        lodcom:refArea             lodcom:dom ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_206  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4913"^^xsd:int ;
+        lodcom:refArea             lodcom:kinderhaus-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_198  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4451"^^xsd:int ;
+        lodcom:refArea             lodcom:sentrup ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_177  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "936"^^xsd:int ;
+        lodcom:refArea             lodcom:bahnhof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_156  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "10394"^^xsd:int ;
+        lodcom:refArea             lodcom:ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_79  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2911"^^xsd:int ;
+        lodcom:refArea             lodcom:herz-jesu ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_58  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1073"^^xsd:int ;
+        lodcom:refArea             lodcom:ueberwasser ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_135  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2926"^^xsd:int ;
+        lodcom:refArea             lodcom:herz-jesu ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_37  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2560"^^xsd:int ;
+        lodcom:refArea             lodcom:kinderhaus-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_114  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1049"^^xsd:int ;
+        lodcom:refArea             lodcom:ueberwasser ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_16  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "32288"^^xsd:int ;
+        lodcom:refArea             lodcom:innenstadtring ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_277  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4278"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_256  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2558"^^xsd:int ;
+        lodcom:refArea             lodcom:albachten ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_235  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4282"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_214  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3080"^^xsd:int ;
+        lodcom:refArea             lodcom:gremmendorf-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_185  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3159"^^xsd:int ;
+        lodcom:refArea             lodcom:aaseestadt ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_164  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5150"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_87  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4697"^^xsd:int ;
+        lodcom:refArea             lodcom:mecklenbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_66  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5015"^^xsd:int ;
+        lodcom:refArea             lodcom:hansaplatz ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_143  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4206"^^xsd:int ;
+        lodcom:refArea             lodcom:mecklenbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_45  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2163"^^xsd:int ;
+        lodcom:refArea             lodcom:gremmendorf-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_122  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5024"^^xsd:int ;
+        lodcom:refArea             lodcom:hansaplatz ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_24  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5944"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_101  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2215"^^xsd:int ;
+        lodcom:refArea             lodcom:gremmendorf-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_264  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "13824"^^xsd:int ;
+        lodcom:refArea             lodcom:nord ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_2  a              qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "954"^^xsd:int ;
+        lodcom:refArea             lodcom:ueberwasser ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_243  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5152"^^xsd:int ;
+        lodcom:refArea             lodcom:schuetzenhof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_222  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2439"^^xsd:int ;
+        lodcom:refArea             lodcom:amelsbueren ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_201  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4264"^^xsd:int ;
+        lodcom:refArea             lodcom:roxel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_193  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4286"^^xsd:int ;
+        lodcom:refArea             lodcom:rumphorst ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_172  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1583"^^xsd:int ;
+        lodcom:refArea             lodcom:buddenturm ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_95  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1269"^^xsd:int ;
+        lodcom:refArea             lodcom:sprakel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_151  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1298"^^xsd:int ;
+        lodcom:refArea             lodcom:sprakel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_74  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5342"^^xsd:int ;
+        lodcom:refArea             lodcom:geist ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_53  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3938"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_130  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5328"^^xsd:int ;
+        lodcom:refArea             lodcom:geist ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_32  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2324"^^xsd:int ;
+        lodcom:refArea             lodcom:albachten ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_109  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4083"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_11  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3978"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_272  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4183"^^xsd:int ;
+        lodcom:refArea             lodcom:wolbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_251  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "19355"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte-nordost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_230  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "6179"^^xsd:int ;
+        lodcom:refArea             lodcom:altstadt ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_209  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5343"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_180  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3139"^^xsd:int ;
+        lodcom:refArea             lodcom:schlachthof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_82  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4990"^^xsd:int ;
+        lodcom:refArea             lodcom:uppenberg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_159  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3655"^^xsd:int ;
+        lodcom:refArea             lodcom:angelmodde ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_61  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1017"^^xsd:int ;
+        lodcom:refArea             lodcom:martini ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_138  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5024"^^xsd:int ;
+        lodcom:refArea             lodcom:uppenberg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_40  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "13004"^^xsd:int ;
+        lodcom:refArea             lodcom:nord ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_117  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1024"^^xsd:int ;
+        lodcom:refArea             lodcom:martini ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_280  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "163752"^^xsd:int ;
+        lodcom:refArea             lodcom:muenster ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_19  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4707"^^xsd:int ;
+        lodcom:refArea             lodcom:schuetzenhof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_259  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "30187"^^xsd:int ;
+        lodcom:refArea             lodcom:west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_238  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3005"^^xsd:int ;
+        lodcom:refArea             lodcom:neutor ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_217  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "13415"^^xsd:int ;
+        lodcom:refArea             lodcom:suedost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_188  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3543"^^xsd:int ;
+        lodcom:refArea             lodcom:dueesberg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_90  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3395"^^xsd:int ;
+        lodcom:refArea             lodcom:nienberge ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_167  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "17315"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_69  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "8287"^^xsd:int ;
+        lodcom:refArea             lodcom:kreuz ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_146  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3391"^^xsd:int ;
+        lodcom:refArea             lodcom:nienberge ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_48  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3927"^^xsd:int ;
+        lodcom:refArea             lodcom:wolbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_125  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "8266"^^xsd:int ;
+        lodcom:refArea             lodcom:kreuz ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_27  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "18024"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte-nordost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_104  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4025"^^xsd:int ;
+        lodcom:refArea             lodcom:wolbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_267  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3521"^^xsd:int ;
+        lodcom:refArea             lodcom:handorf ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_5  a              qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "931"^^xsd:int ;
+        lodcom:refArea             lodcom:martini ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_246  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "776"^^xsd:int ;
+        lodcom:refArea             lodcom:hafen ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_225  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "959"^^xsd:int ;
+        lodcom:refArea             lodcom:aegidii ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_204  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4791"^^xsd:int ;
+        lodcom:refArea             lodcom:coerde ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_196  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "77905"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_175  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3098"^^xsd:int ;
+        lodcom:refArea             lodcom:pluggendorf ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_98  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1584"^^xsd:int ;
+        lodcom:refArea             lodcom:gelmer-dyckburg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_154  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1625"^^xsd:int ;
+        lodcom:refArea             lodcom:gelmer-dyckburg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_77  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "16998"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte-sued ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_56  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "150878"^^xsd:int ;
+        lodcom:refArea             lodcom:muenster ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_133  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "17027"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte-sued ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_35  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "26644"^^xsd:int ;
+        lodcom:refArea             lodcom:west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_112  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "160291"^^xsd:int ;
+        lodcom:refArea             lodcom:muenster ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_14  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2717"^^xsd:int ;
+        lodcom:refArea             lodcom:neutor ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_275  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3014"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_254  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4542"^^xsd:int ;
+        lodcom:refArea             lodcom:sentrup ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_233  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "968"^^xsd:int ;
+        lodcom:refArea             lodcom:bahnhof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_212  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "10477"^^xsd:int ;
+        lodcom:refArea             lodcom:ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_183  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1304"^^xsd:int ;
+        lodcom:refArea             lodcom:schloss ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_162  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2583"^^xsd:int ;
+        lodcom:refArea             lodcom:berg_fidel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_85  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "10170"^^xsd:int ;
+        lodcom:refArea             lodcom:gievenbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_64  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "6046"^^xsd:int ;
+        lodcom:refArea             lodcom:josef ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_141  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "10428"^^xsd:int ;
+        lodcom:refArea             lodcom:gievenbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_43  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3290"^^xsd:int ;
+        lodcom:refArea             lodcom:handorf ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_120  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "6031"^^xsd:int ;
+        lodcom:refArea             lodcom:josef ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_22  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "727"^^xsd:int ;
+        lodcom:refArea             lodcom:hafen ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_262  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4914"^^xsd:int ;
+        lodcom:refArea             lodcom:kinderhaus-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_241  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3121"^^xsd:int ;
+        lodcom:refArea             lodcom:aaseestadt ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_220  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5164"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_191  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2904"^^xsd:int ;
+        lodcom:refArea             lodcom:herz-jesu ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_170  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1054"^^xsd:int ;
+        lodcom:refArea             lodcom:ueberwasser ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_93  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2623"^^xsd:int ;
+        lodcom:refArea             lodcom:kinderhaus-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_72  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "35114"^^xsd:int ;
+        lodcom:refArea             lodcom:innenstadtring ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_149  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2628"^^xsd:int ;
+        lodcom:refArea             lodcom:kinderhaus-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_51  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2968"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_128  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "34978"^^xsd:int ;
+        lodcom:refArea             lodcom:innenstadtring ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_30  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3766"^^xsd:int ;
+        lodcom:refArea             lodcom:sentrup ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_107  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3016"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_270  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3109"^^xsd:int ;
+        lodcom:refArea             lodcom:gremmendorf-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_8  a              qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5640"^^xsd:int ;
+        lodcom:refArea             lodcom:josef ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_249  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4265"^^xsd:int ;
+        lodcom:refArea             lodcom:rumphorst ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_228  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1589"^^xsd:int ;
+        lodcom:refArea             lodcom:buddenturm ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_207  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1332"^^xsd:int ;
+        lodcom:refArea             lodcom:sprakel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_199  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4306"^^xsd:int ;
+        lodcom:refArea             lodcom:mecklenbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_178  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4981"^^xsd:int ;
+        lodcom:refArea             lodcom:hansaplatz ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_80  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "6181"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_157  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2225"^^xsd:int ;
+        lodcom:refArea             lodcom:gremmendorf-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_136  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "6117"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_59  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1642"^^xsd:int ;
+        lodcom:refArea             lodcom:dom ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_38  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4678"^^xsd:int ;
+        lodcom:refArea             lodcom:kinderhaus-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_115  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1602"^^xsd:int ;
+        lodcom:refArea             lodcom:dom ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_17  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2990"^^xsd:int ;
+        lodcom:refArea             lodcom:aaseestadt ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_278  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2426"^^xsd:int ;
+        lodcom:refArea             lodcom:amelsbueren ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_257  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4336"^^xsd:int ;
+        lodcom:refArea             lodcom:roxel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_236  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3145"^^xsd:int ;
+        lodcom:refArea             lodcom:schlachthof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_215  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3831"^^xsd:int ;
+        lodcom:refArea             lodcom:angelmodde ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_186  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5350"^^xsd:int ;
+        lodcom:refArea             lodcom:geist ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_165  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4174"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_88  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2414"^^xsd:int ;
+        lodcom:refArea             lodcom:albachten ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_67  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4257"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_144  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2464"^^xsd:int ;
+        lodcom:refArea             lodcom:albachten ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_123  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4238"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_46  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2907"^^xsd:int ;
+        lodcom:refArea             lodcom:gremmendorf-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_25  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3990"^^xsd:int ;
+        lodcom:refArea             lodcom:rumphorst ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_102  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2978"^^xsd:int ;
+        lodcom:refArea             lodcom:gremmendorf-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_265  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5375"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_3  a              qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1508"^^xsd:int ;
+        lodcom:refArea             lodcom:dom ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_244  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3549"^^xsd:int ;
+        lodcom:refArea             lodcom:dueesberg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_223  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "17392"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_202  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3440"^^xsd:int ;
+        lodcom:refArea             lodcom:nienberge ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_194  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5079"^^xsd:int ;
+        lodcom:refArea             lodcom:uppenberg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_173  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1025"^^xsd:int ;
+        lodcom:refArea             lodcom:martini ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_96  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "13470"^^xsd:int ;
+        lodcom:refArea             lodcom:nord ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_75  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5063"^^xsd:int ;
+        lodcom:refArea             lodcom:schuetzenhof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_152  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "13535"^^xsd:int ;
+        lodcom:refArea             lodcom:nord ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_54  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2322"^^xsd:int ;
+        lodcom:refArea             lodcom:amelsbueren ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_131  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5063"^^xsd:int ;
+        lodcom:refArea             lodcom:schuetzenhof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_110  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2384"^^xsd:int ;
+        lodcom:refArea             lodcom:amelsbueren ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_33  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3953"^^xsd:int ;
+        lodcom:refArea             lodcom:roxel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_12  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2856"^^xsd:int ;
+        lodcom:refArea             lodcom:schlachthof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_273  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "13579"^^xsd:int ;
+        lodcom:refArea             lodcom:suedost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_252  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "78086"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_231  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3140"^^xsd:int ;
+        lodcom:refArea             lodcom:pluggendorf ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_210  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1658"^^xsd:int ;
+        lodcom:refArea             lodcom:gelmer-dyckburg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_181  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "8223"^^xsd:int ;
+        lodcom:refArea             lodcom:kreuz ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_160  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4062"^^xsd:int ;
+        lodcom:refArea             lodcom:wolbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_83  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "19036"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte-nordost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_62  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "6268"^^xsd:int ;
+        lodcom:refArea             lodcom:altstadt ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_139  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "19064"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte-nordost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_41  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5004"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_118  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "6222"^^xsd:int ;
+        lodcom:refArea             lodcom:altstadt ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_20  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3410"^^xsd:int ;
+        lodcom:refArea             lodcom:dueesberg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_260  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4885"^^xsd:int ;
+        lodcom:refArea             lodcom:coerde ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_239  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1303"^^xsd:int ;
+        lodcom:refArea             lodcom:schloss ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_218  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2586"^^xsd:int ;
+        lodcom:refArea             lodcom:berg_fidel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_189  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "17200"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte-sued ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_91  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "29200"^^xsd:int ;
+        lodcom:refArea             lodcom:west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_168  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "160654"^^xsd:int ;
+        lodcom:refArea             lodcom:muenster ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_70  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3159"^^xsd:int ;
+        lodcom:refArea             lodcom:neutor ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_147  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "29165"^^xsd:int ;
+        lodcom:refArea             lodcom:west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_49  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "12525"^^xsd:int ;
+        lodcom:refArea             lodcom:suedost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_126  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3071"^^xsd:int ;
+        lodcom:refArea             lodcom:neutor ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_28  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "72209"^^xsd:int ;
+        lodcom:refArea             lodcom:mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_105  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "12844"^^xsd:int ;
+        lodcom:refArea             lodcom:suedost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_268  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "10578"^^xsd:int ;
+        lodcom:refArea             lodcom:ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_6  a              qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5697"^^xsd:int ;
+        lodcom:refArea             lodcom:altstadt ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_247  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2956"^^xsd:int ;
+        lodcom:refArea             lodcom:herz-jesu ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_226  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1019"^^xsd:int ;
+        lodcom:refArea             lodcom:ueberwasser ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_205  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2649"^^xsd:int ;
+        lodcom:refArea             lodcom:kinderhaus-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_197  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "10661"^^xsd:int ;
+        lodcom:refArea             lodcom:gievenbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_176  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "6227"^^xsd:int ;
+        lodcom:refArea             lodcom:josef ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_99  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3421"^^xsd:int ;
+        lodcom:refArea             lodcom:handorf ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_155  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3474"^^xsd:int ;
+        lodcom:refArea             lodcom:handorf ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_78  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "801"^^xsd:int ;
+        lodcom:refArea             lodcom:hafen ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_57  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "998"^^xsd:int ;
+        lodcom:refArea             lodcom:aegidii ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_134  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "785"^^xsd:int ;
+        lodcom:refArea             lodcom:hafen ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_36  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4506"^^xsd:int ;
+        lodcom:refArea             lodcom:coerde ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_113  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1001"^^xsd:int ;
+        lodcom:refArea             lodcom:aegidii ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_15  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1185"^^xsd:int ;
+        lodcom:refArea             lodcom:schloss ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_276  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5166"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_255  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4570"^^xsd:int ;
+        lodcom:refArea             lodcom:mecklenbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_234  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5024"^^xsd:int ;
+        lodcom:refArea             lodcom:hansaplatz ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_213  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2367"^^xsd:int ;
+        lodcom:refArea             lodcom:gremmendorf-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_184  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "35164"^^xsd:int ;
+        lodcom:refArea             lodcom:innenstadtring ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_163  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2986"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_86  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4339"^^xsd:int ;
+        lodcom:refArea             lodcom:sentrup ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_65  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "895"^^xsd:int ;
+        lodcom:refArea             lodcom:bahnhof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_142  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4422"^^xsd:int ;
+        lodcom:refArea             lodcom:sentrup ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_44  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "9830"^^xsd:int ;
+        lodcom:refArea             lodcom:ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_121  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "880"^^xsd:int ;
+        lodcom:refArea             lodcom:bahnhof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_23  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2759"^^xsd:int ;
+        lodcom:refArea             lodcom:herz-jesu ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_100  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "10205"^^xsd:int ;
+        lodcom:refArea             lodcom:ost ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_263  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1364"^^xsd:int ;
+        lodcom:refArea             lodcom:sprakel ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_1  a              qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "903"^^xsd:int ;
+        lodcom:refArea             lodcom:aegidii ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_242  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5411"^^xsd:int ;
+        lodcom:refArea             lodcom:geist ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_221  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4208"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_200  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "2504"^^xsd:int ;
+        lodcom:refArea             lodcom:albachten ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_192  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "6211"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_171  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1611"^^xsd:int ;
+        lodcom:refArea             lodcom:dom ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_94  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4905"^^xsd:int ;
+        lodcom:refArea             lodcom:kinderhaus-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_73  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3108"^^xsd:int ;
+        lodcom:refArea             lodcom:aaseestadt ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_150  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4895"^^xsd:int ;
+        lodcom:refArea             lodcom:kinderhaus-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_52  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4947"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_129  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3132"^^xsd:int ;
+        lodcom:refArea             lodcom:aaseestadt ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2012-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_31  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4407"^^xsd:int ;
+        lodcom:refArea             lodcom:mecklenbeck ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_108  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5093"^^xsd:int ;
+        lodcom:refArea             lodcom:hiltrup-mitte ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2011-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_10  a             qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4655"^^xsd:int ;
+        lodcom:refArea             lodcom:hansaplatz ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_271  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "3857"^^xsd:int ;
+        lodcom:refArea             lodcom:angelmodde ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_250  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "5117"^^xsd:int ;
+        lodcom:refArea             lodcom:uppenberg ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_9  a              qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "818"^^xsd:int ;
+        lodcom:refArea             lodcom:bahnhof ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2010-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_229  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "1027"^^xsd:int ;
+        lodcom:refArea             lodcom:martini ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2014-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_208  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "13685"^^xsd:int ;
+        lodcom:refArea             lodcom:nord ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .
+
+lodcom:total_obs_179  a            qb:Observation ;
+        qb:dataSet                 lodcom:TotalHouseholdCount ;
+        qb:measureType             lodcom:numberOfHouseholds ;
+        lodcom:numberOfHouseholds  "4252"^^xsd:int ;
+        lodcom:refArea             lodcom:mauritz-west ;
+        lodcom:refPeriod           <http://reference.data.gov.uk/id/gregorian-interval/2013-01-01T00:00:00/P1Y> .

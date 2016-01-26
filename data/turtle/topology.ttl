@@ -1,0 +1,196 @@
+@prefix schema: <http://schema.org/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix sdmx:  <http://purl.org/linked-data/sdmx#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix geo:   <http://www.opengis.net/ont/geosparql#> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix sf:    <http://www.opengis.net/ont/sf#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix lodcom: <http://vocab.lodcom.de/> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix interval: <http://reference.data.gov.uk/def/intervals/> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+
+lodcom:geist  lodcom:touches  lodcom:dueesberg , lodcom:aaseestadt , lodcom:pluggendorf , lodcom:josef , lodcom:schuetzenhof ;
+        geo:sfTouches   lodcom:aaseestadt , lodcom:josef , lodcom:dueesberg , lodcom:pluggendorf , lodcom:schuetzenhof .
+
+lodcom:mitte-sued  lodcom:touches  lodcom:mitte-nordost , lodcom:innenstadtring ;
+        geo:sfTouches   lodcom:mitte-nordost , lodcom:innenstadtring .
+
+lodcom:aegidii  lodcom:touches  lodcom:dom , lodcom:josef , lodcom:bahnhof , lodcom:pluggendorf , lodcom:ueberwasser , lodcom:schloss ;
+        geo:sfTouches   lodcom:dom , lodcom:pluggendorf , lodcom:josef , lodcom:bahnhof , lodcom:schloss , lodcom:ueberwasser .
+
+lodcom:innenstadtring
+        lodcom:touches  lodcom:mitte-sued , lodcom:mitte-nordost , lodcom:altstadt ;
+        geo:sfTouches   lodcom:mitte-sued , lodcom:mitte-nordost , lodcom:altstadt .
+
+lodcom:coerde  lodcom:touches  lodcom:kinderhaus-ost , lodcom:rumphorst , lodcom:sprakel , lodcom:gelmer-dyckburg ;
+        geo:sfTouches   lodcom:kinderhaus-ost , lodcom:rumphorst , lodcom:sprakel , lodcom:gelmer-dyckburg .
+
+lodcom:buddenturm  lodcom:touches  lodcom:schlachthof , lodcom:kreuz , lodcom:martini , lodcom:ueberwasser , lodcom:schloss , lodcom:dom ;
+        geo:sfTouches   lodcom:ueberwasser , lodcom:martini , lodcom:dom , lodcom:schloss , lodcom:kreuz , lodcom:schlachthof .
+
+lodcom:schlachthof  lodcom:touches  lodcom:mauritz-west , lodcom:mauritz-mitte , lodcom:martini , lodcom:uppenberg , lodcom:rumphorst , lodcom:bahnhof , lodcom:buddenturm , lodcom:kreuz , lodcom:dom ;
+        geo:sfTouches   lodcom:uppenberg , lodcom:mauritz-mitte , lodcom:dom , lodcom:bahnhof , lodcom:martini , lodcom:buddenturm , lodcom:kreuz , lodcom:mauritz-west , lodcom:rumphorst .
+
+lodcom:mitte-nordost  lodcom:touches  lodcom:mitte-sued , lodcom:innenstadtring ;
+        geo:sfTouches   lodcom:mitte-sued , lodcom:innenstadtring .
+
+lodcom:west  lodcom:touches  lodcom:hiltrup , lodcom:nord , lodcom:mitte ;
+        geo:sfTouches   lodcom:hiltrup , lodcom:nord , lodcom:mitte .
+
+lodcom:schuetzenhof  lodcom:touches  lodcom:dueesberg , lodcom:geist , lodcom:berg_fidel , lodcom:josef , lodcom:hafen ;
+        geo:sfTouches   lodcom:berg_fidel , lodcom:geist , lodcom:hafen , lodcom:josef , lodcom:dueesberg .
+
+lodcom:rumphorst  lodcom:touches  lodcom:mauritz-ost , lodcom:mauritz-mitte , lodcom:gelmer-dyckburg , lodcom:mauritz-west , lodcom:uppenberg , lodcom:coerde , lodcom:schlachthof , lodcom:kinderhaus-ost , lodcom:kreuz ;
+        geo:sfTouches   lodcom:uppenberg , lodcom:mauritz-ost , lodcom:schlachthof , lodcom:gelmer-dyckburg , lodcom:mauritz-mitte , lodcom:mauritz-west , lodcom:kreuz , lodcom:coerde , lodcom:kinderhaus-ost .
+
+lodcom:roxel  lodcom:touches  lodcom:sentrup , lodcom:mecklenbeck , lodcom:albachten , lodcom:gievenbeck , lodcom:nienberge ;
+        geo:sfTouches   lodcom:mecklenbeck , lodcom:sentrup , lodcom:gievenbeck , lodcom:nienberge , lodcom:albachten .
+
+lodcom:gelmer-dyckburg
+        lodcom:touches  lodcom:mauritz-mitte , lodcom:coerde , lodcom:rumphorst , lodcom:handorf , lodcom:sprakel , lodcom:mauritz-ost ;
+        geo:sfTouches   lodcom:handorf , lodcom:mauritz-mitte , lodcom:rumphorst , lodcom:mauritz-ost , lodcom:sprakel , lodcom:coerde .
+
+lodcom:ost  lodcom:touches  lodcom:suedost , lodcom:nord , lodcom:mitte ;
+        geo:sfTouches   lodcom:suedost , lodcom:nord , lodcom:mitte .
+
+lodcom:hiltrup-mitte  lodcom:touches  lodcom:hiltrup-west , lodcom:hiltrup-ost , lodcom:amelsbueren ;
+        geo:sfTouches   lodcom:hiltrup-west , lodcom:hiltrup-ost , lodcom:amelsbueren .
+
+lodcom:bahnhof  lodcom:touches  lodcom:martini , lodcom:aegidii , lodcom:hafen , lodcom:hansaplatz , lodcom:josef , lodcom:mauritz-west , lodcom:dom , lodcom:schlachthof ;
+        geo:sfTouches   lodcom:schlachthof , lodcom:dom , lodcom:josef , lodcom:mauritz-west , lodcom:aegidii , lodcom:martini , lodcom:hafen , lodcom:hansaplatz .
+
+lodcom:mecklenbeck  lodcom:touches  lodcom:sentrup , lodcom:aaseestadt , lodcom:dueesberg , lodcom:albachten , lodcom:amelsbueren , lodcom:roxel ;
+        geo:sfTouches   lodcom:sentrup , lodcom:dueesberg , lodcom:albachten , lodcom:aaseestadt , lodcom:amelsbueren , lodcom:roxel .
+
+lodcom:mauritz-west  lodcom:touches  lodcom:schlachthof , lodcom:rumphorst , lodcom:mauritz-mitte , lodcom:hansaplatz , lodcom:bahnhof , lodcom:herz-jesu ;
+        geo:sfTouches   lodcom:mauritz-mitte , lodcom:rumphorst , lodcom:herz-jesu , lodcom:hansaplatz , lodcom:bahnhof , lodcom:schlachthof .
+
+lodcom:sprakel  lodcom:touches  lodcom:coerde , lodcom:gelmer-dyckburg , lodcom:kinderhaus-west , lodcom:nienberge , lodcom:kinderhaus-ost ;
+        geo:sfTouches   lodcom:kinderhaus-ost , lodcom:nienberge , lodcom:gelmer-dyckburg , lodcom:kinderhaus-west , lodcom:coerde .
+
+lodcom:angelmodde  lodcom:touches  lodcom:hiltrup-ost , lodcom:gremmendorf-west , lodcom:gremmendorf-ost , lodcom:wolbeck ;
+        geo:sfTouches   lodcom:hiltrup-ost , lodcom:gremmendorf-west , lodcom:gremmendorf-ost , lodcom:wolbeck .
+
+lodcom:mitte  lodcom:touches  lodcom:nord , lodcom:hiltrup , lodcom:west , lodcom:ost , lodcom:suedost ;
+        geo:sfTouches   lodcom:nord , lodcom:hiltrup , lodcom:ost , lodcom:suedost , lodcom:west .
+
+lodcom:josef  lodcom:touches  lodcom:hafen , lodcom:hansaplatz , lodcom:aegidii , lodcom:dom , lodcom:schloss , lodcom:geist , lodcom:schuetzenhof , lodcom:bahnhof , lodcom:aaseestadt , lodcom:pluggendorf ;
+        geo:sfTouches   lodcom:dom , lodcom:geist , lodcom:aegidii , lodcom:pluggendorf , lodcom:hafen , lodcom:hansaplatz , lodcom:schuetzenhof , lodcom:schloss , lodcom:aaseestadt , lodcom:bahnhof .
+
+lodcom:suedost  lodcom:touches  lodcom:hiltrup , lodcom:ost , lodcom:mitte ;
+        geo:sfTouches   lodcom:hiltrup , lodcom:ost , lodcom:mitte .
+
+lodcom:touches  a           rdf:Property ;
+        rdfs:comment        "Relates two administrative regions to each other that are spatially touching." ;
+        rdfs:domain         dbo:AdministrativeRegion ;
+        rdfs:range          dbo:AdministrativeRegion ;
+        rdfs:seeAlso        geo:sfTouches ;
+        rdfs:subPropertyOf  geo:sfTouches .
+
+lodcom:pluggendorf  lodcom:touches  lodcom:josef , lodcom:aegidii , lodcom:schloss , lodcom:geist , lodcom:aaseestadt , lodcom:sentrup ;
+        geo:sfTouches   lodcom:aaseestadt , lodcom:aegidii , lodcom:geist , lodcom:sentrup , lodcom:schloss , lodcom:josef .
+
+lodcom:hansaplatz  lodcom:touches  lodcom:josef , lodcom:herz-jesu , lodcom:hafen , lodcom:mauritz-west , lodcom:bahnhof ;
+        geo:sfTouches   lodcom:mauritz-west , lodcom:herz-jesu , lodcom:josef , lodcom:hafen , lodcom:bahnhof .
+
+lodcom:schloss  lodcom:touches  lodcom:aegidii , lodcom:buddenturm , lodcom:kreuz , lodcom:sentrup , lodcom:ueberwasser , lodcom:aaseestadt , lodcom:pluggendorf , lodcom:neutor , lodcom:josef ;
+        geo:sfTouches   lodcom:sentrup , lodcom:josef , lodcom:ueberwasser , lodcom:aegidii , lodcom:buddenturm , lodcom:pluggendorf , lodcom:neutor , lodcom:aaseestadt , lodcom:kreuz .
+
+lodcom:sentrup  lodcom:touches  lodcom:neutor , lodcom:mecklenbeck , lodcom:schloss , lodcom:roxel , lodcom:uppenberg , lodcom:pluggendorf , lodcom:gievenbeck , lodcom:aaseestadt ;
+        geo:sfTouches   lodcom:mecklenbeck , lodcom:roxel , lodcom:aaseestadt , lodcom:gievenbeck , lodcom:uppenberg , lodcom:schloss , lodcom:pluggendorf , lodcom:neutor .
+
+lodcom:amelsbueren  lodcom:touches  lodcom:dueesberg , lodcom:berg_fidel , lodcom:hiltrup-west , lodcom:hiltrup-mitte , lodcom:albachten , lodcom:mecklenbeck ;
+        geo:sfTouches   lodcom:berg_fidel , lodcom:albachten , lodcom:hiltrup-mitte , lodcom:dueesberg , lodcom:hiltrup-west , lodcom:mecklenbeck .
+
+lodcom:gremmendorf-ost
+        lodcom:touches  lodcom:mauritz-ost , lodcom:angelmodde , lodcom:handorf , lodcom:gremmendorf-west , lodcom:wolbeck ;
+        geo:sfTouches   lodcom:handorf , lodcom:angelmodde , lodcom:gremmendorf-west , lodcom:mauritz-ost , lodcom:wolbeck .
+
+lodcom:martini  lodcom:touches  lodcom:schlachthof , lodcom:kreuz , lodcom:dom , lodcom:buddenturm , lodcom:bahnhof ;
+        geo:sfTouches   lodcom:buddenturm , lodcom:kreuz , lodcom:schlachthof , lodcom:dom , lodcom:bahnhof .
+
+lodcom:altstadt  lodcom:touches  lodcom:innenstadtring ;
+        geo:sfTouches   lodcom:innenstadtring .
+
+lodcom:uppenberg  lodcom:touches  lodcom:kinderhaus-west , lodcom:rumphorst , lodcom:kinderhaus-ost , lodcom:gievenbeck , lodcom:schlachthof , lodcom:kreuz , lodcom:sentrup , lodcom:neutor ;
+        geo:sfTouches   lodcom:neutor , lodcom:kreuz , lodcom:sentrup , lodcom:schlachthof , lodcom:kinderhaus-ost , lodcom:rumphorst , lodcom:gievenbeck , lodcom:kinderhaus-west .
+
+lodcom:aaseestadt  lodcom:touches  lodcom:geist , lodcom:dueesberg , lodcom:sentrup , lodcom:mecklenbeck , lodcom:schloss , lodcom:pluggendorf , lodcom:josef ;
+        geo:sfTouches   lodcom:sentrup , lodcom:dueesberg , lodcom:geist , lodcom:mecklenbeck , lodcom:josef , lodcom:pluggendorf , lodcom:schloss .
+
+lodcom:mauritz-mitte  lodcom:touches  lodcom:mauritz-ost , lodcom:herz-jesu , lodcom:rumphorst , lodcom:schlachthof , lodcom:mauritz-west , lodcom:gelmer-dyckburg ;
+        geo:sfTouches   lodcom:rumphorst , lodcom:gelmer-dyckburg , lodcom:mauritz-west , lodcom:schlachthof , lodcom:mauritz-ost , lodcom:herz-jesu .
+
+lodcom:nienberge  lodcom:touches  lodcom:kinderhaus-west , lodcom:gievenbeck , lodcom:roxel , lodcom:sprakel ;
+        geo:sfTouches   lodcom:kinderhaus-west , lodcom:gievenbeck , lodcom:roxel , lodcom:sprakel .
+
+lodcom:dom  lodcom:touches  lodcom:aegidii , lodcom:bahnhof , lodcom:ueberwasser , lodcom:martini , lodcom:josef , lodcom:buddenturm , lodcom:schlachthof ;
+        geo:sfTouches   lodcom:buddenturm , lodcom:bahnhof , lodcom:aegidii , lodcom:martini , lodcom:josef , lodcom:schlachthof , lodcom:ueberwasser .
+
+lodcom:mauritz-ost  lodcom:touches  lodcom:mauritz-mitte , lodcom:gremmendorf-ost , lodcom:gremmendorf-west , lodcom:herz-jesu , lodcom:handorf , lodcom:gelmer-dyckburg , lodcom:hafen , lodcom:rumphorst ;
+        geo:sfTouches   lodcom:gremmendorf-ost , lodcom:gelmer-dyckburg , lodcom:hafen , lodcom:rumphorst , lodcom:mauritz-mitte , lodcom:gremmendorf-west , lodcom:handorf , lodcom:herz-jesu .
+
+lodcom:kinderhaus-ost
+        lodcom:touches  lodcom:rumphorst , lodcom:coerde , lodcom:uppenberg , lodcom:kinderhaus-west , lodcom:sprakel ;
+        geo:sfTouches   lodcom:uppenberg , lodcom:rumphorst , lodcom:kinderhaus-west , lodcom:coerde , lodcom:sprakel .
+
+lodcom:hafen  lodcom:touches  lodcom:hansaplatz , lodcom:schuetzenhof , lodcom:berg_fidel , lodcom:bahnhof , lodcom:mauritz-ost , lodcom:josef , lodcom:dueesberg , lodcom:gremmendorf-west , lodcom:herz-jesu ;
+        geo:sfTouches   lodcom:mauritz-ost , lodcom:hansaplatz , lodcom:dueesberg , lodcom:josef , lodcom:gremmendorf-west , lodcom:herz-jesu , lodcom:berg_fidel , lodcom:schuetzenhof , lodcom:bahnhof .
+
+lodcom:nord  lodcom:touches  lodcom:ost , lodcom:west , lodcom:mitte ;
+        geo:sfTouches   lodcom:ost , lodcom:west , lodcom:mitte .
+
+lodcom:kreuz  lodcom:touches  lodcom:buddenturm , lodcom:schlachthof , lodcom:martini , lodcom:uppenberg , lodcom:schloss , lodcom:rumphorst , lodcom:neutor ;
+        geo:sfTouches   lodcom:buddenturm , lodcom:rumphorst , lodcom:schlachthof , lodcom:uppenberg , lodcom:neutor , lodcom:martini , lodcom:schloss .
+
+lodcom:hiltrup  lodcom:touches  lodcom:suedost , lodcom:west , lodcom:mitte ;
+        geo:sfTouches   lodcom:suedost , lodcom:west , lodcom:mitte .
+
+lodcom:handorf  lodcom:touches  lodcom:gremmendorf-west , lodcom:mauritz-ost , lodcom:wolbeck , lodcom:gremmendorf-ost , lodcom:gelmer-dyckburg ;
+        geo:sfTouches   lodcom:mauritz-ost , lodcom:gremmendorf-ost , lodcom:gremmendorf-west , lodcom:wolbeck , lodcom:gelmer-dyckburg .
+
+lodcom:berg_fidel  lodcom:touches  lodcom:gremmendorf-west , lodcom:hafen , lodcom:hiltrup-ost , lodcom:dueesberg , lodcom:schuetzenhof , lodcom:amelsbueren , lodcom:hiltrup-west ;
+        geo:sfTouches   lodcom:hiltrup-ost , lodcom:dueesberg , lodcom:schuetzenhof , lodcom:gremmendorf-west , lodcom:hiltrup-west , lodcom:amelsbueren , lodcom:hafen .
+
+lodcom:albachten  lodcom:touches  lodcom:roxel , lodcom:mecklenbeck , lodcom:amelsbueren ;
+        geo:sfTouches   lodcom:roxel , lodcom:mecklenbeck , lodcom:amelsbueren .
+
+lodcom:dueesberg  lodcom:touches  lodcom:geist , lodcom:berg_fidel , lodcom:aaseestadt , lodcom:mecklenbeck , lodcom:schuetzenhof , lodcom:amelsbueren , lodcom:hafen ;
+        geo:sfTouches   lodcom:amelsbueren , lodcom:geist , lodcom:mecklenbeck , lodcom:hafen , lodcom:berg_fidel , lodcom:aaseestadt , lodcom:schuetzenhof .
+
+lodcom:hiltrup-west  lodcom:touches  lodcom:amelsbueren , lodcom:hiltrup-ost , lodcom:berg_fidel , lodcom:gremmendorf-west , lodcom:hiltrup-mitte ;
+        geo:sfTouches   lodcom:gremmendorf-west , lodcom:amelsbueren , lodcom:hiltrup-ost , lodcom:hiltrup-mitte , lodcom:berg_fidel .
+
+lodcom:neutor  lodcom:touches  lodcom:uppenberg , lodcom:schloss , lodcom:kreuz , lodcom:sentrup ;
+        geo:sfTouches   lodcom:uppenberg , lodcom:schloss , lodcom:kreuz , lodcom:sentrup .
+
+lodcom:gremmendorf-west
+        lodcom:touches  lodcom:berg_fidel , lodcom:hiltrup-west , lodcom:mauritz-ost , lodcom:gremmendorf-ost , lodcom:hiltrup-ost , lodcom:hafen , lodcom:herz-jesu , lodcom:handorf , lodcom:angelmodde ;
+        geo:sfTouches   lodcom:hiltrup-ost , lodcom:mauritz-ost , lodcom:angelmodde , lodcom:berg_fidel , lodcom:handorf , lodcom:hafen , lodcom:gremmendorf-ost , lodcom:herz-jesu , lodcom:hiltrup-west .
+
+lodcom:kinderhaus-west
+        lodcom:touches  lodcom:nienberge , lodcom:kinderhaus-ost , lodcom:gievenbeck , lodcom:sprakel , lodcom:uppenberg ;
+        geo:sfTouches   lodcom:kinderhaus-ost , lodcom:nienberge , lodcom:gievenbeck , lodcom:uppenberg , lodcom:sprakel .
+
+lodcom:ueberwasser  lodcom:touches  lodcom:schloss , lodcom:dom , lodcom:aegidii , lodcom:buddenturm ;
+        geo:sfTouches   lodcom:schloss , lodcom:dom , lodcom:aegidii , lodcom:buddenturm .
+
+lodcom:wolbeck  lodcom:touches  lodcom:gremmendorf-ost , lodcom:handorf , lodcom:angelmodde ;
+        geo:sfTouches   lodcom:gremmendorf-ost , lodcom:handorf , lodcom:angelmodde .
+
+lodcom:hiltrup-ost  lodcom:touches  lodcom:hiltrup-west , lodcom:gremmendorf-west , lodcom:angelmodde , lodcom:berg_fidel , lodcom:hiltrup-mitte ;
+        geo:sfTouches   lodcom:angelmodde , lodcom:hiltrup-mitte , lodcom:hiltrup-west , lodcom:gremmendorf-west , lodcom:berg_fidel .
+
+lodcom:gievenbeck  lodcom:touches  lodcom:uppenberg , lodcom:kinderhaus-west , lodcom:sentrup , lodcom:roxel , lodcom:nienberge ;
+        geo:sfTouches   lodcom:nienberge , lodcom:kinderhaus-west , lodcom:roxel , lodcom:uppenberg , lodcom:sentrup .
+
+lodcom:herz-jesu  lodcom:touches  lodcom:mauritz-west , lodcom:hafen , lodcom:gremmendorf-west , lodcom:hansaplatz , lodcom:mauritz-ost , lodcom:mauritz-mitte ;
+        geo:sfTouches   lodcom:mauritz-ost , lodcom:gremmendorf-west , lodcom:hansaplatz , lodcom:mauritz-west , lodcom:hafen , lodcom:mauritz-mitte .

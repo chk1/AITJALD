@@ -1,0 +1,41 @@
+@prefix schema: <http://schema.org/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix sdmx:  <http://purl.org/linked-data/sdmx#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix geo:   <http://www.opengis.net/ont/geosparql#> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix sf:    <http://www.opengis.net/ont/sf#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix lodcom: <http://vocab.lodcom.de/> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix interval: <http://reference.data.gov.uk/def/intervals/> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+
+lodcom:Teilbereich  rdfs:comment  "The sub borough is a statistical entity in which belong different districts. The sub borough further divides highly populated boroughs." ;
+        rdfs:label       "Sub Borough"@en , "Teilbereich"@de ;
+        rdfs:subClassOf  dbo:AdministrativeRegion .
+
+lodcom:upperAdministrativeLevel
+        a             rdf:Property ;
+        rdfs:comment  "relates an administrative region to its next higher administrative level, e.g. districts to sub borough or boroughs." ;
+        rdfs:domain   dbo:AdministrativeRegion ;
+        rdfs:range    dbo:AdministrativeRegion .
+
+lodcom:districtId  a  rdf:Property ;
+        rdfs:comment  "The city administration uses unique identifier for their districts." ;
+        rdfs:domain   lodcom:Stadtteil ;
+        rdfs:range    xsd:integer .
+
+lodcom:Stadtteil  rdfs:comment  "A city district describes the smallest spatial division in the city administration." ;
+        rdfs:label       "City District"@en , "Stadtteil"@de ;
+        rdfs:subClassOf  dbo:AdministrativeRegion .
+
+lodcom:Stadtbezirk  rdfs:comment  "The borough is the largest spatial administrative region in the city administration." ;
+        rdfs:label       "Borough"@en , "Stadtbezirk"@de ;
+        rdfs:subClassOf  dbo:AdministrativeRegion .
