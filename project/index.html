@@ -11,32 +11,69 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-inverse navbar-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Haushalte Münster</a>
+	<div class="content">
+		<div class="navbar navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Haushalte Münster</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#" id="map_tab">Map</a></li>
+						<li><a href="#" id="voc_tab">Vocabulary</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
 			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#" id="map_tab">Map</a></li>
-					<li><a href="#" id="y2011">1p. households 2011</a></li>
-					<li><a href="#" id="y2012">2012</a></li>
-					<li><a href="#" id="y2013">2013</a></li>
-					<li><a href="#" id="y2014">2014</a></li>
-					<li><a href="#" id="voc_tab">Vocabulary</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
 		</div>
-	</nav>
+		<div id="sidebar-container" class="col-xs-3">
+			<h2>Münster house hold data visualized</h2>
+			<hr>
+			<form>
+				<div class="form-group">
+				<label for="dataset">Select a data set</label>
+				<select id="dataset" class="form-control" disabled="true">
+					<option value="" selected class="disabled">Select a dataset</option>
+					<!-- populated in menu.js -->
+				</select>
+				</div>
+				
+				<div class="form-group">
+				<label for="datasetgender">Select a gender</label>
+				<select id="datasetgender" class="form-control">
+					<!-- populated in menu.js -->
+				</select>
+				</div>
 
-	<div id="map"></div>
-	<div id="voc"></div>
+				<div class="form-group">
+				<label for="datasetage">Select an age group</label>
+				<select id="datasetage" class="form-control">
+					<!-- populated in menu.js -->
+				</select>
+				</div>
+
+				<div class="form-group">
+				<label for="datasetyear">Select a year</label>
+				<select id="datasetyear" class="form-control">
+					<!-- populated in menu.js -->
+				</select>
+				</div>
+				
+				<button class="btn btn-info">Show me</button>
+			</form>
+		</div>
+		<div id="content-container" class="col-xs-9 fill-height nopadding">
+			<div id="map"></div>
+			<div id="voc"></div>
+		</div>
+
+	</div>
+
 
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -63,6 +100,9 @@
 		
 		function hideMap() {
 			$('#map').hide();
+			$('#sidebar-container').hide();
+			$('#content-container').removeClass('col-xs-9');
+			$('#content-container').addClass('col-xs-12');
 		}
 		
 		function showDocumentation() {
@@ -75,10 +115,14 @@
 		
 		function hideDocumentation() {
 			$('#voc').hide();
+			$('#sidebar-container').show();
+			$('#content-container').removeClass('col-xs-12');
+			$('#content-container').addClass('col-xs-9');
 		}
 	</script>
 	<script src="js/doc.js"></script>
 	<script src="js/map.js"></script>
+	<script src="js/menu.js"></script>
 	
 </body>
 </html>

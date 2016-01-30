@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX cube: <http://purl.org/linked-data/cube#>
+PREFIX lodcom: <http://vocab.lodcom.de/>
+PREFIX greg: <http://reference.data.gov.uk/id/gregorian-interval/>
+PREFIX dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+PREFIX gendercode: <http://purl.org/linked-data/sdmx/2009/code#>
+
+SELECT DISTINCT (CONCAT(?minAge, "-", ?maxAge) AS ?ageRanges) ?ageRange (STR(?refPeriod) AS ?refPeriods) ?gender WHERE { GRAPH <http://course.introlinkeddata.org/G4> {
+	lodcom:SingleHouseholdGenderCount cube:structure ?structure .
+
+	?structure cube:component ?components .
+
+	OPTIONAL { 
+		?components cube:dimension ?ageRangeDim .
+		?obs cube:dataSet lodcom:SingleHouseholdGenderCount .
+		?obs lodcom:ageRange ?ageRange .
+		?ageRange lodcom:min ?minAge .
+		?ageRange lodcom:max ?maxAge
+	} .
+	OPTIONAL { 
+		?components cube:dimension ?refPeriodDim .
+		?obs cube:dataSet lodcom:SingleHouseholdGenderCount .
+		?obs <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> ?refPeriod
+	} . 
+	OPTIONAL {
+		?components cube:dimension dimension:sex .
+		?obs cube:dataSet lodcom:SingleHouseholdGenderCount .
+		?obs dimension:sex ?gender
+	}
+}} ORDER BY DESC(?ageRanges) DESC(?refPeriods) DESC(?gender)
