@@ -1,9 +1,17 @@
 /*
 	Query all types of observation from the database
 */
-function queryDatasets() {
+function queryMenuDatasets() {
 	// queries/observations.txt
-    var qry = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX cube: <http://purl.org/linked-data/cube#> SELECT ?observation ?label ?structure WHERE { GRAPH <http://course.introlinkeddata.org/G4> {?observation rdf:type cube:DataSet . ?observation cube:structure ?structure . ?observation rdfs:label ?label FILTER (lang(?label) = 'en') }}";
+    qry = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
+		"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
+		"PREFIX cube: <http://purl.org/linked-data/cube#> " +
+		"SELECT ?observation ?label ?structure WHERE { GRAPH <http://course.introlinkeddata.org/G4> {" +
+			"?observation rdf:type cube:DataSet . " +
+			"?observation cube:structure ?structure . " +
+			"?observation rdfs:label ?label " +
+		"FILTER (lang(?label) = 'en') " +
+		"}}";
     $.post("http://giv-lodumdata.uni-muenster.de:8282/parliament/sparql", {
         query: qry,
         output: 'json'
@@ -38,9 +46,33 @@ function populateDatasetSelection(data) {
 /*
 	Query all possible choices for filtering a chosen dataset
 */
-function queryDataSubsets(countType) {
+function queryMenuDataSubsets(countType) {
 	// queries/observations-subdivision.txt
-    var qry = 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX cube: <http://purl.org/linked-data/cube#> PREFIX lodcom: <http://vocab.lodcom.de/> PREFIX greg: <http://reference.data.gov.uk/id/gregorian-interval/> PREFIX dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> PREFIX gendercode: <http://purl.org/linked-data/sdmx/2009/code#> SELECT DISTINCT (CONCAT(?minAge, "-", ?maxAge) AS ?ageRanges) ?ageRange (STR(?refPeriod) AS ?refPeriods) ?gender WHERE { GRAPH <http://course.introlinkeddata.org/G4> {lodcom:'+countType+' cube:structure ?structure . ?structure cube:component ?components . OPTIONAL {?components cube:dimension ?ageRangeDim . ?obs cube:dataSet lodcom:'+countType+' . ?obs lodcom:ageRange ?ageRange . ?ageRange lodcom:min ?minAge . ?ageRange lodcom:max ?maxAge } . OPTIONAL {?components cube:dimension ?refPeriodDim . ?obs cube:dataSet lodcom:'+countType+' . ?obs <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> ?refPeriod } . OPTIONAL {?components cube:dimension dimension:sex . ?obs cube:dataSet lodcom:'+countType+' . ?obs dimension:sex ?gender } }}  ORDER BY ASC(?ageRanges) DESC(?refPeriods) ASC(?gender)';
+    var qry = 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ' +
+		'PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ' +
+		'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> ' +
+		'PREFIX cube: <http://purl.org/linked-data/cube#> ' +
+		'PREFIX lodcom: <http://vocab.lodcom.de/> ' +
+		'PREFIX greg: <http://reference.data.gov.uk/id/gregorian-interval/> ' +
+		'PREFIX dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> ' +
+		'PREFIX gendercode: <http://purl.org/linked-data/sdmx/2009/code#> ' +
+		'SELECT DISTINCT (CONCAT(?minAge, "-", ?maxAge) AS ?ageRanges) ?ageRange (STR(?refPeriod) AS ?refPeriods) ?gender WHERE { GRAPH <http://course.introlinkeddata.org/G4> {' +
+		'lodcom:'+countType+' cube:structure ?structure . ' +
+		'?structure cube:component ?components . ' +
+		'OPTIONAL {?components cube:dimension ?ageRangeDim . ' +
+			'?obs cube:dataSet lodcom:'+countType+' . ' +
+			'?obs lodcom:ageRange ?ageRange . ' +
+			'?ageRange lodcom:min ?minAge . ' +
+			'?ageRange lodcom:max ?maxAge } . ' +
+		'OPTIONAL {' +
+			'?components cube:dimension ?refPeriodDim . ' +
+			'?obs cube:dataSet lodcom:'+countType+' . ' +
+			'?obs <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> ?refPeriod } . ' +
+		'OPTIONAL {' +
+			'?components cube:dimension dimension:sex . ' +
+			'?obs cube:dataSet lodcom:'+countType+' . ' +
+			'?obs dimension:sex ?gender } ' +
+		'}}  ORDER BY ASC(?ageRanges) DESC(?refPeriods) ASC(?gender)';
     $.post("http://giv-lodumdata.uni-muenster.de:8282/parliament/sparql", {
         query: qry,
         output: 'json'
@@ -109,9 +141,9 @@ function populateYearAndGenderSelection(data) {
 $('select#dataset').on('change', function(e){
 	var countType = $(this).val();
 	if(countType!=="") {
-		queryDataSubsets(countType);
+		queryMenuDataSubsets(countType);
 		$('select#dataset option.disabled').attr('disabled', 'disabled');
 	}
 });
 
-queryDatasets();
+queryMenuDatasets();

@@ -6,7 +6,6 @@ $('#voc_tab').on('click', function(){
         $("#voc").empty();
         queryVocabulary();
     }
-    hideMap();
     showDocumentation();
 });
 
@@ -15,6 +14,8 @@ var Prefixes = {
      * The used prefixes as a key-value pair JSON object 
      */
     vocabularies : {
+        "afn": "http://jena.hpl.hp.com/ARQ/function#",
+        "fn": "http://www.w3.org/2005/xpath-functions#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "sf": "http://www.opengis.net/ont/sf#",
@@ -153,7 +154,7 @@ var VocabularyEntryTemplate = {
     title: null,
     /** a div containing the description (rdfs:comment) */
     commentDiv: null,
-    /** the parent div of the properties tabele */
+    /** the parent div of the properties table */
     tableDiv: null,
     /** the table structure */
     table: null,
