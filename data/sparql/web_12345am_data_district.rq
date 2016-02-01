@@ -1,0 +1,44 @@
+PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#>
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX gml: <http://www.opengis.net/ont/gml#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX par: <http://parliament.semwebcentral.org/parliament#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <http://schema.org/>
+PREFIX sdmx:  <http://purl.org/linked-data/sdmx#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX dbo:   <http://dbpedia.org/ontology/>
+PREFIX qb:    <http://purl.org/linked-data/cube#>
+PREFIX sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#>
+PREFIX sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#>
+PREFIX lodcom: <http://vocab.lodcom.de/>
+PREFIX sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#>
+PREFIX interval: <http://reference.data.gov.uk/def/intervals/>
+PREFIX sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#>
+PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+PREFIX dc:    <http://purl.org/dc/terms/>
+
+
+SELECT DISTINCT ?districtURI ?dataSet ?time ?value
+WHERE {
+	GRAPH <http://course.introlinkeddata.org/G4> { 
+		?obs a qb:Observation;
+			lodcom:refArea ?districtURI;
+			lodcom:refArea <%DISTRICT%>;
+			lodcom:refPeriod ?time;
+			lodcom:refPeriod <%TIME%>;
+			qb:dataSet ?dataSet;
+			qb:measureType ?measure;
+			?measure ?value.
+
+		FILTER (?dataSet IN (lodcom:SingleHouseholdTotalCount,lodcom:TwoPersonsHouseholdCount,lodcom:ThreePersonsHouseholdCount,lodcom:FourPersonsHouseholdCount,lodcom:FivePersonsMoreHouseholdCount))
+	}
+}
+ORDER BY ?dataSet ASC(?time)

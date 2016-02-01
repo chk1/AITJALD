@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 	<link rel="stylesheet" href="css/map.css" />
+	<!--<link rel="stylesheet" href="css/sidebar.css" />-->
 </head>
 <body>
 
@@ -26,6 +27,7 @@
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="#" id="map_tab">Map</a></li>
+						<li><a href="#" id="datasheet_tab">Data Sheet</a></li>
 						<li><a href="#" id="voc_tab">Vocabulary</a></li>
 					</ul>
 				</div><!--/.nav-collapse -->
@@ -70,10 +72,10 @@
 		<div id="content-container" class="col-xs-9 fill-height nopadding">
 			<div id="map"></div>
 			<div id="voc"></div>
+			<div id="datasheet"></div>
 		</div>
 
 	</div>
-
 
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -81,6 +83,7 @@
 	<script src="https://cdn.rawgit.com/arthur-e/Wicket/master/wicket.js"></script>
 	<script src="https://cdn.rawgit.com/arthur-e/Wicket/master/wicket-leaflet.js"></script>
 	<script src="https://rawgit.com/gka/chroma.js/master/chroma.min.js"></script>
+	<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	
 	<script>
 		// global variables / flags
@@ -105,24 +108,38 @@
 			$('#content-container').addClass('col-xs-12');
 		}
 		
-		function showDocumentation() {
-			$('#voc').show();
-		}
-		
 		function showMap() {
+			hideDataSheet();
+			hideDocumentation();
 			$('#map').show();
+			$('#sidebar-container').show();
+			$('#content-container').removeClass('col-xs-12');
+			$('#content-container').addClass('col-xs-9');
+		}
+
+		function showDocumentation() {
+			hideMap();
+			hideDataSheet();
+			$('#voc').show();
 		}
 		
 		function hideDocumentation() {
 			$('#voc').hide();
-			$('#sidebar-container').show();
-			$('#content-container').removeClass('col-xs-12');
-			$('#content-container').addClass('col-xs-9');
+		}
+		
+		function hideDataSheet() {
+		    $("#datasheet").hide();
+		}
+
+		function showDataSheet() {
+			hideMap();
+			hideDocumentation();
+		    $("#datasheet").show();
 		}
 	</script>
 	<script src="js/doc.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/menu.js"></script>
-	
+	<script src="js/sheet.js"></script>
 </body>
 </html>
