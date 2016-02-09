@@ -8,43 +8,158 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 	<link rel="stylesheet" href="css/map.css" />
+	<link rel="stylesheet" href="css/input-range.css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 </head>
 <body>
 
-	<nav class="navbar navbar-inverse navbar-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Haushalte Münster</a>
+	<div class="content">
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Haushalte Münster</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#" id="map_tab">Map</a></li>
+						<!--<li><a href="#" id="datasheet_tab">Data Sheet</a></li>-->
+						<li><a href="#" id="voc_tab">Vocabulary</a></li>
+						<li><a href="#" class="help btn"> Help Tour ?</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
 			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#" id="map_tab">Map</a></li>
-					<li><a href="#" id="y2011">1p. households 2011</a></li>
-					<li><a href="#" id="y2012">2012</a></li>
-					<li><a href="#" id="y2013">2013</a></li>
-					<li><a href="#" id="y2014">2014</a></li>
-					<li><a href="#" id="voc_tab">Vocabulary</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
 		</div>
-	</nav>
+		<div id="sidebar-container" class="col-xs-3">
+			<h2>Münster house hold data visualized</h2>
+			<hr>
+			<form>
+				<div class="form-group">
+					<label for="dataset">Select a data set</label>
+					<select id="dataset" class="form-control" disabled="true">
+						<option value="" selected class="disabled">Select a dataset</option>
+						<!-- populated in menu.js -->
+					</select>
+				</div>
+				
+				<div id="dataset-filters" style="display:none">
+					<div class="form-group">
+						<label for="datasetgender">Select a gender</label>
+						<select id="datasetgender" class="form-control">
+							<!-- populated in menu.js -->
+						</select>
+					</div>
 
-	<div id="map"></div>
-	<div id="voc"></div>
+					<div class="form-group">
+						<label for="datasetage">Select an age group</label>
+						<select id="datasetage" class="form-control">
+							<!-- populated in menu.js -->
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="yearslider">Select a year</label>
+						<!--<select id="datasetyear" class="form-control">-->
+							<!-- populated in menu.js -->
+						<!--</select>-->
+						<div class="timeslider">
+							<input id="yearslider" type="range" min="2010" max="2014" value="2014" step="1" />
+						</div>
+						<div class="timeslider-ticks">
+							<div class="timeslider-tick" data-value="2010">2010</div>
+							<div class="timeslider-tick" data-value="2011">2011</div>
+							<div class="timeslider-tick" data-value="2012">2012</div>
+							<div class="timeslider-tick" data-value="2013">2013</div>
+							<div class="timeslider-tick" data-value="2014">2014</div>
+						</div>
+					</div>
+				</div>
+				
+				<button class="btn btn-info" id="mapTheData" type="button" disabled="disabled">Show me</button>
+				
+				<br/>
+				<br/>
+				<div id ="button_datasheet">
+				<label class="btn btn-primary">
+				    <input id="data_sheet_toggle" type="checkbox" disabled="disabled"> Data Sheet for District
+				</label>
+				</div>
+			</form>
+		</div>
+		<div id="content-container" class="col-xs-9 fill-height nopadding">
+			<div id="map"></div>
+			<div id="voc"></div>
+			<div id="datasheet" class="container">
+				<div id="split-bottom-bar"></div>
+				<h1 id="sheet_title"></h1>
+				<div id="data_panel" class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><a data-toggle="collapse" href="#ds_charts">General statistics</a><a class="collapse-all" onclick="$('#datasheet .collapse').collapse('hide')">[Collapse All]</a><a class="collapse-all" onclick="$('#datasheet .collapse').collapse('show')">[Show All]</a></h3>
+						</div>
+						<div id="ds_charts" class="panel-collapse collapse">
+							<div id="ds_charts_body" class="panel-body" align="center"></div>
+						</div>
+					</div>
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><a data-toggle="collapse" href="#single_charts">Single Household statistics</a><a class="collapse-all" onclick="$('#datasheet .collapse').collapse('hide')">[Collapse All]</a><a class="collapse-all" onclick="$('#datasheet .collapse').collapse('show')">[Show All]</a></h3>
+						</div>
+						<div id="single_charts" class="panel-collapse collapse">
+							<div id="single_charts_body" class="panel-body" align="center"></div>
+						</div>
+					</div>
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><a data-toggle="collapse" href="#child_charts">Household with Child statistics</a><a class="collapse-all" onclick="$('#datasheet .collapse').collapse('hide')">[Collapse All]</a><a class="collapse-all" onclick="$('#datasheet .collapse').collapse('show')">[Show All]</a></h3>
+						</div>
+						<div id="child_charts" class="panel-collapse collapse">
+							<div id="child_charts_body" class="panel-body" align="center"></div>
+						</div>
+					</div>
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><a data-toggle="collapse" href="#neighbor_charts">Neighboring districts statistics</a><a class="collapse-all" onclick="$('#datasheet .collapse').collapse('hide')">[Collapse All]</a><a class="collapse-all" onclick="$('#datasheet .collapse').collapse('show')">[Show All]</a></h3>
+						</div>
+						<div id="neighbor_charts" class="panel-collapse collapse">
+							<div id="neighbor_charts_body" class="panel-body" align="center"></div>
+						</div>
+					</div>
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><a data-toggle="collapse" href="#parent_charts">Upper administrative district statistics</a><a class="collapse-all" onclick="$('#datasheet .collapse').collapse('hide')">[Collapse All]</a><a class="collapse-all" onclick="$('#datasheet .collapse').collapse('show')">[Show All]</a></h3>
+						</div>
+						<div id="parent_charts" class="panel-collapse collapse">
+							<div id="parent_charts_body" class="panel-body" align="center"></div>
+						</div>
+					</div>
+				</div>
+				<div id="ds_tables" class="collapse"></div>
+			</div>
+		</div>
+		
+	</div>
+	<button id="sidebar-toggle" class="btn btn-primary sidebar-toggle-button" data-toggle="tooltip" data-placement="right" title="Hide Sidebar."><span class="glyphicon glyphicon-menu-left"></span></button>
+	<button id="bottombar-toggle" class="btn btn-primary bottombar-toggle-button" data-toggle="tooltip" data-placement="right" title="Show Data Sheet."><span class="glyphicon glyphicon-menu-up"></span></button>
 
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<!-- <script src="http://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script> -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
-	<script src="https://cdn.rawgit.com/arthur-e/Wicket/master/wicket.js"></script>
-	<script src="https://cdn.rawgit.com/arthur-e/Wicket/master/wicket-leaflet.js"></script>
 	<script src="https://rawgit.com/gka/chroma.js/master/chroma.min.js"></script>
-	
+	<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script src="http://cdn-geoweb.s3.amazonaws.com/terraformer/1.0.4/terraformer.min.js"></script>
+	<script src="http://cdn-geoweb.s3.amazonaws.com/terraformer-wkt-parser/1.0.0/terraformer-wkt-parser.min.js"></script>
+
 	<script>
 		// global variables / flags
 		var GLOBAL = {
@@ -61,24 +176,214 @@
 		    e.preventDefault();
 		});
 		
+		
+		function showBottomMenu() {
+			hideSidebar();
+			$("#datasheet").css("height","40%");
+			$("#bottombar-toggle").css("bottom",$("#datasheet").css("height")).show();
+			$("#bottombar-toggle span").removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
+			
+			$("#datasheet").show();
+			$("#map").css("height","60%");
+			map.invalidateSize();
+			$("#bottombar-toggle").attr("title","Hide Data Sheet.");
+		}
+		
+		function hideBottomMenu(withButton) {
+			if (withButton) {
+				$("#bottombar-toggle").hide();
+			} else {
+				$("#bottombar-toggle").css("bottom","0%").show();
+			}
+			
+			$("#bottombar-toggle span").removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
+			$("#datasheet").hide();
+			$("#map").css("height","100%");
+			map.invalidateSize();
+			
+			$("#bottombar-toggle").attr("title","Show Data Sheet.");
+		}
+		
+		function hideSidebar(withButton) {
+			if (withButton) {
+				$("#sidebar-toggle").hide();
+			} else {
+				$("#sidebar-toggle").css("left","0%").show();
+			}
+			$("#sidebar-toggle span").removeClass("glyphicon-menu-left").addClass("glyphicon-menu-right");
+			
+			//$('#sidebar-container').hide("slide",{direction:"left"},300);
+			$('#sidebar-container').hide();
+			$('#content-container').removeClass('col-xs-9');
+			$('#content-container').addClass('col-xs-12');
+			map.invalidateSize();
+			$("#sidebar-toggle").attr("title","Show Sidebar.");
+		}
+		
 		function hideMap() {
 			$('#map').hide();
+			hideSidebar(true);
+		}
+		
+		function showSidebar() {
+			$("#sidebar-toggle span").removeClass("glyphicon-menu-right").addClass("glyphicon-menu-left");
+			$("#sidebar-toggle").css("left","25%").show();
+			
+			//$('#sidebar-container').show("slide",{direction:"left"},300);
+			$('#sidebar-container').show();
+			$('#content-container').removeClass('col-xs-12');
+			$('#content-container').addClass('col-xs-9');
+			map.invalidateSize();
+			$("#sidebar-toggle").attr("title","Hide Sidebar.");
 		}
 		
 		function showDocumentation() {
+			hideMap();
+			//hideDataSheet();
+			hideBottomMenu(true);
 			$('#voc').show();
 		}
 		
 		function showMap() {
+			//hideDataSheet();
+			hideDocumentation();
+			showSidebar();
+			
 			$('#map').show();
+			map.invalidateSize();
 		}
+		
+		
 		
 		function hideDocumentation() {
 			$('#voc').hide();
 		}
+		
+		function hideDataSheet() {
+		    $("#datasheet").hide();
+		};
+
+		function showDataSheet() {
+			hideMap();
+			hideDocumentation();
+		    $("#datasheet").show();
+		};
+		
+		$("#data_sheet_toggle").prop("checked",false);
+		
+		$("#sidebar-toggle").click(function (e) {
+			if ($("#sidebar-container").css("display") == "none") {
+				showSidebar();
+				
+			} else {
+				hideSidebar(false);
+			}
+		});
+		
+		$("#bottombar-toggle").click(function (e) {
+			if ($("#datasheet").css("display") == "none") {
+				showBottomMenu();
+			} else {
+				hideBottomMenu(false);
+			}
+		});
+		
+		//resizeable bottom bar
+		$('#split-bottom-bar').mousedown(function (e) {
+    		e.preventDefault();
+    		$(document).mousemove(function (e) {
+		        e.preventDefault();
+		        
+		        var min = 72;
+		        var max = $(window).height();
+		        var newHeight = ((max - e.clientY)/max)*100;
+		        var mapHeight = (100-newHeight);
+		        
+		        if (e.clientY > min && newHeight > 20) {
+		        	$('#datasheet').css("height", (max - e.clientY)+"px");
+		        	$('.bottombar-toggle-button').css("bottom",(max - e.clientY)+"px");
+		          	$('#map').css("height", (e.clientY-min)+20+"px");
+		          	map.invalidateSize();
+		        }
+		        //var x = $('#datasheet').offset().top - e.pageY;
+		         //console.log(x);
+		          //$('#datasheet').css("height", x);
+		          //$('#map').css("margin-top", x);
+		          //map.invalidateSize();
+		        
+    		});
+		});
+			
+		$(document).mouseup(function (e) {
+			$(document).unbind('mousemove');
+		
+		});
 	</script>
+<script type="text/javascript">
+	      $('.help').click(function() {
+	        $('.content').concierge({
+	          steps: [
+  	            {
+  	              element:$('.navbar-brand:first'),
+  	              title:"Guide for Haushalte Münster",
+  	              content:"Here we start our help guide for analysing  Haushalte Münster",
+  	              placement:'bottom'
+  	            },
+	            {
+	              element:$('#map_tab'),
+	              title: "Here you look for Map",
+	              content: "Interactive Map of Münster with option to analyse data  ",
+	              placement:'bottom'
+	            },
+	            /*
+  	            {
+  	              element:$('#datasheet_tab'),
+  	              title:"Here you look for Data",
+  	              content:"This help in navagating to the data of interested  area by selecting on the map.",
+  	              placement:'bottom'
+  	            },
+  	            */
+  	            {
+  	              element:$('#voc_tab'),
+  	              title:"Here you look for Vocabulary",
+  	              content:"This help in navagating to the all the Vocabularies used in the Project.",
+  	              placement:'bottom'
+  	            },
+  	            {
+  	              element:$('.form-group:first'),
+  	              title:"Here you look for Data Set of your Interest",
+  	              content:"You can search for the data of your interest using filters",
+  	              placement:'right'
+  	            },
+  	            {
+  	              element:$('#mapTheData'),
+  	              title:"Click on Show Me ",
+  	              content:"View data on the map, based on your interest using filters",
+  	              placement:'right'
+  	            },
+  	            {
+  	              element:$('#button_datasheet'),
+  	              title:"Click to check the option",
+  	              content:"Check the button and click district over the map to visualize the data summary.",
+  	              placement:'right'
+  	            },
+				
+	          ],
+	          afterAll: function() {
+	            alert('Tour completed')
+	          },
+	          nextEvent: "click",
+	          nextText: "<br/><br/><b>Continue</b>",
+	          debug: true
+	        });
+	        return false
+	      });      
+</script>
 	<script src="js/doc.js"></script>
 	<script src="js/map.js"></script>
+	<script src="js/sheet.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/jquery.concierge.js" type="text/javascript" charset="utf-8"></script>
 	
 </body>
 </html>
