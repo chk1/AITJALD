@@ -87,7 +87,7 @@ function queryDataSubsets(countType) {
         console.log(data);
         populateYearAndGenderSelection(data);
 
-        $("#mapTheData").attr('disabled', false);
+        $("#mapTheData, #mapTheData-mobile").attr('disabled', false);
 		$("#data_sheet_toggle").attr('disabled', false);
     });
 }
@@ -174,13 +174,17 @@ $('input#yearslider').on('change', function(e){
 	}
 });
 
-$('button#mapTheData').on('click', function(){
+$('button#mapTheData, button#mapTheData-mobile').on('click', function(){
 	// see also map.js
 	showThis.year = $('input#yearslider').val();
 	showThis.dataset = $('select#dataset').val();
 	showThis.agegroup = $('select#datasetage').val();
 	showThis.gender = $('select#datasetgender').val();
 	mapData();
+});
+$('button#mapTheData-mobile').on('click', function(){
+	hideSidebar(false);
+	$('#sidebar-toggle-top').fadeIn();
 });
 
 // query available datasets for selection

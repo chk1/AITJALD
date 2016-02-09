@@ -82,7 +82,8 @@
 					</div>
 				</div>
 				
-				<button class="btn btn-info" id="mapTheData" type="button" disabled="disabled">Show me this data set</button>
+				<button class="btn btn-info hidden-xs hidden-sm" id="mapTheData" type="button" disabled="disabled">Show me this data set</button>
+				<button class="btn btn-info hidden-md hidden-lg" id="mapTheData-mobile" type="button" disabled="disabled">Show me this data set</button>
 				
 				<br/>
 				<br/>
@@ -91,10 +92,11 @@
 				<label class="btn btn-primary">
 				    <input id="data_sheet_toggle" type="checkbox" disabled="disabled"> Show datasheet
 				</label>
+				<p>&nbsp;</p>
 				</div>
 			</form>
 		</div>
-		<div id="content-container" class="col-xs-9 fill-height nopadding">
+		<div id="content-container" class="col-xs-12 col-md-9 fill-height nopadding">
 			<div id="map"></div>
 			<div id="voc"></div>
 			<div id="about">
@@ -158,7 +160,8 @@
 		</div>
 		
 	</div>
-	<button id="sidebar-toggle" class="btn btn-primary sidebar-toggle-button" data-toggle="tooltip" data-placement="right" title="Hide Sidebar."><span class="glyphicon glyphicon-menu-left"></span></button>
+	<button id="sidebar-toggle" class="btn btn-primary sidebar-toggle-button hidden-xs hidden-sm" data-toggle="tooltip" data-placement="right" title="Hide Sidebar."><span class="glyphicon glyphicon-menu-left"></span></button>
+	<button id="sidebar-toggle-top" class="btn btn-primary sidebar-toggle-button sidebar-toggle-button-top hidden-md hidden-lg" style="display:none" data-toggle="tooltip" data-placement="top" title="Hide Sidebar.">Toggle filter <span class="glyphicon glyphicon-menu-down"></span></button>
 	<button id="bottombar-toggle" class="btn btn-primary bottombar-toggle-button" data-toggle="tooltip" data-placement="right" title="Show Data Sheet."><span class="glyphicon glyphicon-menu-up"></span></button>
 
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -224,8 +227,8 @@
 			
 			//$('#sidebar-container').hide("slide",{direction:"left"},300);
 			$('#sidebar-container').hide();
-			$('#content-container').removeClass('col-xs-9');
-			$('#content-container').addClass('col-xs-12');
+			$('#content-container').removeClass('col-md-9');
+			$('#content-container').addClass('col-md-12');
 			map.invalidateSize();
 			$("#sidebar-toggle").attr("title","Show Sidebar.");
 		};
@@ -241,8 +244,8 @@
 			
 			//$('#sidebar-container').show("slide",{direction:"left"},300);
 			$('#sidebar-container').show();
-			$('#content-container').removeClass('col-xs-12');
-			$('#content-container').addClass('col-xs-9');
+			$('#content-container').removeClass('col-md-12');
+			$('#content-container').addClass('col-md-9');
 			map.invalidateSize();
 			$("#sidebar-toggle").attr("title","Hide Sidebar.");
 		};
@@ -314,7 +317,7 @@
 		});
 		
 		
-		$("#sidebar-toggle").click(function (e) {
+		$("#sidebar-toggle, #sidebar-toggle-top").click(function (e) {
 			if ($("#sidebar-container").css("display") == "none") {
 				showSidebar();
 				

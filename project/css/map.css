@@ -63,6 +63,14 @@ html, body{
     padding:20px;
 }
 
+#voc {
+    padding:10px;
+}
+
+#voc h2 {
+    word-wrap: break-word;
+}
+
 .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
@@ -86,6 +94,15 @@ html, body{
     left:25%;
     margin-left:-5px;
     z-index: 9999;
+}
+
+.sidebar-toggle-button-top {
+    padding:3px;
+    width: 150px;
+    height: 30px;
+    top:50px;
+    left:calc(50% - 75px);
+    z-index: 1000;
 }
 
 .sidebar-toggle-button span {
