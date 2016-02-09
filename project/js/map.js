@@ -1,3 +1,4 @@
+// zoom to center of Münster
 var map = L.map('map').setView([51.9609808, 7.62416839], 13);
 
 var defaults = {
@@ -17,6 +18,7 @@ var defaults = {
     fillOpacity: 1
 };
 
+// black and white base map
 L.tileLayer('http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
 }).addTo(map);
@@ -38,12 +40,17 @@ var info = L.control(),
 // by default load single house hold total count from 2011 
 var showThis = {
     area: "Stadtteil",
-    year: 2011,
-    dataset: "SingleHouseholdTotalCount",
-    gender: "female",
-    agegroup: "AgeRange_20_29"
-}
+    year: 2014,
+    dataset: "TotalHouseholdCount",
+    gender: null,
+    agegroup: null
+};
 
+/*
+    Switch between different levels of details 
+    by chosing a different administrative level
+    according to the current zoom level
+*/
 map.on('zoomend', function () {
     //console.log(map.getZoom());
     try {
@@ -54,56 +61,65 @@ map.on('zoomend', function () {
     if (map.getZoom() >= 12){
         if(showThis.area == "Stadtbezirk") {
             showThis.area = "Stadtteil";
-            mapData(currentYear);
+            mapData();
         }
     } else {
         if(showThis.area == "Stadtteil") {
             showThis.area = "Stadtbezirk";
-            mapData(currentYear);
+            mapData();
         }
     }
 });
 
-function mapData(y) {
-       var qry = "PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#> "
-            + "PREFIX fn: <http://www.w3.org/2005/xpath-functions#> "
-            + "PREFIX geo: <http://www.opengis.net/ont/geosparql#> "
-            + "PREFIX geof: <http://www.opengis.net/def/function/geosparql/> "
-            + "PREFIX gml: <http://www.opengis.net/ont/gml#> "
-            + "PREFIX owl: <http://www.w3.org/2002/07/owl#> "
-            + "PREFIX par: <http://parliament.semwebcentral.org/parliament#> "
-            + "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
-            + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
-            + "PREFIX sf: <http://www.opengis.net/ont/sf#> "
-            + "PREFIX time: <http://www.w3.org/2006/time#> "
-            + "PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> "
-            + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
-            + "PREFIX lodcom: <http://vocab.lodcom.de/> "
-            + "SELECT ?id ?name ?n ?wkt "
-            + "WHERE { "
-            + "GRAPH <http://course.introlinkeddata.org/G4> "
-                + "{"
-                    + "?bezirk rdf:type lodcom:"+showThis.area+" . "
-                    + "?bezirk <http://www.w3.org/2000/01/rdf-schema#label> ?name . "
-                    + "?id <http://www.w3.org/2000/01/rdf-schema#label> ?name . "
-                    + "?obs <http://purl.org/linked-data/cube#dataSet> lodcom:"+showThis.dataset+" . "
-                    + "?obs <http://vocab.lodcom.de/numberOfHouseholds> ?num . "
-                    + "?obs lodcom:refArea ?bezirk . "
-                    + "?obs lodcom:refPeriod <http://reference.data.gov.uk/id/gregorian-interval/"+showThis.year+"-01-01T00:00:00/P1Y> . "
-                    + "?obs <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ?n . "
-                    + "?bezirk geo:hasGeometry ?geometry . "
-                    + "?geometry geo:asWKT ?wkt. "
-                    + "FILTER(lang(?name) = 'en') "
-                + "}"
-            + "} ORDER BY ?n";
+/*
+    Query the linked data dataset according to the options set in
+    the showThis object, then call the processBindings() for further
+    processing and data display
+*/
+function mapData() {
+    var genderFilter = (showThis.gender !== null) ? "?obs <http://purl.org/linked-data/sdmx/2009/dimension#sex> <"+showThis.gender+"> ." : "";
+    var ageRangeFilter = (showThis.agegroup !== null) ? "?obs <http://vocab.lodcom.de/ageRange> <"+showThis.agegroup+"> ." : "";
+    //var houseHoldsResultType = (showThis.dataset !== "AveragePersonsPerHousehold") ? "numberOfHouseholds" : "averagePersonsPerHousehold";
+    var qry = "PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#> "
+        + "PREFIX fn: <http://www.w3.org/2005/xpath-functions#> "
+        + "PREFIX geo: <http://www.opengis.net/ont/geosparql#> "
+        + "PREFIX geof: <http://www.opengis.net/def/function/geosparql/> "
+        + "PREFIX gml: <http://www.opengis.net/ont/gml#> "
+        + "PREFIX owl: <http://www.w3.org/2002/07/owl#> "
+        + "PREFIX par: <http://parliament.semwebcentral.org/parliament#> "
+        + "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
+        + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
+        + "PREFIX sf: <http://www.opengis.net/ont/sf#> "
+        + "PREFIX time: <http://www.w3.org/2006/time#> "
+        + "PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> "
+        + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
+        + "PREFIX lodcom: <http://vocab.lodcom.de/> "
+        + "SELECT ?id ?name ?n ?wkt "
+        + "WHERE { "
+        + "GRAPH <http://course.introlinkeddata.org/G4> "
+            + "{"
+                + "?bezirk rdf:type lodcom:"+showThis.area+" . "
+                + "?bezirk <http://www.w3.org/2000/01/rdf-schema#label> ?name . "
+                + "?id <http://www.w3.org/2000/01/rdf-schema#label> ?name . "
+                + "?obs <http://purl.org/linked-data/cube#dataSet> lodcom:"+showThis.dataset+" . "
+                + "?obs <http://purl.org/linked-data/cube#measureType> ?measure ."
+                + "?obs ?measure ?num . "
+                + "?obs lodcom:refArea ?bezirk . "
+                + "?obs lodcom:refPeriod <http://reference.data.gov.uk/id/gregorian-interval/"+showThis.year+"-01-01T00:00:00/P1Y> . "
+                + "?obs <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ?n . "
+                + genderFilter 
+                + ageRangeFilter
+                + "?bezirk geo:hasGeometry ?geometry . "
+                + "?geometry geo:asWKT ?wkt. "
+                + "FILTER(lang(?name) = 'en') "
+            + "}"
+        + "} ORDER BY ?n";
     $.post("http://giv-lodumdata.uni-muenster.de:8282/parliament/sparql", {
         query: qry,
         output: 'json'
     },
     function(data){
-        //console.log(data);
         processBindings(data);
-        //updateLegend();
     });
     currentYear = y;
 }
@@ -127,8 +143,8 @@ function minmax(data) {
     return [min, max];
 }
 
-var colorScale;
-var gjlayer;
+var colorScale; // chroma scale object for polygon colouring and legend
+var gjlayer; // GeoJSON layer that contains the polygons
 
 /*
     After querying the SPARQL endpoint data further processing is done from here
@@ -136,7 +152,6 @@ var gjlayer;
     - calculate new colors for display
     - calculate new entries for legend
     - populate data sheet
-    ...
 */
 function processBindings(data) {
     // map.removeLayer(featureGroup);
@@ -194,6 +209,9 @@ function parseToGeoJSONFeatureCollection(data) {
     return geoJsonFeatureCollection;
 }
 
+/*
+    Polygon style, color, etc.
+*/
 function styleFeature(feature) {
     return {
         color: colorScale(feature.properties.n),
@@ -205,7 +223,7 @@ function styleFeature(feature) {
 
 function addPopupToLayer() {
     gjlayer.eachLayer(function(layer) {
-        layer.bindPopup("<b>"+layer.feature.properties.name+"</b><br>"+layer.feature.properties.n+" households<br>"+"<div id='popup'></div>");
+        layer.bindPopup("<b>"+layer.feature.properties.name+"</b><br>"+layer.feature.properties.n+" "+ ((showThis.dataset==="AveragePersonsPerHousehold")?"person household size":"households") +"<br>"+"<div id='popup'></div>");
         bindMouseEvents(layer,layer.feature.properties.name);
     });
 }
@@ -257,8 +275,13 @@ function updateLegend(minmax) {
     legend = L.control({position: 'bottomright'});
 
     var intermediateSteps = [];
+    var step;
     for(var i=0; i<=5; i++){
-        var step = minmax[0]+Math.floor((minmax[1]-minmax[0])/5)*i;
+        if(showThis.dataset === "AveragePersonsPerHousehold") {
+            step = minmax[0]+((minmax[1]-minmax[0])/5.0)*i;
+        } else {
+            step = minmax[0]+Math.round((minmax[1]-minmax[0])/5)*i;
+        }
         intermediateSteps.push(step);
     }
     // sort numbers in descending order
@@ -269,6 +292,11 @@ function updateLegend(minmax) {
     legend.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'info legend');
         var labels = [];
+        if(showThis.dataset === "AveragePersonsPerHousehold") {
+            labels.push("<b>Avg. household <br/>size (occupants)</b>");
+        } else {
+            labels.push("<b>Nr. of households</b>");
+        }
         intermediateSteps.forEach(function(dataValue, index, array){
             try{
                 labels.push('<i style="background:' + colorScale(dataValue) + '"></i>' + dataValue);
@@ -284,17 +312,10 @@ function updateLegend(minmax) {
 
 function mouseOutHandler(e) {
     var layer = e.target;
-    layer.setStyle({
-            //color: '#87421F',
-            dashArray: '',
-            weight: 0.5,
-        opacity: 1,
-        fillOpacity: 0.9
-    });
-        try {
-            info.removeFrom(map);
-        } catch(e){
-        }
+    gjlayer.resetStyle(layer);
+    try {
+        info.removeFrom(map);
+    } catch(e){}
 }
 
 function postQuery(qry, callback) {
@@ -525,5 +546,5 @@ function createBarChart(chartContent) {
     chart.render();
 }
 
-mapData(2011);
+mapData(); // load the default data set
 

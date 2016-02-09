@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 	<link rel="stylesheet" href="css/map.css" />
-
+	<link rel="stylesheet" href="css/input-range.css" />
 </head>
 <body>
 
@@ -38,39 +38,51 @@
 			<hr>
 			<form>
 				<div class="form-group">
-				<label for="dataset">Select a data set</label>
-				<select id="dataset" class="form-control" disabled="true">
-					<option value="" selected class="disabled">Select a dataset</option>
-					<!-- populated in menu.js -->
-				</select>
+					<label for="dataset">Select a data set</label>
+					<select id="dataset" class="form-control" disabled="true">
+						<option value="" selected class="disabled">Select a dataset</option>
+						<!-- populated in menu.js -->
+					</select>
 				</div>
 				
-				<div class="form-group">
-				<label for="datasetgender">Select a gender</label>
-				<select id="datasetgender" class="form-control">
-					<!-- populated in menu.js -->
-				</select>
-				</div>
+				<div id="dataset-filters" style="display:none">
+					<div class="form-group">
+						<label for="datasetgender">Select a gender</label>
+						<select id="datasetgender" class="form-control">
+							<!-- populated in menu.js -->
+						</select>
+					</div>
 
-				<div class="form-group">
-				<label for="datasetage">Select an age group</label>
-				<select id="datasetage" class="form-control">
-					<!-- populated in menu.js -->
-				</select>
-				</div>
+					<div class="form-group">
+						<label for="datasetage">Select an age group</label>
+						<select id="datasetage" class="form-control">
+							<!-- populated in menu.js -->
+						</select>
+					</div>
 
-				<div class="form-group">
-				<label for="datasetyear">Select a year</label>
-				<select id="datasetyear" class="form-control">
-					<!-- populated in menu.js -->
-				</select>
+					<div class="form-group">
+						<label for="yearslider">Select a year</label>
+						<!--<select id="datasetyear" class="form-control">-->
+							<!-- populated in menu.js -->
+						<!--</select>-->
+						<div class="timeslider">
+							<input id="yearslider" type="range" min="2010" max="2014" value="2014" step="1" />
+						</div>
+						<div class="timeslider-ticks">
+							<div class="timeslider-tick" data-value="2010">2010</div>
+							<div class="timeslider-tick" data-value="2011">2011</div>
+							<div class="timeslider-tick" data-value="2012">2012</div>
+							<div class="timeslider-tick" data-value="2013">2013</div>
+							<div class="timeslider-tick" data-value="2014">2014</div>
+						</div>
+					</div>
 				</div>
 	
-				<button class="btn btn-info" id="mapTheData" type="button">Show me</button>
+				<button class="btn btn-info" id="mapTheData" type="button" disabled="disabled">Show me</button>
 				<br/>
 				<br/>
 				<label class="btn btn-primary">
-				    <input id="data_sheet_toggle" type="checkbox"> Data Sheet for District
+				    <input id="data_sheet_toggle" type="checkbox" disabled="disabled"> Data Sheet for District
 				</label>
 			</form>
 		</div>
