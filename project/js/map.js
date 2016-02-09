@@ -230,8 +230,6 @@ function addPopupToLayer() {
         var isChecked = $("#data_sheet_toggle").prop("checked");
         if (!isChecked) {
             layer.bindPopup("<b>"+layer.feature.properties.name+"</b><br>"+layer.feature.properties.n+" "+ ((showThis.dataset==="AveragePersonsPerHousehold")?"person household size":"households") +"<br>"+"<div id='popup'></div>");
-        } else {
-            layer.unbindPopup();
         }
         bindMouseEvents(layer,layer.feature.properties.name);
     });
