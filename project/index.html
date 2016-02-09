@@ -31,18 +31,20 @@
 						<!--<li><a href="#" id="datasheet_tab">Data Sheet</a></li>-->
 						<li><a href="#" id="voc_tab">Vocabulary</a></li>
 						<li><a href="#" class="help btn"> Help Tour ?</a></li>
+						<li><a href="#" id="about_tab">About</a></li>
 					</ul>
 				</div><!--/.nav-collapse -->
 			</div>
 		</div>
 		<div id="sidebar-container" class="col-xs-3">
 			<h2>Münster house hold data visualized</h2>
+			<p>This tool visualizes Münster's household counts. On the map to the right you will see the household counts for each district, there are 45 lower districts (<i>Stadtteile</i>) and 6 upper districts (<i>Stadtbezirke</i>) in total. Below there are 10 datasets to chose from, where you can select to view the distribution of households by the number of occupants, by age or gender.</p>
+			<p>Move your mouse over a district or click on one to retrieve more statistical data.</p>
 			<hr>
 			<form>
 				<div class="form-group">
 					<label for="dataset">Select a data set</label>
 					<select id="dataset" class="form-control" disabled="true">
-						<option value="" selected class="disabled">Select a dataset</option>
 						<!-- populated in menu.js -->
 					</select>
 				</div>
@@ -80,13 +82,14 @@
 					</div>
 				</div>
 				
-				<button class="btn btn-info" id="mapTheData" type="button" disabled="disabled">Show me</button>
+				<button class="btn btn-info" id="mapTheData" type="button" disabled="disabled">Show me this data set</button>
 				
 				<br/>
 				<br/>
 				<div id ="button_datasheet">
+				<p>Enable "Show datasheet" to show a more detailed datasheet when you click on a district:</p>
 				<label class="btn btn-primary">
-				    <input id="data_sheet_toggle" type="checkbox" disabled="disabled"> Data Sheet for District
+				    <input id="data_sheet_toggle" type="checkbox" disabled="disabled"> Show datasheet
 				</label>
 				</div>
 			</form>
@@ -94,6 +97,13 @@
 		<div id="content-container" class="col-xs-9 fill-height nopadding">
 			<div id="map"></div>
 			<div id="voc"></div>
+			<div id="about">
+				<h2>About this project</h2>
+				<p>This project was made by <a href="https://github.com/flahn" target="_blank">Florian Lahn</a>, <a href="https://github.com/chk1" target="_blank">Christoph Kisfeld</a>, <a href="https://github.com/olegvstepanov" target="_blank">Oleg Stepanov</a> and <a href="https://github.com/shivamgupta37" target="_blank">Shivam Gupta</a> in the course "An introduction to Javascript and Linked Data" at the Institute of Geoinformatics, Münster.</p>
+				<p>We are utilizing <a href="https://en.wikipedia.org/wiki/Linked_data" target="_blank">Linked Data</a> to query and retrieve all data shown on this page.</p>
+				<p>The source code for this project is available on <a href="https://github.com/chk1/AITJALD" target="_blank"><b>Github</b></a>.</p>
+				<p>We have utilized Leaflet, CanvasJS (see <a href="https://raw.githubusercontent.com/chk1/AITJALD/539114239328cdc94eef0d0cd4a7f2c630fa35f4/NOTICE" target="_blank">NOTICE</a>), Bootstrap, chroma.js, terraformer and jQuery to build this page.</p>
+			</div>
 			<div id="datasheet" class="container">
 				<div id="split-bottom-bar"></div>
 				<h1 id="sheet_title"></h1>
@@ -244,6 +254,14 @@
 			$('#voc').show();
 		};
 		
+		function showAbout() {
+			hideMap();
+			hideDataSheet();
+			hideBottomMenu(true);
+			$('#about').show();
+		}
+		$('#about_tab').on('click', showAbout);
+
 		function showMap() {
 			//hideDataSheet();
 			hideDocumentation();

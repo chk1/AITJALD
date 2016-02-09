@@ -54,6 +54,15 @@ html, body{
     overflow: auto;
 }
 
+#about {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    display: none;
+    padding:20px;
+}
+
 .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;

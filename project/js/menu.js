@@ -37,9 +37,13 @@ function populateDatasetSelection(data) {
 			$(option).attr('data-uri', obsFull);
 			$(option).attr('data-structure', obsFull);
 			$(option).html(label);
+			if(obsShort === "TotalHouseholdCount") {
+				$(option).attr('selected', 'selected');
+			}
 			$('select#dataset').append(option);
 		}
 		$('select#dataset').attr('disabled', false);
+		$("#dataset-filters").slideDown();
 	}
 }
 
@@ -85,7 +89,6 @@ function queryDataSubsets(countType) {
 
         $("#mapTheData").attr('disabled', false);
 		$("#data_sheet_toggle").attr('disabled', false);
-		$("#dataset-filters").slideDown();
     });
 }
 
@@ -180,4 +183,7 @@ $('button#mapTheData').on('click', function(){
 	mapData();
 });
 
-queryDatasets(); // query available datasets for selection
+// query available datasets for selection
+queryDatasets(); 
+// enable filters for the default data set shown at page load
+queryDataSubsets(showThis.dataset);
