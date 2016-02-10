@@ -1,0 +1,31 @@
+.show-grid {
+  background-color: #EEE;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  min-height: 40px;
+  line-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* example popover content settings */
+.popover-content {
+  background-color: #808080;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-size: 14px;
+}
+
+/*popovertitle
+
+.popover-title {
+    padding: 8px 14px; 
+    margin: 0;
+    font-size: 14px;
+    background-color: #DAEBEC !important;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+}

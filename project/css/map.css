@@ -84,18 +84,33 @@ html, body{
 }
 
 .bottombar-toggle-button {
+    display: none;
     padding-top:0px;
     width: 60px;
     height: 20px;
     position:absolute;
     bottom: 0%;
     left:50%;
-    margin-bottom:-5px;
+    margin-bottom:3px;
     z-index: 9998;
 }
 
 .bottombar-toggle-button span {
     text-align: center;
+}
+
+#split-bottom-bar {
+    position:fixed;
+    background-color:grey;
+    height:3px;
+    z-index: 3000;
+    width: 100%;
+    cursor: row-resize;
+}
+
+.collapse-all {
+    float:right;
+    cursor:pointer;
 }
 
 #chartContainer {
@@ -109,12 +124,12 @@ html, body{
 }
 #district-container {
     height: 400px; 
-    width: 300px;
+    width: 400px;
 }
 
 #parent-container {
     height: 400px; 
-    width: 300px;
+    width: 400px;
 }
 
 #popup {
@@ -133,4 +148,23 @@ html, body{
     display: inline-block;
     margin-right: 8px;
     opacity: 0.7;
+}
+
+.timeslider {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.timeslider-ticks {
+    display: flex;
+    flex-direction: row;
+}
+
+.timeslider-tick {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.timeslider-tick.disabled {
+    color: #ccc;
 }

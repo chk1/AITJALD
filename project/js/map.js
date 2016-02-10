@@ -1,5 +1,7 @@
+// zoom to center of Münster
 var map = L.map('map').setView([51.9609808, 7.62416839], 13);
 
+// TO DO Is this part used somewhere? Guess not. 
 var defaults = {
     icon: new L.Icon({
         iconUrl: 'red_dot.png',
@@ -17,6 +19,7 @@ var defaults = {
     fillOpacity: 1
 };
 
+// black and white base map
 L.tileLayer('http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
 }).addTo(map);
@@ -38,12 +41,17 @@ var info = L.control(),
 // by default load single house hold total count from 2011 
 var showThis = {
     area: "Stadtteil",
-    year: 2011,
-    dataset: "SingleHouseholdTotalCount",
-    gender: "female",
-    agegroup: "AgeRange_20_29"
-}
+    year: 2014,
+    dataset: "TotalHouseholdCount",
+    gender: null,
+    agegroup: null
+};
 
+/*
+    Switch between different levels of details 
+    by chosing a different administrative level
+    according to the current zoom level
+*/
 map.on('zoomend', function () {
     //console.log(map.getZoom());
     try {
@@ -54,58 +62,66 @@ map.on('zoomend', function () {
     if (map.getZoom() >= 12){
         if(showThis.area == "Stadtbezirk") {
             showThis.area = "Stadtteil";
-            mapData(currentYear);
+            mapData();
         }
     } else {
         if(showThis.area == "Stadtteil") {
             showThis.area = "Stadtbezirk";
-            mapData(currentYear);
+            mapData();
         }
     }
 });
 
-function mapData(y) {
-       var qry = "PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#> "
-            + "PREFIX fn: <http://www.w3.org/2005/xpath-functions#> "
-            + "PREFIX geo: <http://www.opengis.net/ont/geosparql#> "
-            + "PREFIX geof: <http://www.opengis.net/def/function/geosparql/> "
-            + "PREFIX gml: <http://www.opengis.net/ont/gml#> "
-            + "PREFIX owl: <http://www.w3.org/2002/07/owl#> "
-            + "PREFIX par: <http://parliament.semwebcentral.org/parliament#> "
-            + "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
-            + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
-            + "PREFIX sf: <http://www.opengis.net/ont/sf#> "
-            + "PREFIX time: <http://www.w3.org/2006/time#> "
-            + "PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> "
-            + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
-            + "PREFIX lodcom: <http://vocab.lodcom.de/> "
-            + "SELECT ?id ?name ?n ?wkt "
-            + "WHERE { "
-            + "GRAPH <http://course.introlinkeddata.org/G4> "
-                + "{"
-                    + "?bezirk rdf:type lodcom:"+showThis.area+" . "
-                    + "?bezirk <http://www.w3.org/2000/01/rdf-schema#label> ?name . "
-                    + "?id <http://www.w3.org/2000/01/rdf-schema#label> ?name . "
-                    + "?obs <http://purl.org/linked-data/cube#dataSet> lodcom:"+showThis.dataset+" . "
-                    + "?obs <http://vocab.lodcom.de/numberOfHouseholds> ?num . "
-                    + "?obs lodcom:refArea ?bezirk . "
-                    + "?obs lodcom:refPeriod <http://reference.data.gov.uk/id/gregorian-interval/"+showThis.year+"-01-01T00:00:00/P1Y> . "
-                    + "?obs <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ?n . "
-                    + "?bezirk geo:hasGeometry ?geometry . "
-                    + "?geometry geo:asWKT ?wkt. "
-                    + "FILTER(lang(?name) = 'en') "
-                + "}"
-            + "} ORDER BY ?n";
+/*
+    Query the linked data dataset according to the options set in
+    the showThis object, then call the processBindings() for further
+    processing and data display
+*/
+function mapData() {
+    var genderFilter = (showThis.gender !== null) ? "?obs <http://purl.org/linked-data/sdmx/2009/dimension#sex> <"+showThis.gender+"> ." : "";
+    var ageRangeFilter = (showThis.agegroup !== null) ? "?obs <http://vocab.lodcom.de/ageRange> <"+showThis.agegroup+"> ." : "";
+    //var houseHoldsResultType = (showThis.dataset !== "AveragePersonsPerHousehold") ? "numberOfHouseholds" : "averagePersonsPerHousehold";
+    var qry = "PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#> "
+        + "PREFIX fn: <http://www.w3.org/2005/xpath-functions#> "
+        + "PREFIX geo: <http://www.opengis.net/ont/geosparql#> "
+        + "PREFIX geof: <http://www.opengis.net/def/function/geosparql/> "
+        + "PREFIX gml: <http://www.opengis.net/ont/gml#> "
+        + "PREFIX owl: <http://www.w3.org/2002/07/owl#> "
+        + "PREFIX par: <http://parliament.semwebcentral.org/parliament#> "
+        + "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
+        + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
+        + "PREFIX sf: <http://www.opengis.net/ont/sf#> "
+        + "PREFIX time: <http://www.w3.org/2006/time#> "
+        + "PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/> "
+        + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
+        + "PREFIX lodcom: <http://vocab.lodcom.de/> "
+        + "SELECT ?id ?name ?n ?wkt "
+        + "WHERE { "
+        + "GRAPH <http://course.introlinkeddata.org/G4> "
+            + "{"
+                + "?bezirk rdf:type lodcom:"+showThis.area+" . "
+                + "?bezirk <http://www.w3.org/2000/01/rdf-schema#label> ?name . "
+                + "?id <http://www.w3.org/2000/01/rdf-schema#label> ?name . "
+                + "?obs <http://purl.org/linked-data/cube#dataSet> lodcom:"+showThis.dataset+" . "
+                + "?obs <http://purl.org/linked-data/cube#measureType> ?measure ."
+                + "?obs ?measure ?num . "
+                + "?obs lodcom:refArea ?bezirk . "
+                + "?obs lodcom:refPeriod <http://reference.data.gov.uk/id/gregorian-interval/"+showThis.year+"-01-01T00:00:00/P1Y> . "
+                + "?obs <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ?n . "
+                + genderFilter 
+                + ageRangeFilter
+                + "?bezirk geo:hasGeometry ?geometry . "
+                + "?geometry geo:asWKT ?wkt. "
+                + "FILTER(lang(?name) = 'en') "
+            + "}"
+        + "} ORDER BY ?n";
     $.post("http://giv-lodumdata.uni-muenster.de:8282/parliament/sparql", {
         query: qry,
         output: 'json'
     },
     function(data){
-        //console.log(data);
         processBindings(data);
-        //updateLegend();
     });
-    currentYear = y;
 }
 
 /*
@@ -127,8 +143,8 @@ function minmax(data) {
     return [min, max];
 }
 
-var colorScale;
-var gjlayer;
+var colorScale; // chroma scale object for polygon colouring and legend
+var gjlayer; // GeoJSON layer that contains the polygons
 
 /*
     After querying the SPARQL endpoint data further processing is done from here
@@ -136,7 +152,6 @@ var gjlayer;
     - calculate new colors for display
     - calculate new entries for legend
     - populate data sheet
-    ...
 */
 function processBindings(data) {
     // map.removeLayer(featureGroup);
@@ -155,15 +170,20 @@ function processBindings(data) {
             layer.on({
                 click: function(e) {
                     var isChecked = $("#data_sheet_toggle").prop("checked");
-                    console.log("checked: "+isChecked);
+                    //console.log("checked: "+isChecked);
                     if (isChecked) {
+                        $("#datasheet .collapse").collapse("show");
                         queryDataSheet(feature.id);
+                        createNeighborsChart(feature.properties.name)();
+                        
                     }
-                    
+                    createDistrictAndParentChart(feature.properties.name)();
                 }
             });
         }
     });
+    
+    
     addPopupToLayer();
     
     gjlayer.addTo(map);
@@ -194,18 +214,25 @@ function parseToGeoJSONFeatureCollection(data) {
     return geoJsonFeatureCollection;
 }
 
+/*
+    Polygon style, color, etc.
+*/
 function styleFeature(feature) {
     return {
-        color: colorScale(feature.properties.n),
-        weight: 0,
-        opacity: 0.9,
-        fillOpacity: 0.6
+        fillColor: colorScale(feature.properties.n),
+        color:'#87421F',
+        weight: 0.5,
+        opacity: 1,
+        fillOpacity: 0.9
     };
 }
 
 function addPopupToLayer() {
     gjlayer.eachLayer(function(layer) {
-        layer.bindPopup("<b>"+layer.feature.properties.name+"</b><br>"+layer.feature.properties.n+" households<br>"+"<div id='popup'></div>");
+        var isChecked = $("#data_sheet_toggle").prop("checked");
+        if (!isChecked) {
+            layer.bindPopup("<b>"+layer.feature.properties.name+"</b><br>"+layer.feature.properties.n+" "+ ((showThis.dataset==="AveragePersonsPerHousehold")?"person household size":"households") +"<br>"+"<div id='popup'></div>");
+        }
         bindMouseEvents(layer,layer.feature.properties.name);
     });
 }
@@ -214,8 +241,9 @@ function addPopupToLayer() {
 function bindMouseEvents(districtObj, name) {
     districtObj.on('mouseover', createMouseOverHandler(name));
     districtObj.on('mouseout', mouseOutHandler);
-    districtObj.on('click', createNeighborsChart(name));
-    districtObj.on('click', createDistrictAndParentChart(name));
+    
+    //districtObj.on('click', createNeighborsChart(name));
+    //districtObj.on('click', createDistrictAndParentChart(name));
 }
 
 function createMouseOverHandler(name) {
@@ -223,7 +251,7 @@ function createMouseOverHandler(name) {
         var layer = e.target;
         layer.setStyle({
             weight: 5,
-            dashArray: '',
+            color: '#666',
             fillOpacity: 0.4
         });
         if (!L.Browser.ie && !L.Browser.opera) {
@@ -257,8 +285,13 @@ function updateLegend(minmax) {
     legend = L.control({position: 'bottomright'});
 
     var intermediateSteps = [];
+    var step;
     for(var i=0; i<=5; i++){
-        var step = minmax[0]+Math.floor((minmax[1]-minmax[0])/5)*i;
+        if(showThis.dataset === "AveragePersonsPerHousehold") {
+            step = minmax[0]+((minmax[1]-minmax[0])/5.0)*i;
+        } else {
+            step = minmax[0]+Math.round((minmax[1]-minmax[0])/5)*i;
+        }
         intermediateSteps.push(step);
     }
     // sort numbers in descending order
@@ -269,6 +302,11 @@ function updateLegend(minmax) {
     legend.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'info legend');
         var labels = [];
+        if(showThis.dataset === "AveragePersonsPerHousehold") {
+            labels.push("<b>Avg. household <br/>size (occupants)</b>");
+        } else {
+            labels.push("<b>Nr. of households</b>");
+        }
         intermediateSteps.forEach(function(dataValue, index, array){
             try{
                 labels.push('<i style="background:' + colorScale(dataValue) + '"></i>' + dataValue);
@@ -284,17 +322,10 @@ function updateLegend(minmax) {
 
 function mouseOutHandler(e) {
     var layer = e.target;
-    layer.setStyle({
-            //color: '#87421F',
-            dashArray: '',
-            weight: 0.5,
-        opacity: 1,
-        fillOpacity: 0.9
-    });
-        try {
-            info.removeFrom(map);
-        } catch(e){
-        }
+    gjlayer.resetStyle(layer);
+    try {
+        info.removeFrom(map);
+    } catch(e){}
 }
 
 function postQuery(qry, callback) {
@@ -308,6 +339,8 @@ function postQuery(qry, callback) {
 
 function createDistrictAndParentChart(name) {
     return function(e){
+        name = name.split(" ").join("_")
+
         var qryParent = "PREFIX lodcom: <http://vocab.lodcom.de/> "
             + "PREFIX geo: <http://www.opengis.net/ont/geosparql#> "
             + "PREFIX sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> "
@@ -345,9 +378,18 @@ function createDistrictAndParentChart(name) {
         $("#parent_charts_body").append($("<div>",{id: "distr_chart"}).css("display","inline-block").css("height","300px").css("width","40%"));
         $("#parent_charts_body").append($("<div>",{id: "parent_chart"}).css("display","inline-block").css("height","300px").css("width","40%"));
         
-        addDataToPieChart(name, qryDistrict, "distr_chart");
-        addDataToPieChart(name, qryParent, "parent_chart");
-        addDataToPopupChart(name, qryDistrict, "popup");
+        /*
+         * if data sheet is checked then put  data into datasheet charts, populate
+         * popup otherwise
+         */
+        var isChecked = $("#data_sheet_toggle").prop("checked");
+        if (isChecked) {
+            addDataToPieChart(name, qryDistrict, "distr_chart");
+            addDataToPieChart(name, qryParent, "parent_chart");
+        } else {
+            addDataToPopupChart(name, qryDistrict, "popup");
+        }
+        
     };
 }
 
@@ -357,25 +399,21 @@ function addDataToPieChart(name, qry, id) {
         if (data.results.bindings[0].name) {
             var currentName = data.results.bindings[0].name.value;
         }
-        var chartData = data.results.bindings.filter(
-            function(binding){
-                return binding.catname.value.split(" ").length > 5;
-            }).map(function(binding) {
-                return {
-                    y : parseInt(binding.n.value),
-                    name: binding.catname.value
-                };
-            });
+        var chartData = data.results.bindings.map(function(binding) {
+            return {
+                y : parseInt(binding.n.value),
+                name: binding.catname.value.split(" ")[4]
+            };
+        });
             createPieChart(currentName, chartData, id);
         });
 
     function createPieChart(name, chartData, id) {
         var chart = new CanvasJS.Chart(id,{
             title:{
-                text: "Households distribution in "+name,
-                fontFamily: "arial black"
+            text: "Households in "+name +" ("+showThis.year+")",
             },
-            animationEnabled: true,
+            animationEnabled: false,
             legend: {
                 verticalAlign: "bottom",
                 horizontalAlign: "center"
@@ -401,17 +439,14 @@ function addDataToPopupChart (name, qry, id) {
         if (data.results.bindings[0].name) {
             var currentName = data.results.bindings[0].name.value;
         }
-        var chartData = data.results.bindings.filter(
-            function(binding){
-                return binding.catname.value.split(" ").length > 5;
-            }).map(function(binding) {
-                return {
-                    y : parseInt(binding.n.value),
-                    label: binding.catname.value.split(" ")[4]
-                };
-            });
-            createColumnChart(currentName, chartData.sort(), id);
+        var chartData = data.results.bindings.map(function(binding) {
+            return {
+                y : parseInt(binding.n.value),
+                label: binding.catname.value.split(" ")[4]
+            };
         });
+        createColumnChart(currentName, chartData, id);
+    });
 
     function createColumnChart(currentName, chartData, id) {
         var chart = new CanvasJS.Chart(id,{
@@ -436,6 +471,7 @@ function addDataToPopupChart (name, qry, id) {
 
 function createNeighborsChart(name) {
     return function(e) {
+        name = name.split(" ").join("_")
         var qryNeighborAllCateg = "PREFIX lodcom: <http://vocab.lodcom.de/> "
             + "PREFIX geo: <http://www.opengis.net/ont/geosparql#> "
             + "PREFIX qb: <http://purl.org/linked-data/cube#> "
@@ -452,6 +488,7 @@ function createNeighborsChart(name) {
                         + "?obs lodcom:numberOfHouseholds ?n . "
                         + "?obs lodcom:refPeriod <http://reference.data.gov.uk/id/gregorian-interval/"+showThis.year+"-01-01T00:00:00/P1Y> . "
                         + "FILTER (lang(?name) = 'en' && lang(?catname) = 'en')"
+                        + "FILTER (?category IN (lodcom:SingleHouseholdTotalCount,lodcom:TwoPersonsHouseholdCount,lodcom:ThreePersonsHouseholdCount,lodcom:FourPersonsHouseholdCount,lodcom:FivePersonsMoreHouseholdCount))"
                 + "} UNION {"
                         + "lodcom:"+name.toLowerCase()+" rdfs:label ?name. "
                         + "?obs lodcom:refArea lodcom:"+name.toLowerCase()+" . "
@@ -460,23 +497,22 @@ function createNeighborsChart(name) {
                         + "?obs lodcom:numberOfHouseholds ?n . "
                         + "?obs lodcom:refPeriod <http://reference.data.gov.uk/id/gregorian-interval/"+showThis.year+"-01-01T00:00:00/P1Y> . "
                         + "FILTER (lang(?name) = 'en' && lang(?catname) = 'en')"
+                        + "FILTER (?category IN (lodcom:SingleHouseholdTotalCount,lodcom:TwoPersonsHouseholdCount,lodcom:ThreePersonsHouseholdCount,lodcom:FourPersonsHouseholdCount,lodcom:FivePersonsMoreHouseholdCount))"
                 + "}"
             + "}} ORDER BY DESC(?n)";
-                    
+
         postQuery(qryNeighborAllCateg, function(data) {
             var chartData = {};
             for (var i in data.results.bindings) {
                 var categ = data.results.bindings[i].catname.value;
                 var popul = parseInt(data.results.bindings[i].n.value);
                     var distr = data.results.bindings[i].name.value;
-                    if (categ.split(" ").length>5){
                         if (!(categ in chartData)){
                             chartData[categ] = [{y : popul, label: distr}]
                         }
                         else {
                             chartData[categ].push({y : popul, label: distr})
                         }
-                    }
                 }
             var chartContent = [];
             for (var category in chartData) {
@@ -499,25 +535,19 @@ function createBarChart(chartContent) {
     
     var chart = new CanvasJS.Chart("neigh_chart", {
         title:{
-            text:"Neighbor districts households in " + showThis.year
+            text:"Neighboring districts households in " + showThis.year
         },
-        animationEnabled: true,
+        theme: "theme2",
+        animationEnabled: false,
         axisX:{
             interval: 1,
-            gridThickness: 0,
-            labelFontSize: 10,
-            labelFontStyle: "normal",
-            labelFontWeight: "normal",
-            labelFontFamily: "Lucida Sans Unicode"
-        },
-        axisY2: {
-            gridColor: "rgba(1,77,101,.1)"
+            gridThickness: 0
         },
         toolTip: {
             shared: true
         },
         legend:{
-                        verticalAlign: "bottom",
+            verticalAlign: "bottom",
             horizontalAlign: "center"
         },
         data: chartContent
@@ -525,5 +555,5 @@ function createBarChart(chartContent) {
     chart.render();
 }
 
-mapData(2011);
+mapData(); // load the default data set
 
