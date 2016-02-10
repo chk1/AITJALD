@@ -1,6 +1,7 @@
 // zoom to center of Münster
 var map = L.map('map').setView([51.9609808, 7.62416839], 13);
 
+// TO DO Is this part used somewhere? Guess not. 
 var defaults = {
     icon: new L.Icon({
         iconUrl: 'red_dot.png',
@@ -218,10 +219,11 @@ function parseToGeoJSONFeatureCollection(data) {
 */
 function styleFeature(feature) {
     return {
-        color: colorScale(feature.properties.n),
-        weight: 0,
-        opacity: 0.9,
-        fillOpacity: 0.6
+        fillColor: colorScale(feature.properties.n),
+        color:'#87421F',
+        weight: 0.5,
+        opacity: 1,
+        fillOpacity: 0.9
     };
 }
 
@@ -249,7 +251,7 @@ function createMouseOverHandler(name) {
         var layer = e.target;
         layer.setStyle({
             weight: 5,
-            dashArray: '',
+            color: '#666',
             fillOpacity: 0.4
         });
         if (!L.Browser.ie && !L.Browser.opera) {
@@ -337,6 +339,8 @@ function postQuery(qry, callback) {
 
 function createDistrictAndParentChart(name) {
     return function(e){
+        name = name.split(" ").join("_")
+
         var qryParent = "PREFIX lodcom: <http://vocab.lodcom.de/> "
             + "PREFIX geo: <http://www.opengis.net/ont/geosparql#> "
             + "PREFIX sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> "
@@ -395,25 +399,21 @@ function addDataToPieChart(name, qry, id) {
         if (data.results.bindings[0].name) {
             var currentName = data.results.bindings[0].name.value;
         }
-        var chartData = data.results.bindings.filter(
-            function(binding){
-                return binding.catname.value.split(" ").length > 5;
-            }).map(function(binding) {
-                return {
-                    y : parseInt(binding.n.value),
-                    name: binding.catname.value
-                };
-            });
+        var chartData = data.results.bindings.map(function(binding) {
+            return {
+                y : parseInt(binding.n.value),
+                name: binding.catname.value.split(" ")[4]
+            };
+        });
             createPieChart(currentName, chartData, id);
         });
 
     function createPieChart(name, chartData, id) {
         var chart = new CanvasJS.Chart(id,{
             title:{
-            text: "Household distribution in "+name +" ("+showThis.year+")",
-                fontFamily: "arial black"
+            text: "Households in "+name +" ("+showThis.year+")",
             },
-            animationEnabled: true,
+            animationEnabled: false,
             legend: {
                 verticalAlign: "bottom",
                 horizontalAlign: "center"
@@ -439,17 +439,14 @@ function addDataToPopupChart (name, qry, id) {
         if (data.results.bindings[0].name) {
             var currentName = data.results.bindings[0].name.value;
         }
-        var chartData = data.results.bindings.filter(
-            function(binding){
-                return binding.catname.value.split(" ").length > 5;
-            }).map(function(binding) {
-                return {
-                    y : parseInt(binding.n.value),
-                    label: binding.catname.value.split(" ")[4]
-                };
-            });
-            createColumnChart(currentName, chartData.sort(), id);
+        var chartData = data.results.bindings.map(function(binding) {
+            return {
+                y : parseInt(binding.n.value),
+                label: binding.catname.value.split(" ")[4]
+            };
         });
+        createColumnChart(currentName, chartData, id);
+    });
 
     function createColumnChart(currentName, chartData, id) {
         var chart = new CanvasJS.Chart(id,{
@@ -474,40 +471,48 @@ function addDataToPopupChart (name, qry, id) {
 
 function createNeighborsChart(name) {
     return function(e) {
+        name = name.split(" ").join("_")
         var qryNeighborAllCateg = "PREFIX lodcom: <http://vocab.lodcom.de/> "
-			+ "PREFIX geo: <http://www.opengis.net/ont/geosparql#> "
-			+ "PREFIX qb: <http://purl.org/linked-data/cube#> "
-			+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
-			+ "SELECT ?name ?n ?catname "
-			+ "WHERE { "
-			+ "GRAPH <http://course.introlinkeddata.org/G4> {"
-				+ "{"
-						+ "lodcom:"+name.toLowerCase()+" lodcom:touches ?neighbor. "
-						+ "?neighbor rdfs:label ?name. "
-						+ "?obs lodcom:refArea ?neighbor . "
-						+ "?obs qb:dataSet ?category . "
-						+ "?category rdfs:label ?catname . "
-						+ "?obs lodcom:numberOfHouseholds ?n . "
-						+ "?obs lodcom:refPeriod <http://reference.data.gov.uk/id/gregorian-interval/"+showThis.year+"-01-01T00:00:00/P1Y> . "
-						+ "FILTER (lang(?name) = 'en' && lang(?catname) = 'en')"
-						+ "FILTER (?category IN (lodcom:SingleHouseholdTotalCount,lodcom:TwoPersonsHouseholdCount,lodcom:ThreePersonsHouseholdCount,lodcom:FourPersonsHouseholdCount,lodcom:FivePersonsMoreHouseholdCount))"
-				+ "}"
-			+ "}} ORDER BY ASC(?catname)";
-                    
+            + "PREFIX geo: <http://www.opengis.net/ont/geosparql#> "
+            + "PREFIX qb: <http://purl.org/linked-data/cube#> "
+            + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
+            + "SELECT ?name ?n ?catname "
+            + "WHERE { "
+            + "GRAPH <http://course.introlinkeddata.org/G4> {"
+                + "{"
+                        + "lodcom:"+name.toLowerCase()+" lodcom:touches ?neighbor. "
+                        + "?neighbor rdfs:label ?name. "
+                        + "?obs lodcom:refArea ?neighbor . "
+                        + "?obs qb:dataSet ?category . "
+                        + "?category rdfs:label ?catname . "
+                        + "?obs lodcom:numberOfHouseholds ?n . "
+                        + "?obs lodcom:refPeriod <http://reference.data.gov.uk/id/gregorian-interval/"+showThis.year+"-01-01T00:00:00/P1Y> . "
+                        + "FILTER (lang(?name) = 'en' && lang(?catname) = 'en')"
+                        + "FILTER (?category IN (lodcom:SingleHouseholdTotalCount,lodcom:TwoPersonsHouseholdCount,lodcom:ThreePersonsHouseholdCount,lodcom:FourPersonsHouseholdCount,lodcom:FivePersonsMoreHouseholdCount))"
+                + "} UNION {"
+                        + "lodcom:"+name.toLowerCase()+" rdfs:label ?name. "
+                        + "?obs lodcom:refArea lodcom:"+name.toLowerCase()+" . "
+                        + "?obs qb:dataSet ?category . "
+                        + "?category rdfs:label ?catname . "
+                        + "?obs lodcom:numberOfHouseholds ?n . "
+                        + "?obs lodcom:refPeriod <http://reference.data.gov.uk/id/gregorian-interval/"+showThis.year+"-01-01T00:00:00/P1Y> . "
+                        + "FILTER (lang(?name) = 'en' && lang(?catname) = 'en')"
+                        + "FILTER (?category IN (lodcom:SingleHouseholdTotalCount,lodcom:TwoPersonsHouseholdCount,lodcom:ThreePersonsHouseholdCount,lodcom:FourPersonsHouseholdCount,lodcom:FivePersonsMoreHouseholdCount))"
+                + "}"
+            + "}} ORDER BY DESC(?n)";
+
         postQuery(qryNeighborAllCateg, function(data) {
             var chartData = {};
             for (var i in data.results.bindings) {
                 var categ = data.results.bindings[i].catname.value;
                 var popul = parseInt(data.results.bindings[i].n.value);
                     var distr = data.results.bindings[i].name.value;
-                    if (categ.split(" ").length>5){
                         if (!(categ in chartData)){
                             chartData[categ] = [{y : popul, label: distr}]
                         }
                         else {
                             chartData[categ].push({y : popul, label: distr})
                         }
-                    }
                 }
             var chartContent = [];
             for (var category in chartData) {
@@ -530,25 +535,19 @@ function createBarChart(chartContent) {
     
     var chart = new CanvasJS.Chart("neigh_chart", {
         title:{
-            text:"Neighbor districts households in " + showThis.year
+            text:"Neighboring districts households in " + showThis.year
         },
-        animationEnabled: true,
+        theme: "theme2",
+        animationEnabled: false,
         axisX:{
             interval: 1,
-            gridThickness: 0,
-            labelFontSize: 10,
-            labelFontStyle: "normal",
-            labelFontWeight: "normal",
-            labelFontFamily: "Lucida Sans Unicode"
-        },
-        axisY2: {
-            gridColor: "rgba(1,77,101,.1)"
+            gridThickness: 0
         },
         toolTip: {
             shared: true
         },
         legend:{
-                        verticalAlign: "bottom",
+            verticalAlign: "bottom",
             horizontalAlign: "center"
         },
         data: chartContent
