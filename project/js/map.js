@@ -1,5 +1,9 @@
 // zoom to center of Münster
-var map = L.map('map').setView([51.9609808, 7.62416839], 13);
+var map = L.map('map', {
+    minZoom: 10,
+    maxZoom: 15,
+    maxBounds: L.latLngBounds([[51.52412, 6.80191], [52.30344, 8.77944]])
+}).setView([51.9609808, 7.62416839], 13);
 
 // TO DO Is this part used somewhere? Guess not. 
 var defaults = {

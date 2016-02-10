@@ -12,7 +12,7 @@
 
 /* example popover content settings */
 .popover-content {
-  background-color: #808080;
+  background-color: #fff;
   font-style: normal;
   font-weight: normal;
   line-height: 1;
@@ -28,4 +28,9 @@
     background-color: #DAEBEC !important;
     border-bottom: 1px solid #ebebeb;
     border-radius: 5px 5px 0 0;
+}
+*/
+
+.popover.concierge-step {
+  width: 300px;
 }

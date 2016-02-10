@@ -30,19 +30,21 @@
 						<li class="active"><a href="#" id="map_tab">Map</a></li>
 						<!--<li><a href="#" id="datasheet_tab">Data Sheet</a></li>-->
 						<li><a href="#" id="voc_tab">Vocabulary</a></li>
-						<li><a href="#" class="help btn"> Help Tour ?</a></li>
+						<li><a href="#" id="help_tour" class="hidden-sm hidden-xs">Help Tour</a></li>
+						<li><a href="#" id="about_tab">About</a></li>
 					</ul>
 				</div><!--/.nav-collapse -->
 			</div>
 		</div>
-		<div id="sidebar-container" class="col-xs-3">
+		<div id="sidebar-container" class="col-xs-12 col-md-3">
 			<h2>Münster house hold data visualized</h2>
+			<p>This tool visualizes Münster's household counts. On the map to the right you will see the household counts for each district, there are 45 lower districts (<i>Stadtteile</i>) and 6 upper districts (<i>Stadtbezirke</i>) in total. Below there are 10 datasets to chose from, where you can select to view the distribution of households by the number of occupants, by age or gender.</p>
+			<p>Move your mouse over a district or click on one to retrieve more statistical data.</p>
 			<hr>
 			<form>
 				<div class="form-group">
 					<label for="dataset">Select a data set</label>
 					<select id="dataset" class="form-control" disabled="true">
-						<option value="" selected class="disabled">Select a dataset</option>
 						<!-- populated in menu.js -->
 					</select>
 				</div>
@@ -80,20 +82,30 @@
 					</div>
 				</div>
 				
-				<button class="btn btn-info" id="mapTheData" type="button" disabled="disabled">Show me</button>
+				<button class="btn btn-info hidden-xs hidden-sm" id="mapTheData" type="button" disabled="disabled">Show me this data set</button>
+				<button class="btn btn-info hidden-md hidden-lg" id="mapTheData-mobile" type="button" disabled="disabled">Show me this data set</button>
 				
 				<br/>
 				<br/>
 				<div id ="button_datasheet">
+				<p>Enable "Show datasheet" to show a more detailed datasheet when you click on a district:</p>
 				<label class="btn btn-primary">
-				    <input id="data_sheet_toggle" type="checkbox" disabled="disabled"> Data Sheet for District
+					<input id="data_sheet_toggle" type="checkbox" disabled="disabled"> Show datasheet
 				</label>
+				<p>&nbsp;</p>
 				</div>
 			</form>
 		</div>
-		<div id="content-container" class="col-xs-9 fill-height nopadding">
+		<div id="content-container" class="col-xs-12 col-md-9 fill-height nopadding">
 			<div id="map"></div>
 			<div id="voc"></div>
+			<div id="about">
+				<h2>About this project</h2>
+				<p>This project was made by <a href="https://github.com/flahn" target="_blank">Florian Lahn</a>, <a href="https://github.com/chk1" target="_blank">Christoph Kisfeld</a>, <a href="https://github.com/olegvstepanov" target="_blank">Oleg Stepanov</a> and <a href="https://github.com/shivamgupta37" target="_blank">Shivam Gupta</a> in the course "An introduction to Javascript and Linked Data" at the Institute of Geoinformatics, Münster.</p>
+				<p>We are utilizing <a href="https://en.wikipedia.org/wiki/Linked_data" target="_blank">Linked Data</a> to query and retrieve all data shown on this page.</p>
+				<p>The source code for this project is available on <a href="https://github.com/chk1/AITJALD" target="_blank"><b>Github</b></a>.</p>
+				<p>We have utilized Leaflet, CanvasJS (see <a href="https://raw.githubusercontent.com/chk1/AITJALD/539114239328cdc94eef0d0cd4a7f2c630fa35f4/NOTICE" target="_blank">NOTICE</a>), Bootstrap, chroma.js, terraformer and jQuery to build this page.</p>
+			</div>
 			<div id="datasheet" class="container">
 				<div id="split-bottom-bar"></div>
 				<h1 id="sheet_title"></h1>
@@ -148,7 +160,8 @@
 		</div>
 		
 	</div>
-	<button id="sidebar-toggle" class="btn btn-primary sidebar-toggle-button" data-toggle="tooltip" data-placement="right" title="Hide Sidebar."><span class="glyphicon glyphicon-menu-left"></span></button>
+	<button id="sidebar-toggle" class="btn btn-primary sidebar-toggle-button hidden-xs hidden-sm" data-toggle="tooltip" data-placement="right" title="Hide Sidebar."><span class="glyphicon glyphicon-menu-left"></span></button>
+	<button id="sidebar-toggle-top" class="btn btn-primary sidebar-toggle-button sidebar-toggle-button-top hidden-md hidden-lg" style="display:none" data-toggle="tooltip" data-placement="top" title="Hide Sidebar.">Toggle filter <span class="glyphicon glyphicon-menu-down"></span></button>
 	<button id="bottombar-toggle" class="btn btn-primary bottombar-toggle-button" data-toggle="tooltip" data-placement="right" title="Show Data Sheet."><span class="glyphicon glyphicon-menu-up"></span></button>
 
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -168,12 +181,12 @@
 		
 		// toggles the activation in the navbar
 		$('.navbar li').click(function(e) {
-		    $('.navbar li.active').removeClass('active');
-		    var $this = $(this);
-		    if (!$this.hasClass('active')) {
-		        $this.addClass('active');
-		    }
-		    e.preventDefault();
+			$('.navbar li.active').removeClass('active');
+			var $this = $(this);
+			if (!$this.hasClass('active')) {
+				$this.addClass('active');
+			}
+			e.preventDefault();
 		});
 		
 		
@@ -214,8 +227,8 @@
 			
 			//$('#sidebar-container').hide("slide",{direction:"left"},300);
 			$('#sidebar-container').hide();
-			$('#content-container').removeClass('col-xs-9');
-			$('#content-container').addClass('col-xs-12');
+			$('#content-container').removeClass('col-md-9');
+			$('#content-container').addClass('col-md-12');
 			map.invalidateSize();
 			$("#sidebar-toggle").attr("title","Show Sidebar.");
 		};
@@ -231,8 +244,8 @@
 			
 			//$('#sidebar-container').show("slide",{direction:"left"},300);
 			$('#sidebar-container').show();
-			$('#content-container').removeClass('col-xs-12');
-			$('#content-container').addClass('col-xs-9');
+			$('#content-container').removeClass('col-md-12');
+			$('#content-container').addClass('col-md-9');
 			map.invalidateSize();
 			$("#sidebar-toggle").attr("title","Hide Sidebar.");
 		};
@@ -241,13 +254,27 @@
 			hideMap();
 			//hideDataSheet();
 			hideBottomMenu(true);
+			hideAbout();
 			$('#voc').show();
 		};
 		
+		function showAbout() {
+			hideMap();
+			hideDataSheet();
+			hideBottomMenu(true);
+			hideDocumentation();
+			$('#about').show();
+		}
+		function hideAbout() {
+			$('#about').hide();
+		}
+		$('#about_tab').on('click', showAbout);
+
 		function showMap() {
 			//hideDataSheet();
 			hideDocumentation();
 			showSidebar();
+			hideAbout();
 			
 			$('#map').show();
 			map.invalidateSize();
@@ -260,13 +287,13 @@
 		};
 		
 		function hideDataSheet() {
-		    $("#datasheet").hide();
+			$("#datasheet").hide();
 		};
 
 		function showDataSheet() {
 			hideMap();
 			hideDocumentation();
-		    $("#datasheet").show();
+			$("#datasheet").show();
 		};
 		
 		$("#data_sheet_toggle").prop("checked",false);
@@ -280,17 +307,17 @@
 			console.log("This was checked? "+isChecked);
 			if (!isChecked) {
 				gjlayer.eachLayer(function(layer) {
-		            layer.bindPopup("<b>"+layer.feature.properties.name+"</b><br>"+layer.feature.properties.n+" "+ ((showThis.dataset==="AveragePersonsPerHousehold")?"person household size":"households") +"<br>"+"<div id='popup'></div>");
-		        });
-		    } else {
-		    	gjlayer.eachLayer(function(layer) {
-		            layer._layers[keys(layer._layers)[0]].unbindPopup();
-		      	});
+					layer.bindPopup("<b>"+layer.feature.properties.name+"</b><br>"+layer.feature.properties.n+" "+ ((showThis.dataset==="AveragePersonsPerHousehold")?"person household size":"households") +"<br>"+"<div id='popup'></div>");
+				});
+			} else {
+				gjlayer.eachLayer(function(layer) {
+					layer._layers[keys(layer._layers)[0]].unbindPopup();
+				});
 			}
 		});
 		
 		
-		$("#sidebar-toggle").click(function (e) {
+		$("#sidebar-toggle, #sidebar-toggle-top").click(function (e) {
 			if ($("#sidebar-container").css("display") == "none") {
 				showSidebar();
 				
@@ -309,22 +336,22 @@
 		
 		//resizeable bottom bar
 		$('#split-bottom-bar').mousedown(function (e) {
-    		e.preventDefault();
-    		$(document).mousemove(function (e) {
-		        e.preventDefault();
-		        
-		        var min = 72;
-		        var max = $(window).height();
-		        var newHeight = ((max - e.clientY)/max)*100;
-		        var mapHeight = (100-newHeight);
-		        
-		        if (e.clientY > min && newHeight > 20) {
-		        	$('#datasheet').css("height", (max - e.clientY)+"px");
-		        	$('.bottombar-toggle-button').css("bottom",(max - e.clientY)+"px");
-		          	$('#map').css("height", (e.clientY-min)+20+"px");
-		          	map.invalidateSize();
-		        }
-    		});
+			e.preventDefault();
+			$(document).mousemove(function (e) {
+				e.preventDefault();
+				
+				var min = 72;
+				var max = $(window).height();
+				var newHeight = ((max - e.clientY)/max)*100;
+				var mapHeight = (100-newHeight);
+				
+				if (e.clientY > min && newHeight > 20) {
+					$('#datasheet').css("height", (max - e.clientY)+"px");
+					$('.bottombar-toggle-button').css("bottom",(max - e.clientY)+"px");
+					$('#map').css("height", (e.clientY-min)+20+"px");
+					map.invalidateSize();
+				}
+			});
 		});
 			
 		$(document).mouseup(function (e) {
@@ -334,65 +361,70 @@
 		
 		
 	</script>
-<script type="text/javascript">
-	      $('.help').click(function() {
-	        $('.content').concierge({
-	          steps: [
-  	            {
-  	              element:$('.navbar-brand:first'),
-  	              title:"Guide for Haushalte Münster",
-  	              content:"Here we start our help guide for analysing  Haushalte Münster",
-  	              placement:'bottom'
-  	            },
-	            {
-	              element:$('#map_tab'),
-	              title: "Here you look for Map",
-	              content: "Interactive Map of Münster with option to analyse data  ",
-	              placement:'bottom'
-	            },
-	            /*
-  	            {
-  	              element:$('#datasheet_tab'),
-  	              title:"Here you look for Data",
-  	              content:"This help in navagating to the data of interested  area by selecting on the map.",
-  	              placement:'bottom'
-  	            },
-  	            */
-  	            {
-  	              element:$('#voc_tab'),
-  	              title:"Here you look for Vocabulary",
-  	              content:"This help in navagating to the all the Vocabularies used in the Project.",
-  	              placement:'bottom'
-  	            },
-  	            {
-  	              element:$('.form-group:first'),
-  	              title:"Here you look for Data Set of your Interest",
-  	              content:"You can search for the data of your interest using filters",
-  	              placement:'right'
-  	            },
-  	            {
-  	              element:$('#mapTheData'),
-  	              title:"Click on Show Me ",
-  	              content:"View data on the map, based on your interest using filters",
-  	              placement:'right'
-  	            },
-  	            {
-  	              element:$('#button_datasheet'),
-  	              title:"Click to check the option",
-  	              content:"Check the button and click district over the map to visualize the data summary.",
-  	              placement:'right'
-  	            },
-				
-	          ],
-	          afterAll: function() {
-	            alert('Tour completed')
-	          },
-	          nextEvent: "click",
-	          nextText: "<br/><br/><b>Continue</b>",
-	          debug: true
-	        });
-	        return false
-	      });      
+	<script type="text/javascript">
+		var helpTourActive = false;
+		  $('#help_tour').click(function() {
+			if(helpTourActive !== true) {
+				helpTourActive = true;
+				$('.content').concierge({
+				  steps: [
+					{
+					  element:$('.navbar-brand:first'),
+					  title:"Guide for Haushalte Münster",
+					  content:"Here we start our help guide for analysing  Haushalte Münster",
+					  placement:'bottom'
+					},
+					{
+					  element:$('#map_tab'),
+					  title: "Here you look for Map",
+					  content: "Interactive Map of Münster with option to analyse data  ",
+					  placement:'bottom'
+					},
+					/*
+					{
+					  element:$('#datasheet_tab'),
+					  title:"Here you look for Data",
+					  content:"This help in navagating to the data of interested  area by selecting on the map.",
+					  placement:'bottom'
+					},
+					*/
+					{
+					  element:$('#voc_tab'),
+					  title:"Here you look for Vocabulary",
+					  content:"This help in navagating to the all the Vocabularies used in the Project.",
+					  placement:'bottom'
+					},
+					{
+					  element:$('.form-group:first'),
+					  title:"Here you look for Data Set of your Interest",
+					  content:"You can search for the data of your interest using filters",
+					  placement:'right'
+					},
+					{
+					  element:$('#mapTheData'),
+					  title:"Click on Show Me ",
+					  content:"View data on the map, based on your interest using filters",
+					  placement:'right'
+					},
+					{
+					  element:$('#button_datasheet'),
+					  title:"Click to check the option",
+					  content:"Check the button and click district over the map to visualize the data summary.",
+					  placement:'right'
+					},
+					
+				  ],
+				  afterAll: function() {
+					//alert('Tour completed')
+					helpTourActive = false;
+				  },
+				  nextEvent: "click",
+				  nextText: "<br/><br/><b>Continue</b>",
+				  debug: true
+				});
+			}
+			return false
+		  });
 </script>
 	<script src="js/doc.js"></script>
 	<script src="js/map.js"></script>
