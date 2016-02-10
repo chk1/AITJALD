@@ -30,7 +30,7 @@
 						<li class="active"><a href="#" id="map_tab">Map</a></li>
 						<!--<li><a href="#" id="datasheet_tab">Data Sheet</a></li>-->
 						<li><a href="#" id="voc_tab">Vocabulary</a></li>
-						<li><a href="#" class="help btn"> Help Tour ?</a></li>
+						<li><a href="#" id="help_tour" class="hidden-sm hidden-xs">Help Tour</a></li>
 						<li><a href="#" id="about_tab">About</a></li>
 					</ul>
 				</div><!--/.nav-collapse -->
@@ -90,7 +90,7 @@
 				<div id ="button_datasheet">
 				<p>Enable "Show datasheet" to show a more detailed datasheet when you click on a district:</p>
 				<label class="btn btn-primary">
-				    <input id="data_sheet_toggle" type="checkbox" disabled="disabled"> Show datasheet
+					<input id="data_sheet_toggle" type="checkbox" disabled="disabled"> Show datasheet
 				</label>
 				<p>&nbsp;</p>
 				</div>
@@ -181,12 +181,12 @@
 		
 		// toggles the activation in the navbar
 		$('.navbar li').click(function(e) {
-		    $('.navbar li.active').removeClass('active');
-		    var $this = $(this);
-		    if (!$this.hasClass('active')) {
-		        $this.addClass('active');
-		    }
-		    e.preventDefault();
+			$('.navbar li.active').removeClass('active');
+			var $this = $(this);
+			if (!$this.hasClass('active')) {
+				$this.addClass('active');
+			}
+			e.preventDefault();
 		});
 		
 		
@@ -287,13 +287,13 @@
 		};
 		
 		function hideDataSheet() {
-		    $("#datasheet").hide();
+			$("#datasheet").hide();
 		};
 
 		function showDataSheet() {
 			hideMap();
 			hideDocumentation();
-		    $("#datasheet").show();
+			$("#datasheet").show();
 		};
 		
 		$("#data_sheet_toggle").prop("checked",false);
@@ -307,12 +307,12 @@
 			console.log("This was checked? "+isChecked);
 			if (!isChecked) {
 				gjlayer.eachLayer(function(layer) {
-		            layer.bindPopup("<b>"+layer.feature.properties.name+"</b><br>"+layer.feature.properties.n+" "+ ((showThis.dataset==="AveragePersonsPerHousehold")?"person household size":"households") +"<br>"+"<div id='popup'></div>");
-		        });
-		    } else {
-		    	gjlayer.eachLayer(function(layer) {
-		            layer._layers[keys(layer._layers)[0]].unbindPopup();
-		      	});
+					layer.bindPopup("<b>"+layer.feature.properties.name+"</b><br>"+layer.feature.properties.n+" "+ ((showThis.dataset==="AveragePersonsPerHousehold")?"person household size":"households") +"<br>"+"<div id='popup'></div>");
+				});
+			} else {
+				gjlayer.eachLayer(function(layer) {
+					layer._layers[keys(layer._layers)[0]].unbindPopup();
+				});
 			}
 		});
 		
@@ -336,22 +336,22 @@
 		
 		//resizeable bottom bar
 		$('#split-bottom-bar').mousedown(function (e) {
-    		e.preventDefault();
-    		$(document).mousemove(function (e) {
-		        e.preventDefault();
-		        
-		        var min = 72;
-		        var max = $(window).height();
-		        var newHeight = ((max - e.clientY)/max)*100;
-		        var mapHeight = (100-newHeight);
-		        
-		        if (e.clientY > min && newHeight > 20) {
-		        	$('#datasheet').css("height", (max - e.clientY)+"px");
-		        	$('.bottombar-toggle-button').css("bottom",(max - e.clientY)+"px");
-		          	$('#map').css("height", (e.clientY-min)+20+"px");
-		          	map.invalidateSize();
-		        }
-    		});
+			e.preventDefault();
+			$(document).mousemove(function (e) {
+				e.preventDefault();
+				
+				var min = 72;
+				var max = $(window).height();
+				var newHeight = ((max - e.clientY)/max)*100;
+				var mapHeight = (100-newHeight);
+				
+				if (e.clientY > min && newHeight > 20) {
+					$('#datasheet').css("height", (max - e.clientY)+"px");
+					$('.bottombar-toggle-button').css("bottom",(max - e.clientY)+"px");
+					$('#map').css("height", (e.clientY-min)+20+"px");
+					map.invalidateSize();
+				}
+			});
 		});
 			
 		$(document).mouseup(function (e) {
@@ -361,65 +361,70 @@
 		
 		
 	</script>
-<script type="text/javascript">
-	      $('.help').click(function() {
-	        $('.content').concierge({
-	          steps: [
-  	            {
-  	              element:$('.navbar-brand:first'),
-  	              title:"Guide for Haushalte Münster",
-  	              content:"Here we start our help guide for analysing  Haushalte Münster",
-  	              placement:'bottom'
-  	            },
-	            {
-	              element:$('#map_tab'),
-	              title: "Here you look for Map",
-	              content: "Interactive Map of Münster with option to analyse data  ",
-	              placement:'bottom'
-	            },
-	            /*
-  	            {
-  	              element:$('#datasheet_tab'),
-  	              title:"Here you look for Data",
-  	              content:"This help in navagating to the data of interested  area by selecting on the map.",
-  	              placement:'bottom'
-  	            },
-  	            */
-  	            {
-  	              element:$('#voc_tab'),
-  	              title:"Here you look for Vocabulary",
-  	              content:"This help in navagating to the all the Vocabularies used in the Project.",
-  	              placement:'bottom'
-  	            },
-  	            {
-  	              element:$('.form-group:first'),
-  	              title:"Here you look for Data Set of your Interest",
-  	              content:"You can search for the data of your interest using filters",
-  	              placement:'right'
-  	            },
-  	            {
-  	              element:$('#mapTheData'),
-  	              title:"Click on Show Me ",
-  	              content:"View data on the map, based on your interest using filters",
-  	              placement:'right'
-  	            },
-  	            {
-  	              element:$('#button_datasheet'),
-  	              title:"Click to check the option",
-  	              content:"Check the button and click district over the map to visualize the data summary.",
-  	              placement:'right'
-  	            },
-				
-	          ],
-	          afterAll: function() {
-	            alert('Tour completed')
-	          },
-	          nextEvent: "click",
-	          nextText: "<br/><br/><b>Continue</b>",
-	          debug: true
-	        });
-	        return false
-	      });      
+	<script type="text/javascript">
+		var helpTourActive = false;
+		  $('#help_tour').click(function() {
+			if(helpTourActive !== true) {
+				helpTourActive = true;
+				$('.content').concierge({
+				  steps: [
+					{
+					  element:$('.navbar-brand:first'),
+					  title:"Guide for Haushalte Münster",
+					  content:"Here we start our help guide for analysing  Haushalte Münster",
+					  placement:'bottom'
+					},
+					{
+					  element:$('#map_tab'),
+					  title: "Here you look for Map",
+					  content: "Interactive Map of Münster with option to analyse data  ",
+					  placement:'bottom'
+					},
+					/*
+					{
+					  element:$('#datasheet_tab'),
+					  title:"Here you look for Data",
+					  content:"This help in navagating to the data of interested  area by selecting on the map.",
+					  placement:'bottom'
+					},
+					*/
+					{
+					  element:$('#voc_tab'),
+					  title:"Here you look for Vocabulary",
+					  content:"This help in navagating to the all the Vocabularies used in the Project.",
+					  placement:'bottom'
+					},
+					{
+					  element:$('.form-group:first'),
+					  title:"Here you look for Data Set of your Interest",
+					  content:"You can search for the data of your interest using filters",
+					  placement:'right'
+					},
+					{
+					  element:$('#mapTheData'),
+					  title:"Click on Show Me ",
+					  content:"View data on the map, based on your interest using filters",
+					  placement:'right'
+					},
+					{
+					  element:$('#button_datasheet'),
+					  title:"Click to check the option",
+					  content:"Check the button and click district over the map to visualize the data summary.",
+					  placement:'right'
+					},
+					
+				  ],
+				  afterAll: function() {
+					//alert('Tour completed')
+					helpTourActive = false;
+				  },
+				  nextEvent: "click",
+				  nextText: "<br/><br/><b>Continue</b>",
+				  debug: true
+				});
+			}
+			return false
+		  });
 </script>
 	<script src="js/doc.js"></script>
 	<script src="js/map.js"></script>
