@@ -1,10 +1,3 @@
-$('#datasheet_tab').on('click', function(){
-
-    //$("#datasheet").empty();
-    //showDataSheet();
-    showBottomMenu();
-});
-
 QUERY_DATASHEET = "SELECT DISTINCT ?dataSet ?dataSetName ?district ?year ?sex ?ageRange ?value ?uomLabel\r\n" + 
             "WHERE {\r\n" + 
             "   GRAPH <http://course.introlinkeddata.org/G4> {\r\n" + 
@@ -52,14 +45,7 @@ QUERY_DATASHEET = "SELECT DISTINCT ?dataSet ?dataSetName ?district ?year ?sex ?a
 function queryDataSheet(uri) {
 
     $("#datasheet .panel-body").empty();
-    
-    //showDataSheet();
     showBottomMenu();
-    
-    
-    
-    //$('.navbar li.active').removeClass('active');
-    //$("#datasheet_tab").parent().addClass('active');
     
     $.post("http://giv-lodumdata.uni-muenster.de:8282/parliament/sparql", {
         query: Prefixes.toString()+QUERY_DATASHEET.split("%DISTRICT%").join(uri),
@@ -67,7 +53,6 @@ function queryDataSheet(uri) {
     },
     function(data) {
         visualizeDataSheet(data);
-        
     });
 }
 
@@ -206,12 +191,12 @@ function visualizeDataSheet(data) {
     }
     
     
-    createSheetBarChart(total_group,"Household Developments from 2010 to 2014","300px","35%",$("#ds_charts_body"),false);
+    createSheetBarChart(total_group,"Households Dynamic from 2010 to 2014","300px","35%",$("#ds_charts_body"),false);
     createSheetBarChart(average_group,"Average Persons per Household","300px","35%",$("#ds_charts_body"),false);
-    createSheetBarChart(ds_group,"Household Developments by Household type 2010-2014","300px","70%",$("#ds_charts_body"),true);
+    createSheetBarChart(ds_group,"Households Dynamic by Household type 2010-2014","300px","70%",$("#ds_charts_body"),true);
     createSheetPieChart(age_block,"ageRange","value",$("#single_charts_body"));
     createGenderChart(gender_block,$("#single_charts_body"));
-    createSheetBarChart(child_group,"Households with children compared to single parent Households","400px","60%",$("#child_charts_body"),true);
+    createSheetBarChart(child_group,"Households with children compared to single parent Households","300px","60%",$("#child_charts_body"),true);
 }
 
 function createSheetBarChart(group,title,height,width,parentNode,legend) {
