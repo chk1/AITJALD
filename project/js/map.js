@@ -5,23 +5,24 @@ var map = L.map('map', {
     maxBounds: L.latLngBounds([[51.52412, 6.80191], [52.30344, 8.77944]])
 }).setView([51.9609808, 7.62416839], 13);
 
-// TO DO Is this part used somewhere? Guess not. 
-var defaults = {
-    icon: new L.Icon({
-        iconUrl: 'red_dot.png',
-        iconSize: [16, 16],
-        iconAnchor: [8, 8],
-        shadowUrl: 'dot_shadow.png',
-        shadowSize: [16, 16],
-        shadowAnchor: [8, 8]
-    }),
-    editable: true,
-    color: '#AA0000',
-    weight: 3,
-    opacity: 1.0,
-    fillColor: '#AA0000',
-    fillOpacity: 1
-};
+// TO DELETE:
+
+// var defaults = {
+//     icon: new L.Icon({
+//         iconUrl: 'red_dot.png',
+//         iconSize: [16, 16],
+//         iconAnchor: [8, 8],
+//         shadowUrl: 'dot_shadow.png',
+//         shadowSize: [16, 16],
+//         shadowAnchor: [8, 8]
+//     }),
+//     editable: true,
+//     color: '#AA0000',
+//     weight: 3,
+//     opacity: 1.0,
+//     fillColor: '#AA0000',
+//     fillOpacity: 1
+// };
 
 // black and white base map
 L.tileLayer('http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
@@ -38,6 +39,7 @@ $('#map_tab').on('click', function(){
 
 var currentYear = 2011;
 
+//create leaflet control and legend
 var info = L.control(),
     legend = L.control();
 
@@ -57,7 +59,6 @@ var showThis = {
     according to the current zoom level
 */
 map.on('zoomend', function () {
-    //console.log(map.getZoom());
     try {
         info.removeFrom(map);
     } catch(e){
@@ -158,8 +159,6 @@ var gjlayer; // GeoJSON layer that contains the polygons
     - populate data sheet
 */
 function processBindings(data) {
-    // map.removeLayer(featureGroup);
-    // featureGroup = L.featureGroup();
     if (gjlayer) map.removeLayer(gjlayer);
     
     var mm = minmax(data);    
@@ -174,7 +173,6 @@ function processBindings(data) {
             layer.on({
                 click: function(e) {
                     var isChecked = $("#data_sheet_toggle").prop("checked");
-                    //console.log("checked: "+isChecked);
                     if (isChecked) {
                         $("#datasheet .collapse").collapse("show");
                         queryDataSheet(feature.id);
@@ -193,6 +191,7 @@ function processBindings(data) {
     gjlayer.addTo(map);
 }
 
+//Parse response data and create geoJSON collection to be used in creation of geoJSON layer
 function parseToGeoJSONFeatureCollection(data) {
     var geoJsonFeatureCollection = {
       "type": "FeatureCollection",
@@ -231,6 +230,10 @@ function styleFeature(feature) {
     };
 }
 
+
+//Bind mouse events to polygons
+//Bind popup only if #data_sheet_toggle is not checked
+
 function addPopupToLayer() {
     gjlayer.eachLayer(function(layer) {
         var isChecked = $("#data_sheet_toggle").prop("checked");
@@ -241,15 +244,13 @@ function addPopupToLayer() {
     });
 }
 
-
+//Bind mouseover and mouseout ivents
 function bindMouseEvents(districtObj, name) {
     districtObj.on('mouseover', createMouseOverHandler(name));
     districtObj.on('mouseout', mouseOutHandler);
-    
-    //districtObj.on('click', createNeighborsChart(name));
-    //districtObj.on('click', createDistrictAndParentChart(name));
 }
 
+//On mouseover - change layer style and update control with the data
 function createMouseOverHandler(name) {
     return function (e) {
         var layer = e.target;
@@ -261,18 +262,20 @@ function createMouseOverHandler(name) {
         if (!L.Browser.ie && !L.Browser.opera) {
             layer.bringToFront();
         }
-
-            info.setPosition("topright").addTo(map);
-            info.update(name);
+        info.setPosition("topright").addTo(map);
+        info.update(name);
     };
 }
 
+//Add div for a control to the map
 info.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
     this.update();
     return this._div;
 };
 
+
+//Update control with current administative level and name of the polygon
 info.update = function (name) {
     if (name){
         this._div.innerHTML = '<h4>'+showThis.area+'</h4>' + '<b>' + name + '</b><br />';
@@ -324,6 +327,7 @@ function updateLegend(minmax) {
     legend.addTo(map);
 }
 
+//Reset layer style and remove control on mouseover 
 function mouseOutHandler(e) {
     var layer = e.target;
     gjlayer.resetStyle(layer);
@@ -332,6 +336,7 @@ function mouseOutHandler(e) {
     } catch(e){}
 }
 
+//Post request to the server and execute callback on success
 function postQuery(qry, callback) {
     $.post("http://giv-lodumdata.uni-muenster.de:8282/parliament/sparql", {
         query: qry,
@@ -341,10 +346,11 @@ function postQuery(qry, callback) {
     );
 }
 
+
+//Pass queries to get info about upper admin level and the current polygon
 function createDistrictAndParentChart(name) {
     return function(e){
         name = name.split(" ").join("_")
-
         var qryParent = "PREFIX lodcom: <http://vocab.lodcom.de/> "
             + "PREFIX geo: <http://www.opengis.net/ont/geosparql#> "
             + "PREFIX sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> "
@@ -397,7 +403,9 @@ function createDistrictAndParentChart(name) {
     };
 }
 
+//Construct PieChart with Canvas JS
 function addDataToPieChart(name, qry, id) {
+//Iterate through response and create correct data structe to pass to CanvasJS
     postQuery(qry, function(data) {
         var currentName =name;
         if (data.results.bindings[0].name) {
@@ -411,7 +419,7 @@ function addDataToPieChart(name, qry, id) {
         });
             createPieChart(currentName, chartData, id);
         });
-
+//Pass data to CanvasJS and render chart
     function createPieChart(name, chartData, id) {
         var chart = new CanvasJS.Chart(id,{
             title:{
@@ -437,6 +445,7 @@ function addDataToPieChart(name, qry, id) {
     }
 }
 
+//Iterate through response and create correct data structe to pass to CanvasJS
 function addDataToPopupChart (name, qry, id) {
     postQuery(qry, function(data) {
         var currentName =name;
@@ -451,7 +460,7 @@ function addDataToPopupChart (name, qry, id) {
         });
         createColumnChart(currentName, chartData, id);
     });
-
+//Pass data to CanvasJS and render ColumnChart
     function createColumnChart(currentName, chartData, id) {
         var chart = new CanvasJS.Chart(id,{
             animationEnabled: false,
@@ -472,10 +481,11 @@ function addDataToPopupChart (name, qry, id) {
     }
 }
 
-
+//Construct StackedBarChart
 function createNeighborsChart(name) {
     return function(e) {
         name = name.split(" ").join("_")
+        // Query to requst data for neighboring polygons
         var qryNeighborAllCateg = "PREFIX lodcom: <http://vocab.lodcom.de/> "
             + "PREFIX geo: <http://www.opengis.net/ont/geosparql#> "
             + "PREFIX qb: <http://purl.org/linked-data/cube#> "
@@ -504,7 +514,7 @@ function createNeighborsChart(name) {
                         + "FILTER (?category IN (lodcom:SingleHouseholdTotalCount,lodcom:TwoPersonsHouseholdCount,lodcom:ThreePersonsHouseholdCount,lodcom:FourPersonsHouseholdCount,lodcom:FivePersonsMoreHouseholdCount))"
                 + "}"
             + "}} ORDER BY DESC(?n)";
-
+//Post query and iterate through response to create correct data structe for BarChart
         postQuery(qryNeighborAllCateg, function(data) {
             var chartData = {};
             for (var i in data.results.bindings) {
@@ -533,7 +543,7 @@ function createNeighborsChart(name) {
         });
     };
 }
-
+//Pass data to CanvasJS and render barChart
 function createBarChart(chartContent) {
     $("#neighbor_charts_body").append($("<div>",{id:"neigh_chart"}).css("height","300px").css("width","70%"));
     
