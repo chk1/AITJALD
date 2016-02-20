@@ -1,3 +1,6 @@
+/**
+ * A query to fetch all related data to a city district 
+ */
 QUERY_DATASHEET = "SELECT DISTINCT ?dataSet ?dataSetName ?district ?year ?sex ?ageRange ?value ?uomLabel\r\n" + 
             "WHERE {\r\n" + 
             "   GRAPH <http://course.introlinkeddata.org/G4> {\r\n" + 
@@ -42,6 +45,12 @@ QUERY_DATASHEET = "SELECT DISTINCT ?dataSet ?dataSetName ?district ?year ?sex ?a
             "}\r\n" + 
             "ORDER BY ?dataSet ASC(?year) ASC(?ageRange)";
 
+/**
+ * A function that executes the HTTP POST request to query and visualize the
+ * returning data as different graphs  
+ * @param uri The URI of the district, e.g. http://vocab.lodcom.de/aegidii
+ * @return void
+ */
 function queryDataSheet(uri) {
 
     $("#datasheet .panel-body").empty();
@@ -56,7 +65,11 @@ function queryDataSheet(uri) {
     });
 }
 
-
+/**
+ * The callback function of queryDataSheet that takes the returning data from the parliament
+ * server and visualizes it in the datasheet bottom menu. 
+ * @param {Object} data The data returned from the parliament server as JSON bindings
+ */
 function visualizeDataSheet(data) {
 
     //createSimpleTable(data);
@@ -199,6 +212,18 @@ function visualizeDataSheet(data) {
     createSheetBarChart(child_group,"Households with children compared to single parent Households","300px","60%",$("#child_charts_body"),true);
 }
 
+/**
+ * This function creates a bar chart for the data sheet. It takes a specific set of data entries, a title, the extent in height
+ * and width, the parent DOM node at which the chart will be appended and also information whether or not the
+ * display a legend for the chart.
+ * 
+ * @param array group An array of sorted response data from the Parliament server
+ * @param string title The title for the chart
+ * @param string  height The height of the chart that is passed as CSS statement
+ * @param string  width The width of the chart that is passed as CSS statement
+ * @param {Object} parentNode The parent DOM node referenced to by JQuery at which the chart will be appended.
+ * @param boolean legend A boolean to state whether or not a legend shall be created.
+ */
 function createSheetBarChart(group,title,height,width,parentNode,legend) {
     var datasets = [];
     for (var j=0; j < group.length; j++) {
@@ -254,10 +279,23 @@ function createSheetBarChart(group,title,height,width,parentNode,legend) {
     chart.render();
 }
 
+/**
+ * This function rounds mathematically a number to two decimal cifers (0.009 to 0.01) 
+ * @param number num
+ * @return The rounded number.
+ */
 function roundToTwo(num) {    
     return +(Math.round(num + "e+2")  + "e-2");
 }
 
+/**
+ * This function creates a pie chart for selected entries of the JSON bindings.
+ * 
+ * @param Array block An array of JSON binding entries
+ * @param string labelAttr A string that defines the labeling attribute out of the data bindings in each individual block element
+ * @param string valueAttr A string that defines the attribute name of the value in the block element.
+ * @param {Object} parentNode The DOM node at which the chart will be appended.
+ */
 function createSheetPieChart(block, labelAttr,valueAttr,parentNode) {
     var points = [];
     var totalSingle = 0;
@@ -314,6 +352,12 @@ function createSheetPieChart(block, labelAttr,valueAttr,parentNode) {
     chart.render();
 }
 
+/**
+ *  This function creates several charts for the gender related data sets and puts it under the correct DOM node.
+ * 
+ * @param Array block An array of JSON binding entries
+ * @param {Object} parentNode The DOM node at which the charts will be appended.
+ */
 function createGenderChart(block,parentNode) {
     var dataset = {
         type: "pie",       
@@ -354,6 +398,12 @@ function createGenderChart(block,parentNode) {
     chart.render();
 }
 
+/**
+ * A default handling to visualize returned data from the parliament server. It will create a table listing
+ * all entries as rows.
+ *  
+ * @param {Object} data JSON bindings returned from the Parliament triple store
+ */
 function createSimpleTable(data) {
     var _table = $("<table>").addClass("table").addClass("table-striped");
     var _headerRow = $("<tr>");
@@ -385,18 +435,33 @@ function createSimpleTable(data) {
     _table.appendTo("#ds_tables");
 }
 
+/**
+ * A data structure for the table visualization 
+ */
 var DistrictDatasetTemplate = {
+    /** The parent node */
     entryDiv: null,
+    /** The DOM node for the tables title */
     titleDiv: null,
+    /** The DOM node to the "div" of the table */
     tableDiv: null,
+    /** The DOM node to the "table" element */
     table: null,
+    /** An array stating the attribute that shall be visualized in the table (the columns) */
     selectedAttributes: null,
-    
+    /**
+     * A function to set the tables title
+     * 
+     * @param string text The title
+     */
     setTitle: function(text) {
         this.titleDiv.text(text);
 
     },
-    
+    /**
+     * A function that initializes the table by creating and linking all relevant DOM
+     * elements. 
+     */
     initTable: function() {
         if (this.selectedAttributes && this.selectedAttributes.length > 1) {
             this.tableDiv = $("<div>").addClass("table-responsive");
@@ -413,6 +478,12 @@ var DistrictDatasetTemplate = {
             }
         }
     },
+    /**
+     * This function reads the data of the JSON binding entry and puts the information for the
+     * prior selected attributes into the table.
+     * 
+     * @param {Object} obj One element of the JSON bindings
+     */
     addTableRow: function(obj) {
         if (this.table) {
             var row = $("<tr>");
@@ -435,6 +506,11 @@ var DistrictDatasetTemplate = {
     }
 };
 
+/**
+ * A constructor function for the DistrictDatasetTemplate
+ *  
+ * @param Array attr An array stating the attribute names of individual elements in the JSON bindings
+ */
 function DistrictDatasetEntry(attr) {
     var obj = DistrictDatasetTemplate;
     obj.selectedAttributes = attr;
@@ -447,6 +523,12 @@ function DistrictDatasetEntry(attr) {
     return obj;
 }
 
+/**
+ * A utility function that extracts all attribute names of a JSON object 
+ * 
+ * @param {Object} obj A JSON object
+ * @return array An array containing the names of each attribute of an JSON object
+ */
 function keys(obj) {
     var arr = [];
     for (var key in obj) {
@@ -455,17 +537,36 @@ function keys(obj) {
     return arr;
 }
 
+/**
+ * Removes a certain object from an array.
+ * 
+ * @param arr The source array.
+ * @param obj The object to be removed from the source array.
+ * @return The array containing the remaining objects.
+ */
 function remove(arr, obj) {
     var index = arr.indexOf(obj);
     arr.splice(index,1);
     return arr;
 }
 
+/**
+ * Searches for the year in an reference.gov.uk URI and returns its position index in the string
+ *  
+ * @param {Object} str A reference.gov.uk URI
+ * @return the position index
+ */
 function extractYear(str) {
     var index = str.match(/\d{4}/);
     return index[0];
 }
 
+/**
+ * A utility function to order different data set types according to a certain pattern (e.g. single to five or more person households)
+ *  
+ * @param {Object} uri The URI of the data set.
+ * @return int An ordering value for a data set URI.
+ */
 function getIndexForDSType (uri) {
     switch(uri) {
         case "http://vocab.lodcom.de/SingleHouseholdTotalCount":
